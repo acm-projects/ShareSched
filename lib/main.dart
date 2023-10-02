@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'newuser.dart';
+import 'uploadpic.dart';
+
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      MaterialApp(
+        home: MyApp(),
+      ));
 }
 
 class MyApp extends StatefulWidget {
@@ -12,6 +18,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -93,7 +101,14 @@ class _MyAppState extends State<MyApp> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 100),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => newuser(),
+                        ),
+                        );
+
+                      },
+
                       child: Text('Create an account'),
                     ),
                   ),
