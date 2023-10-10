@@ -1,75 +1,119 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:login_screen_sharesched/newuser.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class uploadpic extends StatefulWidget {
-  @override
-  _uploadpic createState() => _uploadpic();
+
+void main() {
+  runApp(const MaterialApp(
+    home: UploadPic(),
+  ));
 }
-class _uploadpic extends State<uploadpic> {
+
+class UploadPic extends StatefulWidget {
+  const UploadPic({Key? key}) : super(key: key);
+
+  @override
+  State<UploadPic> createState() => uploadpic();
+}
+
+class uploadpic extends State<UploadPic> {
+
+  File? imageFile;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          leading: IconButton(
-
-            // Back arrow button for the page where user uploads picture
-
-            icon: Icon(
-              Icons.arrow_back,
+    return Scaffold(
+      appBar: AppBar(
+          title: Text(
+            'Upload Your Schedule',
+            style: GoogleFonts.exo(
               color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),),
+          centerTitle: true, backgroundColor: Colors.blue[800]
+
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if(imageFile != null)
+              Container(
+                width: 640,
+                height: 480,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                  image: DecorationImage(
+                      image: FileImage(imageFile!),
+                      fit: BoxFit.cover
+                  ),
+                  border: Border.all(width: 8, color: Colors.black),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+              )
+            else
+              Container(
+                  width: 640,
+                  height: 480,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.blue[200],
+                    border: Border.all(width: 8, color: Colors.black12),
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                  child: Text('Image', style: GoogleFonts.exo(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,),)
+              ),
+            const SizedBox(
+              height: 20,
             ),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => newuser(),
-              ),
-              );
-            },
-          ),
-
-          //App bar of the page
-
-          backgroundColor: Colors.blue[800],
-          title: Text('Upload Schedule',
-              style: TextStyle(color: Colors.white)),
-        ),
-
-        // Button that allows the user to upload picture from their camera roll
-
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-                child: IconButton(
-                  icon: Icon(Icons.photo_album, size: 80),
-                  onPressed : () {},
+            Row(
+              children: [
+                Expanded(
+                  child: ElevatedButton(
+                      onPressed: ()=> getImage(source: ImageSource.camera),
+                      child: Text('Capture Image', style: GoogleFonts.exo(
+                        fontSize: 17,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,),)
+                  ),
                 ),
-              ),
-
-              SizedBox(
-                height: 5.0,
-
-              // Button so user can take a picture of their schedule
-
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-                child: IconButton(
-                  icon: Icon(Icons.camera_alt, size: 80),
-                  onPressed : () {},
-                ),
-              ),
-            ],
-
-          ),
+                const SizedBox(width: 20,),
+                Expanded(
+                  child: ElevatedButton(
+                      onPressed: ()=> getImage(source: ImageSource.gallery),
+                      child: Text('Select Image', style: GoogleFonts.exo(
+                        fontSize: 17,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,))
+                  ),
+                )
+              ],
+            ),
+          ],
         ),
       ),
     );
   }
+
+  void getImage({required ImageSource source}) async {
+
+    final file = await ImagePicker().pickImage(
+        source: source,
+        maxWidth: 640,
+        maxHeight: 480,
+        imageQuality: 70 //0 - 100
+    );
+
+    if(file?.path != null){
+      setState(() {
+        imageFile = File(file!.path);
+      });
+    }
+  }
 }
-
-

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'newuser.dart';
 import 'uploadpic.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+
 
 
 void main() {
@@ -11,6 +14,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+
   const MyApp( {Key? key}) : super(key: key);
 
     @override
@@ -33,8 +37,8 @@ class _MyAppState extends State<MyApp> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text('Login to ShareSched',
-              style: TextStyle(
-                fontSize: 35,
+              style: GoogleFonts.exo(
+                fontSize: 31,
                 color: Colors.blue[800],
                 fontWeight: FontWeight.bold,
               ),

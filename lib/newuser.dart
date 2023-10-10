@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_screen_sharesched/main.dart';
-import 'uploadpic.dart';
+import 'package:login_screen_sharesched/uploadpic.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class newuser extends StatefulWidget {
 
@@ -10,15 +11,20 @@ class newuser extends StatefulWidget {
 
 class _newuser extends State<newuser> {
   bool isObscurePassword = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[800],
         centerTitle: true,
-        title: Text('Create New Profile'),
+        title: Text('Create New Profile', style: GoogleFonts.exo(
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+        ),),
+
         leading: IconButton(
-            icon: Icon(
+          icon: Icon(
             Icons.arrow_back,
             color: Colors.white,
           ),
@@ -133,7 +139,7 @@ class _newuser extends State<newuser> {
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => uploadpic(),
+                          builder: (context) => UploadPic(),
                         ),
                         );
                       },
@@ -192,7 +198,3 @@ class _newuser extends State<newuser> {
     );
   }
 }
-
-
-
-
