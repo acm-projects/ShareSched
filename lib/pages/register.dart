@@ -1,5 +1,15 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'package:myapp/models/user.dart';
+import 'package:myapp/models/user_model.dart';
+import 'package:myapp/repositories/user_respository.dart';
+import 'package:myapp/services/auth.dart';
+import 'custom_widgets.dart';
+
 import 'package:myapp/pages/upload_schedule.dart';
 import 'login.dart';
 import 'custom_widgets.dart';
@@ -42,6 +52,7 @@ class RegisterScreen extends StatelessWidget {
   }
 }
 
+
 class TextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -73,6 +84,7 @@ class TextField extends StatelessWidget {
   }
 }
 
+
 class RegisterForm extends StatefulWidget {
   @override
   _RegisterFormState createState() => _RegisterFormState();
@@ -82,11 +94,13 @@ class _RegisterFormState extends State<RegisterForm> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  void onSignUpButtonPressed() {
+  void onSignUpButtonPressed() async{
+    final AuthService _auth = AuthService();
     // save registration details to database here?
     String email = emailController.text;
     String username = usernameController.text;
     String password = passwordController.text;
+    dynamic result = await _auth.registerWithEmailAndPassword(email, password);
     print("Email: $email");
     print("Username: $username");
     print("Password: $password");
@@ -104,6 +118,7 @@ class _RegisterFormState extends State<RegisterForm> {
               color: Colors.white,
               fontWeight: FontWeight.bold,
             )),
+
         const SizedBox(height: 20),
         Form(
           child: Column(
@@ -128,15 +143,47 @@ class _RegisterFormState extends State<RegisterForm> {
   }
 }
 
+
+// class EmailField extends StatelessWidget {
+//   const EmailField({super.key});
+//   //String email = '';
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.symmetric(horizontal: 35),
+//       child: TextFormField(
+//         keyboardType: TextInputType.emailAddress,
+//         decoration: InputDecoration(
+//           labelText: "Email",
+//           hintText: 'Enter email',
+//           hintStyle: GoogleFonts.montserrat(),
+//           labelStyle: GoogleFonts.montserrat(),
+//           prefixIcon: const Icon(Icons.email),
+//           border: const OutlineInputBorder(),
+//         ),
+//         onChanged: (String Value) {
+//           // setState(() => email = val);
+//         },
+//         validator: (value) {
+//           return value!.isEmpty ? 'Please Enter Email' : null;
+//         },
+//       ),
+//     );
+//   }
+// }
 class EmailField extends StatelessWidget {
+
   TextEditingController controller = TextEditingController();
 
   EmailField({required this.controller});
+
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
+
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -194,6 +241,7 @@ class EmailField extends StatelessWidget {
     );
   }
 }
+
 
 class UsernameField extends StatelessWidget {
   TextEditingController controller = TextEditingController();
@@ -270,6 +318,7 @@ class PasswordField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
+
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -329,6 +378,7 @@ class PasswordField extends StatelessWidget {
   }
 }
 
+
 class SignUpButton extends StatelessWidget {
   const SignUpButton({required this.buttonPressed});
 
@@ -339,7 +389,7 @@ class SignUpButton extends StatelessWidget {
     return MaterialButton(
       minWidth: 335,
       height: 52,
-      onPressed: () {
+      onPressed: (){
         buttonPressed();
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => UploadScreen()));
@@ -362,3 +412,4 @@ class SignUpButton extends StatelessWidget {
     );
   }
 }
+

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/services/auth.dart';
 import 'custom_widgets.dart';
 import 'register.dart';
 import 'package:myapp/navigation/navigation_bar.dart';
@@ -39,6 +40,7 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
+
 class LoginForm extends StatefulWidget {
   @override
   _LoginFormState createState() => _LoginFormState();
@@ -55,12 +57,16 @@ class _LoginFormState extends State<LoginForm> {
     super.dispose();
   }
 
-  void onLoginButtonPressed() {
+  void onLoginButtonPressed() async{
+    final AuthService _auth = AuthService();
     // Save to login details to database here?
     String email = emailController.text;
     String password = passwordController.text;
+    dynamic result = await _auth.signInWithEmailAndPassword(email, password);
     print("Email: $email");
     print("Password: $password");
+    print(result.uid);
+    
   }
 
   Widget build(BuildContext context) {
@@ -129,6 +135,7 @@ class TextField extends StatelessWidget {
   }
 }
 
+
 class EmailField extends StatelessWidget {
   final TextEditingController controller;
 
@@ -138,6 +145,7 @@ class EmailField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
+      
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -195,6 +203,7 @@ class EmailField extends StatelessWidget {
     );
   }
 }
+
 
 class PasswordField extends StatelessWidget {
   final TextEditingController controller;
@@ -262,7 +271,27 @@ class PasswordField extends StatelessWidget {
   }
 }
 
+// class LoginButton extends StatelessWidget {
+//   const LoginButton({super.key});
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.symmetric(horizontal: 100),
+//       child: MaterialButton(
+//         minWidth: double.infinity,
+//         onPressed: () {},
+//         color: Colors.black,
+//         textColor: Colors.white,
+//         child: Text('Log In',
+//             style: GoogleFonts.exo(fontSize: 20, color: Colors.white)),
+//       ),
+//     );
+//   }
+// }
+
 class LoginButton extends StatelessWidget {
+
+
   final Function buttonPressed;
 
   const LoginButton({super.key, required this.buttonPressed});
@@ -272,7 +301,7 @@ class LoginButton extends StatelessWidget {
     return MaterialButton(
       minWidth: 300,
       height: 52,
-      onPressed: () {
+      onPressed: () async{
         buttonPressed();
         Navigator.push(
             context,
@@ -298,3 +327,4 @@ class LoginButton extends StatelessWidget {
     );
   }
 }
+
