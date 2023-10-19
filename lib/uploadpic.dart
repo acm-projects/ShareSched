@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'qrcode.dart';
 import 'package:path_provider/path_provider.dart';
 
+
 void main() {
   runApp(const MaterialApp(
     home: UploadPic(),
@@ -117,18 +118,17 @@ class UploadPicState extends State<UploadPic> {
             // Add the "Next" ElevatedButton below the existing buttons
             ElevatedButton(
               onPressed: () {
-
-                // After the user presses next, the picture data will be
-                // stored in a unique auto generated QR code.
-
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => DemoApp(),
+                ));
               },
               child: Text(
-                'Submit',
-                style: GoogleFonts.exo(
-                  fontSize: 17,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                )
+                  'Submit',
+                  style: GoogleFonts.exo(
+                    fontSize: 17,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  )
               ),
 
             ),
@@ -147,11 +147,18 @@ class UploadPicState extends State<UploadPic> {
       imageQuality: 70,
     );
 
+    // Return directory path where the app can store the data
+
     if (file?.path != null) {
+      // Defines a file name "userSched" and constructs path where image will be saved
+      // file name is given as 'uploaded_schedule.jpg' - stored in apps docs library
       final saveDirectory = await getApplicationDocumentsDirectory();
       final userSched = 'uploaded_schedule.jpg';
 
       savedImagePath = '${saveDirectory.path}/$userSched';
+
+      // checks if file path is null, if not, then code uses 'File'
+      // class to copy image file to the 'savedImagePath'
 
       if (savedImagePath != null) {
         final savedFile = File(file!.path).copy(savedImagePath!);
@@ -159,14 +166,18 @@ class UploadPicState extends State<UploadPic> {
           imageFile = File(file!.path);
         });
 
+        // In the case of an error
+
       }  else {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text("Error"),
-            ),
-          );
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("Error"),
+          ),
+        );
       }
     }
   }
 }
+
+
 

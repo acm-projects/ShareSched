@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'newuser.dart';
 import 'uploadpic.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 
 
