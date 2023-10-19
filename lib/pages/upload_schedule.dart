@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'custom_widgets.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:myapp/colors/app_colors.dart';
 
 class UploadScreen extends StatefulWidget {
   @override
@@ -15,10 +16,12 @@ class _UploadScreen extends State<UploadScreen> {
 
   Future<void> takeImage() async {
     final XFile? photo = await picker.pickImage(source: ImageSource.camera);
+
     if (photo != null) {
       setState(() {
         _image = File(photo.path);
       });
+      // process image
     }
   }
 
@@ -28,6 +31,7 @@ class _UploadScreen extends State<UploadScreen> {
       setState(() {
         _image = File(photo.path);
       });
+      // process images
     }
   }
 
@@ -85,7 +89,7 @@ class UploadText extends StatelessWidget {
         SizedBox(height: 80),
         Text('Upload',
             style: GoogleFonts.quicksand(
-                color: Colors.white,
+                color: AppColors.primaryTextColor,
                 fontSize: 32,
                 fontWeight: FontWeight.bold)),
         const SizedBox(
@@ -93,7 +97,7 @@ class UploadText extends StatelessWidget {
         ),
         Text('Snap a photo of your schedule to auto-fill course details.',
             style: GoogleFonts.quicksand(
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
               fontSize: 15,
             ))
       ],
@@ -112,8 +116,8 @@ class UploadButton extends StatelessWidget {
         minWidth: 180,
         height: 52,
         onPressed: () => buttonPressed(),
-        color: const Color(0xFF1264D1),
-        textColor: Colors.black,
+        color: AppColors.buttonColor1,
+        textColor: AppColors.secondaryTextColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50.0),
           side: const BorderSide(color: Colors.black, width: 0.3),
@@ -152,8 +156,8 @@ class TakePictureButton extends StatelessWidget {
         minWidth: 180,
         height: 52,
         onPressed: () => buttonPressed(),
-        color: const Color(0xFF1264D1),
-        textColor: Colors.black,
+        color: AppColors.buttonColor1,
+        textColor: AppColors.secondaryTextColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50.0),
           side: const BorderSide(color: Colors.black, width: 0.3),

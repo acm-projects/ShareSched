@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:time_planner/time_planner.dart';
+import 'package:myapp/colors/app_colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -24,7 +25,7 @@ class ScheduleForm extends StatelessWidget {
         Text('Schedule',
             style: GoogleFonts.quicksand(
               fontSize: 32,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
               fontWeight: FontWeight.bold,
             )),
         const SizedBox(height: 20),
@@ -52,7 +53,7 @@ class AddFriendsField extends StatelessWidget {
               fontSize: 13.0,
               letterSpacing: 1.5,
               height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
@@ -104,7 +105,7 @@ class _ScheduleState extends State<Schedule> {
   List<TimePlannerTask> tasks = [
     TimePlannerTask(
       // background color for task
-      color: const Color.fromRGBO(53, 51, 205, 1),
+      color: AppColors.courseColor,
 
       // day: Index of header, hour: Task will be begin at this hour
       // minutes: Task will be begin at this minutes
@@ -119,7 +120,9 @@ class _ScheduleState extends State<Schedule> {
       child: Text(
         'MATH 2418',
         style: TextStyle(
-            color: Colors.grey[350], fontSize: 12, fontFamily: 'Quicksand'),
+            color: AppColors.primaryTextColor,
+            fontSize: 12,
+            fontFamily: 'Quicksand'),
       ),
     ),
   ];
@@ -132,38 +135,38 @@ class _ScheduleState extends State<Schedule> {
           TimePlannerTitle(
               title: 'Monday',
               titleStyle: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.primaryTextColor,
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.w700)),
           TimePlannerTitle(
               title: 'Tuesday',
               titleStyle: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.primaryTextColor,
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.w700)),
           TimePlannerTitle(
               title: 'Wednesday',
               titleStyle: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.primaryTextColor,
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.w700)),
           TimePlannerTitle(
               title: 'Thursday',
               titleStyle: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.primaryTextColor,
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.w700)),
           TimePlannerTitle(
               title: 'Friday',
               titleStyle: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.primaryTextColor,
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.w700)),
         ],
         tasks: tasks,
         style: TimePlannerStyle(
             horizontalTaskPadding: BorderSide.strokeAlignCenter,
-            backgroundColor: Colors.black,
+            backgroundColor: AppColors.backgroundColor,
             dividerColor: const Color.fromRGBO(53, 51, 205, 1),
             borderRadius: const BorderRadius.all(Radius.circular(20.0))),
         use24HourFormat: false,

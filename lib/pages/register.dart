@@ -1,18 +1,10 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'package:myapp/models/user.dart';
-import 'package:myapp/models/user_model.dart';
-import 'package:myapp/repositories/user_respository.dart';
 import 'package:myapp/services/auth.dart';
 import 'custom_widgets.dart';
-
 import 'package:myapp/pages/upload_schedule.dart';
 import 'login.dart';
-import 'custom_widgets.dart';
+import 'package:myapp/colors/app_colors.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -52,14 +44,14 @@ class RegisterScreen extends StatelessWidget {
   }
 }
 
-
 class TextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text.rich(
       TextSpan(
         text: "Already have an account? ",
-        style: GoogleFonts.quicksand(fontSize: 16, color: Colors.white),
+        style: GoogleFonts.quicksand(
+            fontSize: 16, color: AppColors.primaryTextColor),
         children: [
           WidgetSpan(
             child: GestureDetector(
@@ -84,7 +76,6 @@ class TextField extends StatelessWidget {
   }
 }
 
-
 class RegisterForm extends StatefulWidget {
   @override
   _RegisterFormState createState() => _RegisterFormState();
@@ -94,16 +85,19 @@ class _RegisterFormState extends State<RegisterForm> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  void onSignUpButtonPressed() async{
+  dynamic onSignUpButtonPressed() async {
     final AuthService _auth = AuthService();
     // save registration details to database here?
     String email = emailController.text;
     String username = usernameController.text;
     String password = passwordController.text;
     dynamic result = await _auth.registerWithEmailAndPassword(email, password);
+
     print("Email: $email");
     print("Username: $username");
     print("Password: $password");
+
+    return result;
   }
 
   Widget build(BuildContext context) {
@@ -118,7 +112,6 @@ class _RegisterFormState extends State<RegisterForm> {
               color: Colors.white,
               fontWeight: FontWeight.bold,
             )),
-
         const SizedBox(height: 20),
         Form(
           child: Column(
@@ -143,47 +136,15 @@ class _RegisterFormState extends State<RegisterForm> {
   }
 }
 
-
-// class EmailField extends StatelessWidget {
-//   const EmailField({super.key});
-//   //String email = '';
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.symmetric(horizontal: 35),
-//       child: TextFormField(
-//         keyboardType: TextInputType.emailAddress,
-//         decoration: InputDecoration(
-//           labelText: "Email",
-//           hintText: 'Enter email',
-//           hintStyle: GoogleFonts.montserrat(),
-//           labelStyle: GoogleFonts.montserrat(),
-//           prefixIcon: const Icon(Icons.email),
-//           border: const OutlineInputBorder(),
-//         ),
-//         onChanged: (String Value) {
-//           // setState(() => email = val);
-//         },
-//         validator: (value) {
-//           return value!.isEmpty ? 'Please Enter Email' : null;
-//         },
-//       ),
-//     );
-//   }
-// }
 class EmailField extends StatelessWidget {
-
   TextEditingController controller = TextEditingController();
 
   EmailField({required this.controller});
-
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
-
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -196,7 +157,7 @@ class EmailField extends StatelessWidget {
               fontSize: 13.0,
               letterSpacing: 1.5,
               height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
@@ -242,7 +203,6 @@ class EmailField extends StatelessWidget {
   }
 }
 
-
 class UsernameField extends StatelessWidget {
   TextEditingController controller = TextEditingController();
 
@@ -264,7 +224,7 @@ class UsernameField extends StatelessWidget {
               fontSize: 13.0,
               letterSpacing: 1.5,
               height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
@@ -318,7 +278,6 @@ class PasswordField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
-
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -331,7 +290,7 @@ class PasswordField extends StatelessWidget {
               fontSize: 13.0,
               letterSpacing: 1.5,
               height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
@@ -354,7 +313,7 @@ class PasswordField extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15.0),
               ),
               enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: Colors.black, width: 1.5),
+                borderSide: const BorderSide(color: Colors.white, width: 1.5),
                 borderRadius: BorderRadius.circular(15.0),
               ),
               focusedBorder: OutlineInputBorder(
@@ -378,7 +337,6 @@ class PasswordField extends StatelessWidget {
   }
 }
 
-
 class SignUpButton extends StatelessWidget {
   const SignUpButton({required this.buttonPressed});
 
@@ -389,13 +347,18 @@ class SignUpButton extends StatelessWidget {
     return MaterialButton(
       minWidth: 335,
       height: 52,
-      onPressed: (){
-        buttonPressed();
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => UploadScreen()));
+      onPressed: () async {
+        dynamic result = await buttonPressed();
+        if (result != null && result.uid != null) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => UploadScreen()));
+          print("Sign up successful");
+        } else {
+          print("Sign up unsuccessful");
+        }
       },
-      color: const Color(0xFF1264D1),
-      textColor: Colors.black,
+      color: AppColors.buttonColor1,
+      textColor: AppColors.secondaryTextColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(50.0),
         side: const BorderSide(color: Colors.black, width: 0.3),
@@ -412,4 +375,3 @@ class SignUpButton extends StatelessWidget {
     );
   }
 }
-

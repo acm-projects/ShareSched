@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/colors/app_colors.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -49,7 +50,7 @@ class LogoWidget extends StatelessWidget {
                 style: GoogleFonts.quicksand(
                     fontSize: 28,
                     height: 14.5,
-                    color: Colors.white,
+                    color: AppColors.primaryTextColor,
                     fontWeight: FontWeight.w300),
               ),
             ],

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/navigation/navigation_bar.dart';
+import 'package:myapp/pages/home.dart';
+import 'package:myapp/pages/upload_schedule.dart';
 import 'package:myapp/services/auth.dart';
 import 'custom_widgets.dart';
 import 'register.dart';
-import 'package:myapp/navigation/navigation_bar.dart';
+import 'package:myapp/colors/app_colors.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -40,7 +43,6 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-
 class LoginForm extends StatefulWidget {
   @override
   _LoginFormState createState() => _LoginFormState();
@@ -57,16 +59,18 @@ class _LoginFormState extends State<LoginForm> {
     super.dispose();
   }
 
-  void onLoginButtonPressed() async{
+  dynamic onLoginButtonPressed() async {
     final AuthService _auth = AuthService();
     // Save to login details to database here?
     String email = emailController.text;
     String password = passwordController.text;
     dynamic result = await _auth.signInWithEmailAndPassword(email, password);
+
     print("Email: $email");
     print("Password: $password");
     print(result.uid);
-    
+
+    return result;
   }
 
   Widget build(BuildContext context) {
@@ -77,7 +81,7 @@ class _LoginFormState extends State<LoginForm> {
         Text('Log In',
             style: GoogleFonts.quicksand(
               fontSize: 32,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
               fontWeight: FontWeight.bold,
             )),
         const SizedBox(height: 20),
@@ -109,7 +113,8 @@ class TextField extends StatelessWidget {
     return Text.rich(
       TextSpan(
         text: "Don't have an account? ",
-        style: GoogleFonts.quicksand(fontSize: 16, color: Colors.white),
+        style: GoogleFonts.quicksand(
+            fontSize: 16, color: AppColors.primaryTextColor),
         children: [
           WidgetSpan(
             child: GestureDetector(
@@ -135,7 +140,6 @@ class TextField extends StatelessWidget {
   }
 }
 
-
 class EmailField extends StatelessWidget {
   final TextEditingController controller;
 
@@ -145,7 +149,6 @@ class EmailField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
-      
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -204,7 +207,6 @@ class EmailField extends StatelessWidget {
   }
 }
 
-
 class PasswordField extends StatelessWidget {
   final TextEditingController controller;
   const PasswordField({required this.controller});
@@ -224,7 +226,7 @@ class PasswordField extends StatelessWidget {
               fontSize: 13.0,
               letterSpacing: 1.5,
               height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
@@ -271,27 +273,7 @@ class PasswordField extends StatelessWidget {
   }
 }
 
-// class LoginButton extends StatelessWidget {
-//   const LoginButton({super.key});
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.symmetric(horizontal: 100),
-//       child: MaterialButton(
-//         minWidth: double.infinity,
-//         onPressed: () {},
-//         color: Colors.black,
-//         textColor: Colors.white,
-//         child: Text('Log In',
-//             style: GoogleFonts.exo(fontSize: 20, color: Colors.white)),
-//       ),
-//     );
-//   }
-// }
-
 class LoginButton extends StatelessWidget {
-
-
   final Function buttonPressed;
 
   const LoginButton({super.key, required this.buttonPressed});
@@ -301,15 +283,20 @@ class LoginButton extends StatelessWidget {
     return MaterialButton(
       minWidth: 300,
       height: 52,
-      onPressed: () async{
-        buttonPressed();
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => CustomNavigationBar(),
-            ));
+      onPressed: () async {
+        dynamic result = await buttonPressed();
+
+        if (result != null && result.uid != null) {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CustomNavigationBar(),
+              ));
+        } else {
+          print("Login failed");
+        }
       },
-      color: const Color(0xFF1264D1),
+      color: AppColors.buttonColor1,
       textColor: Colors.black,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(50.0),
@@ -327,4 +314,3 @@ class LoginButton extends StatelessWidget {
     );
   }
 }
-

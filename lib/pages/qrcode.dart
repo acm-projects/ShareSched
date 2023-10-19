@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'custom_widgets.dart';
+import 'package:myapp/colors/app_colors.dart';
 
 class QRScreen extends StatelessWidget {
   @override
@@ -31,7 +32,7 @@ class NameWidget extends StatelessWidget {
     return Text('QR Code',
         style: GoogleFonts.quicksand(
           fontSize: 32,
-          color: Colors.white,
+          color: AppColors.primaryTextColor,
           fontWeight: FontWeight.bold,
         ));
   }
