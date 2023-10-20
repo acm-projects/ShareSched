@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:time_planner/time_planner.dart';
 import 'package:myapp/colors/app_colors.dart';
 
-List<TimePlannerTask> tasks = {};
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   void addTaskButtonPressed() {

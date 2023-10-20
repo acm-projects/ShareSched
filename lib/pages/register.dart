@@ -136,11 +136,16 @@ class _RegisterFormState extends State<RegisterForm> {
   }
 }
 
-class EmailField extends StatelessWidget {
-  TextEditingController controller = TextEditingController();
+class EmailField extends StatefulWidget {
+  final TextEditingController controller;
 
-  EmailField({required this.controller});
+  EmailField({required this.controller, Key? key}) : super(key: key);
 
+  @override
+  _EmailFieldState createState() => _EmailFieldState();
+}
+
+class _EmailFieldState extends State<EmailField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -163,8 +168,9 @@ class EmailField extends StatelessWidget {
           const SizedBox(height: 5),
           // Email Text Field
           TextFormField(
-            controller: controller,
+            controller: widget.controller,
             keyboardType: TextInputType.emailAddress,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: InputDecoration(
               labelText: 'name@email.com',
               prefixIcon: Padding(
@@ -192,7 +198,9 @@ class EmailField extends StatelessWidget {
             },
             validator: (String? value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your email';
+                return 'Please enter your email.';
+              } else if (!value.contains('@')) {
+                return 'Please enter a valid email.';
               }
               return null;
             },
@@ -203,11 +211,14 @@ class EmailField extends StatelessWidget {
   }
 }
 
-class UsernameField extends StatelessWidget {
-  TextEditingController controller = TextEditingController();
+class UsernameField extends StatefulWidget {
+  final TextEditingController controller;
+  UsernameField({Key? key, required this.controller}) : super(key: key);
+  @override
+  _UsernameFieldState createState() => _UsernameFieldState();
+}
 
-  UsernameField({required this.controller});
-
+class _UsernameFieldState extends State<UsernameField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -230,8 +241,9 @@ class UsernameField extends StatelessWidget {
           const SizedBox(height: 5),
           // Username Text Field
           TextFormField(
-            controller: controller,
+            controller: widget.controller,
             keyboardType: TextInputType.emailAddress,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: InputDecoration(
               labelText: 'johndoe',
               prefixIcon: Padding(
@@ -259,7 +271,16 @@ class UsernameField extends StatelessWidget {
             },
             validator: (String? value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your username';
+                return 'Please enter your username.';
+              }
+              final RegExp regex = RegExp(r'^[a-zA-Z0-9_]+$');
+
+              if (!regex.hasMatch(value)) {
+                return 'Username must contain only alphanumeric characters.';
+              }
+
+              if (value.length > 20 || value.length < 3) {
+                return 'Username must be between 3 and 20 characters.';
               }
               return null;
             },
@@ -270,10 +291,14 @@ class UsernameField extends StatelessWidget {
   }
 }
 
-class PasswordField extends StatelessWidget {
-  TextEditingController controller = TextEditingController();
-
+class PasswordField extends StatefulWidget {
+  TextEditingController controller;
+  @override
   PasswordField({super.key, required this.controller});
+  _PasswordField createState() => _PasswordField();
+}
+
+class _PasswordField extends State<PasswordField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -281,7 +306,6 @@ class PasswordField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Username Label
           const Text(
             '   PASSWORD',
             style: TextStyle(
@@ -294,11 +318,11 @@ class PasswordField extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 5),
-          // Username Text Field
           TextFormField(
-            controller: controller,
+            controller: widget.controller,
             obscureText: true,
             keyboardType: TextInputType.emailAddress,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: InputDecoration(
               labelText: '********',
               prefixIcon: Padding(
@@ -326,7 +350,10 @@ class PasswordField extends StatelessWidget {
             },
             validator: (String? value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your password';
+                return 'Please enter your password.';
+              }
+              if (value.length < 6) {
+                return 'Password must be at least 6 characters long.';
               }
               return null;
             },
