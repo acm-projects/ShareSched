@@ -5,9 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'qrcode.dart';
 import 'package:path_provider/path_provider.dart';
 
-
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     home: UploadPic(),
   ));
 }
@@ -21,9 +20,6 @@ class UploadPic extends StatefulWidget {
 
 class UploadPicState extends State<UploadPic> {
   File? imageFile;
-
-  String? savedImagePath;
-
 
   @override
   Widget build(BuildContext context) {
@@ -118,19 +114,30 @@ class UploadPicState extends State<UploadPic> {
             // Add the "Next" ElevatedButton below the existing buttons
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => DemoApp(),
-                ));
+                if (imageFile != null) {
+                  final imageData = imageFile!.readAsBytesSync();
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DemoApp(imageData: imageData),
+                    ),
+                  );
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text("Please select an image before submitting."),
+                    ),
+                  );
+                }
               },
               child: Text(
-                  'Submit',
-                  style: GoogleFonts.exo(
-                    fontSize: 17,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  )
+                'Submit',
+                style: GoogleFonts.exo(
+                  fontSize: 17,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-
             ),
           ],
         ),
@@ -140,44 +147,19 @@ class UploadPicState extends State<UploadPic> {
 
   void getImage({required ImageSource source}) async {
     final imagePicker = ImagePicker();
-    final file = await ImagePicker().pickImage(
+    final file = await imagePicker.pickImage(
       source: source,
       maxWidth: 640,
       maxHeight: 480,
       imageQuality: 70,
     );
 
-    // Return directory path where the app can store the data
-
     if (file?.path != null) {
-      // Defines a file name "userSched" and constructs path where image will be saved
-      // file name is given as 'uploaded_schedule.jpg' - stored in apps docs library
-      final saveDirectory = await getApplicationDocumentsDirectory();
-      final userSched = 'uploaded_schedule.jpg';
-
-      savedImagePath = '${saveDirectory.path}/$userSched';
-
-      // checks if file path is null, if not, then code uses 'File'
-      // class to copy image file to the 'savedImagePath'
-
-      if (savedImagePath != null) {
-        final savedFile = File(file!.path).copy(savedImagePath!);
-        setState(() {
-          imageFile = File(file!.path);
-        });
-
-        // In the case of an error
-
-      }  else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text("Error"),
-          ),
-        );
-      }
+      final savedFile = File(file!.path);
+      setState(() {
+        imageFile = savedFile;
+      });
     }
   }
 }
-
-
 
