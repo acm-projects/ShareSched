@@ -186,17 +186,17 @@ class _TimePickerState extends State<TimePicker> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30))),
               onPressed: () => _showTimePicker(),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(
+                  Icon(
                     Icons.access_time,
                     color: Colors.white,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 8,
                   ),
-                  const Text('Pick Time',
+                  Text('Pick Time',
                       style: TextStyle(
                         fontFamily: 'Quicksand',
                         fontWeight: FontWeight.bold,
@@ -235,7 +235,7 @@ class _AddCourseButtonState extends State<AddCourseButton> {
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
             blurRadius: 10,
-            offset: Offset(0, 5),
+            offset: const Offset(0, 5),
           ),
         ],
       ),
@@ -246,7 +246,7 @@ class _AddCourseButtonState extends State<AddCourseButton> {
         minWidth: 300,
         height: 50,
         onPressed: () => widget.onPressed(),
-        child: Row(
+        child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.add_circle, color: Colors.white),
@@ -302,10 +302,10 @@ class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
             color: Colors.white,
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         DropdownButton<String>(
           borderRadius: BorderRadius.circular(30),
-          icon: Icon(Icons.arrow_drop_down, color: Colors.white),
+          icon: const Icon(Icons.arrow_drop_down, color: Colors.white),
           dropdownColor: AppColors.themeColor,
           value: selectedOption ?? days.first,
           onChanged: (String? value) {
@@ -322,8 +322,8 @@ class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
                   color: AppColors.themeColor,
                   borderRadius: BorderRadius.circular(15),
                 ),
-                margin: EdgeInsets.symmetric(vertical: 4),
-                padding: EdgeInsets.all(10),
+                margin: const EdgeInsets.symmetric(vertical: 4),
+                padding: const EdgeInsets.all(10),
                 child: Text(
                   value,
                   style: const TextStyle(
@@ -346,7 +346,7 @@ class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
 
 class _ScheduleState extends State<Schedule> {
   @override
-  String taskName = "";
+  String taskName = "", location = "";
   int day = 0, minute = 0, hour = 0;
   int minuteDuration = 90, daysDuration = 1;
   TimeOfDay selectedTime = TimeOfDay.now();
@@ -361,94 +361,6 @@ class _ScheduleState extends State<Schedule> {
   dynamic onDayChosen(int dayChosen) {
     day = dayChosen;
   }
-
-  void onTaskCreate() async {
-    TextEditingController nameController = TextEditingController();
-    TextEditingController locationController = TextEditingController();
-    await showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return Dialog(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(40.0),
-            ),
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(40),
-                gradient: const LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  colors: [
-                    AppColors.themeColor,
-                    Colors.black,
-                  ],
-                ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      TaskField(
-                        labelText: 'Course Name',
-                        name: 'Enter your course name',
-                        controller: nameController,
-                        icon: Icon(Icons.edit),
-                      ),
-                      SizedBox(
-                        height: 40,
-                      ),
-                      CustomDropDownMenu(onItemChosen: onDayChosen),
-                      SizedBox(
-                        height: 40,
-                      ),
-                      TimePicker(
-                        time: selectedTime,
-                        onTimeChanged: onTimeChanged,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TaskField(
-                          labelText: 'Location',
-                          name: 'Enter the course location',
-                          controller: locationController,
-                          icon: Icon(
-                            Icons.location_on,
-                          )),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      AddCourseButton(
-                        onPressed: () => {},
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          );
-        });
-  }
-
-  /*  tasks.add(
-      TimePlannerTask(
-          color: AppColors.getRandomColor(),
-          dateTime: TimePlannerDateTime(day: day, hour: hour, minutes: minute),
-          minutesDuration: minuteDuration,
-          daysDuration: daysDuration,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CustomText(text: taskName),
-              SizedBox(
-                height: 6,
-              ),
-            ],
-          )),
-    );*/
 
   List<TimePlannerTask> tasks = [
     TimePlannerTask(
@@ -481,6 +393,104 @@ class _ScheduleState extends State<Schedule> {
           ],
         )),
   ];
+  void onTaskCreate() async {
+    TextEditingController nameController = TextEditingController();
+    TextEditingController locationController = TextEditingController();
+    await showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Dialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(40.0),
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(40),
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    AppColors.themeColor,
+                    Colors.black,
+                  ],
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      TaskField(
+                        labelText: 'Course Name',
+                        name: 'Enter your course name',
+                        controller: nameController,
+                        icon: const Icon(Icons.edit),
+                      ),
+                      const SizedBox(
+                        height: 40,
+                      ),
+                      CustomDropDownMenu(onItemChosen: onDayChosen),
+                      const SizedBox(
+                        height: 40,
+                      ),
+                      TimePicker(
+                        time: selectedTime,
+                        onTimeChanged: onTimeChanged,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TaskField(
+                          labelText: 'Location',
+                          name: 'Enter the course location',
+                          controller: locationController,
+                          icon: const Icon(
+                            Icons.location_on,
+                          )),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      AddCourseButton(
+                        onPressed: () => {
+                          print(taskName + '\n'),
+                          setState(() {
+                            taskName = nameController.text;
+                            location = locationController.text;
+                            tasks.add(
+                              TimePlannerTask(
+                                  color: AppColors.getRandomColor(),
+                                  dateTime: TimePlannerDateTime(
+                                      day: day, hour: hour, minutes: minute),
+                                  minutesDuration: minuteDuration,
+                                  daysDuration: daysDuration,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      CustomText(text: taskName),
+                                      const SizedBox(
+                                        height: 6,
+                                      ),
+                                      CustomText(text: location),
+                                      const SizedBox(
+                                        height: 6,
+                                      ),
+                                    ],
+                                  )),
+                            );
+                          }),
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          );
+        });
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
