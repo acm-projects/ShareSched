@@ -51,6 +51,7 @@ class LoginForm extends StatefulWidget {
 class _LoginFormState extends State<LoginForm> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  String? errorMessage;
 
   @override
   void dispose() {
@@ -66,6 +67,16 @@ class _LoginFormState extends State<LoginForm> {
     String password = passwordController.text;
     dynamic result = await _auth.signInWithEmailAndPassword(email, password);
 
+    if (result == null || result.uid == null) {
+      setState(() {
+        errorMessage = 'Login failed'; // Update error message
+      });
+    } else {
+      // Navigate or perform other actions on successful login
+      setState(() {
+        errorMessage = null; // Clear error message
+      });
+    }
     print("Email: $email");
     print("Password: $password");
     print(result.uid);
@@ -93,10 +104,23 @@ class _LoginFormState extends State<LoginForm> {
               const SizedBox(height: 20),
               PasswordField(controller: passwordController),
               const SizedBox(height: 20),
+              if (errorMessage != null)
+                Column(
+                  children: [
+                    Text(
+                      errorMessage!,
+                      style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 16,
+                          fontFamily: 'Quicksand-SemiBold'),
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                ), // Conditionally display error message
               LoginButton(buttonPressed: onLoginButtonPressed),
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
               const AuthButtons(),
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
               TextField(),
               const SizedBox(height: 20),
             ],
@@ -113,8 +137,10 @@ class TextField extends StatelessWidget {
     return Text.rich(
       TextSpan(
         text: "Don't have an account? ",
-        style: GoogleFonts.quicksand(
-            fontSize: 16, color: AppColors.primaryTextColor),
+        style: const TextStyle(
+            fontFamily: 'Quicksand-SemiBold',
+            fontSize: 16,
+            color: AppColors.primaryTextColor),
         children: [
           WidgetSpan(
             child: GestureDetector(
@@ -127,10 +153,10 @@ class TextField extends StatelessWidget {
               },
               child: Text(
                 'Sign up',
-                style: GoogleFonts.quicksand(
-                  fontSize: 16,
-                  color: Colors.blue,
-                ),
+                style: const TextStyle(
+                    fontFamily: 'Quicksand-SemiBold',
+                    fontSize: 16,
+                    color: Color.fromARGB(255, 18, 101, 209)),
               ),
             ),
           ),
@@ -156,12 +182,11 @@ class EmailField extends StatelessWidget {
           const Text(
             '   EMAIL',
             style: TextStyle(
-              fontFamily: 'Mulish',
+              fontFamily: 'Mulish-ExtraBold',
               fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontSize: 12.0,
               letterSpacing: 1.5,
-              height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
@@ -221,11 +246,10 @@ class PasswordField extends StatelessWidget {
           const Text(
             '   PASSWORD',
             style: TextStyle(
-              fontFamily: 'Mulish',
+              fontFamily: 'Mulish-ExtraBold',
               fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontSize: 12.0,
               letterSpacing: 1.5,
-              height: 1.0,
               color: AppColors.primaryTextColor,
             ),
           ),
@@ -305,8 +329,7 @@ class LoginButton extends StatelessWidget {
       child: const Text(
         'LOG IN',
         style: TextStyle(
-          fontFamily: 'Mulish',
-          fontWeight: FontWeight.w700,
+          fontFamily: 'Mulish-Bold',
           fontSize: 15,
           letterSpacing: 1.25,
         ),

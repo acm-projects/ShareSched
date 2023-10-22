@@ -50,8 +50,10 @@ class TextField extends StatelessWidget {
     return Text.rich(
       TextSpan(
         text: "Already have an account? ",
-        style: GoogleFonts.quicksand(
-            fontSize: 16, color: AppColors.primaryTextColor),
+        style: const TextStyle(
+            fontFamily: 'Quicksand-SemiBold',
+            fontSize: 16,
+            color: AppColors.primaryTextColor),
         children: [
           WidgetSpan(
             child: GestureDetector(
@@ -63,10 +65,10 @@ class TextField extends StatelessWidget {
               },
               child: Text(
                 'Log in',
-                style: GoogleFonts.quicksand(
-                  fontSize: 16,
-                  color: Colors.blue,
-                ),
+                style: const TextStyle(
+                    fontFamily: 'Quicksand-SemiBold',
+                    fontSize: 16,
+                    color: Color.fromARGB(255, 18, 101, 209)),
               ),
             ),
           ),
@@ -157,11 +159,10 @@ class _EmailFieldState extends State<EmailField> {
           const Text(
             '   EMAIL',
             style: TextStyle(
-              fontFamily: 'Mulish',
+              fontFamily: 'Mulish-ExtraBold',
               fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontSize: 12.0,
               letterSpacing: 1.5,
-              height: 1.0,
               color: AppColors.primaryTextColor,
             ),
           ),
@@ -199,7 +200,9 @@ class _EmailFieldState extends State<EmailField> {
             validator: (String? value) {
               if (value == null || value.isEmpty) {
                 return 'Please enter your email.';
-              } else if (!value.contains('@')) {
+              } else if (!value.contains('@') ||
+                  !RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")
+                      .hasMatch(value)) {
                 return 'Please enter a valid email.';
               }
               return null;
@@ -230,11 +233,10 @@ class _UsernameFieldState extends State<UsernameField> {
           const Text(
             '   USERNAME',
             style: TextStyle(
-              fontFamily: 'Mulish',
+              fontFamily: 'Mulish-ExtraBold',
               fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontSize: 12.0,
               letterSpacing: 1.5,
-              height: 1.0,
               color: AppColors.primaryTextColor,
             ),
           ),
@@ -309,11 +311,10 @@ class _PasswordField extends State<PasswordField> {
           const Text(
             '   PASSWORD',
             style: TextStyle(
-              fontFamily: 'Mulish',
+              fontFamily: 'Mulish-ExtraBold',
               fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontSize: 12.0,
               letterSpacing: 1.5,
-              height: 1.0,
               color: AppColors.primaryTextColor,
             ),
           ),
@@ -393,8 +394,7 @@ class SignUpButton extends StatelessWidget {
       child: const Text(
         'SIGN UP',
         style: TextStyle(
-          fontFamily: 'Mulish',
-          fontWeight: FontWeight.w700,
+          fontFamily: 'Mulish-Bold',
           fontSize: 15,
           letterSpacing: 1.25,
         ),

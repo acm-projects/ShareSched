@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/xor/Desktop/ShareSched/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-te/values-te.xml",
+            "outputFile": "C:\\Users\\ROSHA\\Downloads\\ui\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-te\\values-te.xml",
             "map": [
                 {
-                    "source": "/home/xor/.gradle/caches/transforms-3/99cdbd474747f52e26e72418b05a81c3/transformed/jetified-play-services-basement-18.1.0/res/values-te/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "135",
-                        "endOffsets": "330"
-                    },
-                    "to": {
-                        "startLines": "17",
-                        "startColumns": "4",
-                        "startOffsets": "1781",
-                        "endColumns": "139",
-                        "endOffsets": "1916"
-                    }
-                },
-                {
-                    "source": "/home/xor/.gradle/caches/transforms-3/5c3021716831bdbe27f37cd88778270f/transformed/core-1.10.1/res/values-te/values-te.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,157,265,367,468,574,681,805",
-                        "endColumns": "101,107,101,100,105,106,123,100",
-                        "endOffsets": "152,260,362,463,569,676,800,901"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,31",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,157,265,367,468,574,681,3432",
-                        "endColumns": "101,107,101,100,105,106,123,100",
-                        "endOffsets": "152,260,362,463,569,676,800,3528"
-                    }
-                },
-                {
-                    "source": "/home/xor/.gradle/caches/transforms-3/cd3a5b5b625ea423d9d536a71316b131/transformed/browser-1.4.0/res/values-te/values-te.xml",
+                    "source": "C:\\Users\\ROSHA\\.gradle\\caches\\transforms-3\\cd3a5b5b625ea423d9d536a71316b131\\transformed\\browser-1.4.0\\res\\values-te\\values-te.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -55,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/xor/.gradle/caches/transforms-3/1b925a0e1c8efcc465a999a38c4c1633/transformed/jetified-play-services-base-18.0.1/res/values-te/values.xml",
+                    "source": "C:\\Users\\ROSHA\\.gradle\\caches\\transforms-3\\1b925a0e1c8efcc465a999a38c4c1633\\transformed\\jetified-play-services-base-18.0.1\\res\\values-te\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -69,6 +35,40 @@
                         "startOffsets": "805,915,1069,1199,1314,1451,1576,1681,1921,2070,2182,2335,2467,2618,2781,2845,2915",
                         "endColumns": "109,153,129,114,136,124,104,99,148,111,152,131,150,162,63,69,81",
                         "endOffsets": "910,1064,1194,1309,1446,1571,1676,1776,2065,2177,2330,2462,2613,2776,2840,2910,2992"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ROSHA\\.gradle\\caches\\transforms-3\\5c3021716831bdbe27f37cd88778270f\\transformed\\core-1.10.1\\res\\values-te\\values-te.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,157,265,367,468,574,681,805",
+                        "endColumns": "101,107,101,100,105,106,123,100",
+                        "endOffsets": "152,260,362,463,569,676,800,901"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,31",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,157,265,367,468,574,681,3432",
+                        "endColumns": "101,107,101,100,105,106,123,100",
+                        "endOffsets": "152,260,362,463,569,676,800,3528"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ROSHA\\.gradle\\caches\\transforms-3\\99cdbd474747f52e26e72418b05a81c3\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-te\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "135",
+                        "endOffsets": "330"
+                    },
+                    "to": {
+                        "startLines": "17",
+                        "startColumns": "4",
+                        "startOffsets": "1781",
+                        "endColumns": "139",
+                        "endOffsets": "1916"
                     }
                 }
             ]

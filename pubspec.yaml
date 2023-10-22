@@ -66,7 +66,18 @@ flutter:
     - family: Quicksand
       fonts:
         - asset: assets/page-1/fonts/Quicksand-VariableFont_wght.ttf
-
+    - family: Mulish
+      fonts:
+        - asset: assets/page-1/fonts/Mulish-VariableFont_wght.ttf
+    - family: Mulish-Bold
+      fonts:
+        - asset: assets/page-1/fonts/Mulish-Bold.ttf
+    - family: Mulish-ExtraBold
+      fonts:
+        - asset: assets/page-1/fonts/Mulish-ExtraBold.ttf
+    - family: Quicksand-SemiBold
+      fonts:
+        - asset: assets/page-1/fonts/Quicksand-SemiBold.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -97,7 +108,9 @@ flutter:
     - assets/page-1/images/custom/facebook.png
     - assets/page-1/images/custom/google.png
     - assets/page-1/images/custom/home.png
+    - assets/page-1/images/custom/home2.png
     - assets/page-1/images/custom/profile.png
+    - assets/page-1/images/custom/profile2.png
     - assets/page-1/images/custom/modal.png
     - assets/page-1/images/custom/logo_2.png
     - assets/page-1/images/ocr.png

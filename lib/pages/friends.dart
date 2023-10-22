@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'custom_widgets.dart';
+import 'package:myapp/colors/app_colors.dart';
 
 class FriendScreen extends StatefulWidget {
   @override
@@ -84,9 +85,9 @@ class _SearchFormState extends State<SearchForm> {
         Form(
           child: Column(
             children: [
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               AddFriendsField(controller: friendName),
-              const SizedBox(height: 70),
+              const SizedBox(height: 60),
               SearchButton(
                 buttonPressed: onSearchButtonPressed,
               ),
@@ -114,15 +115,14 @@ class AddFriendsField extends StatelessWidget {
           const Text(
             '   SEARCH',
             style: TextStyle(
-              fontFamily: 'Mulish',
-              fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontFamily: 'Mulish-ExtraBold',
+              fontSize: 12.0,
               letterSpacing: 1.5,
               height: 1.0,
               color: Colors.white,
             ),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 7),
           // Username Text Field
           TextFormField(
             controller: controller,
@@ -183,11 +183,12 @@ class SearchButton extends StatelessWidget {
         child: const Text(
           'SEARCH',
           style: TextStyle(
-            fontFamily: 'Mulish',
-            fontWeight: FontWeight.w700,
-            fontSize: 15,
-            letterSpacing: 1.25,
-          ),
+              fontFamily: 'Mulish-Bold',
+              fontWeight: FontWeight.w800,
+              fontSize: 15,
+              letterSpacing: 1.25,
+              height: 1.0,
+              color: AppColors.secondaryTextColor),
         ));
   }
 }

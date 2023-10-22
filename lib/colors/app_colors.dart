@@ -9,6 +9,8 @@ class AppColors {
         _random.nextInt(256), _random.nextInt(256));
   }
 
+  static const Color themeColor = Color.fromRGBO(53, 51, 205, 1);
+
   // Background color
   static const Color backgroundColor = Colors.black;
 
