@@ -119,7 +119,7 @@ class UploadPicState extends State<UploadPic> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DemoApp(imageData: imageData),
+                      builder: (context) => QrCode(imageData: imageData),
                     ),
                   );
                 } else {

@@ -3,10 +3,10 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-class DemoApp extends StatelessWidget {
+class QrCode extends StatelessWidget {
   final Uint8List imageData;
 
-  DemoApp({required this.imageData});
+  QrCode({required this.imageData});
 
   @override
   Widget build(BuildContext context) {
