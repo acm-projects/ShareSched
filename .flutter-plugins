@@ -1,16 +1,18 @@
 # This is a generated file; do not edit or check into version control.
-cloud_firestore=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\cloud_firestore-4.9.2\\
-cloud_firestore_web=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\cloud_firestore_web-3.7.1\\
+cloud_firestore=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\cloud_firestore-4.11.0\\
+cloud_firestore_web=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\cloud_firestore_web-3.8.1\\
+cloud_functions=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\cloud_functions-4.5.1\\
+cloud_functions_web=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\cloud_functions_web-4.6.4\\
 file_selector_linux=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\file_selector_linux-0.9.2+1\\
 file_selector_macos=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\file_selector_macos-0.9.3+3\\
 file_selector_windows=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\file_selector_windows-0.9.3+1\\
-firebase_auth=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_auth-4.10.0\\
-firebase_auth_web=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_auth_web-5.8.1\\
-firebase_core=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_core-2.17.0\\
-firebase_core_web=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_core_web-2.8.0\\
+firebase_auth=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_auth-4.11.1\\
+firebase_auth_web=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_auth_web-5.8.4\\
+firebase_core=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_core-2.19.0\\
+firebase_core_web=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_core_web-2.8.1\\
 firebase_ml_vision=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_ml_vision-0.12.0+3\\
-firebase_storage=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_storage-11.2.8\\
-firebase_storage_web=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_storage_web-3.6.8\\
+firebase_storage=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_storage-11.3.1\\
+firebase_storage_web=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_storage_web-3.6.10\\
 flutter_plugin_android_lifecycle=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\flutter_plugin_android_lifecycle-2.0.16\\
 google_mlkit_barcode_scanning=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\google_mlkit_barcode_scanning-0.9.0\\
 google_mlkit_commons=C:\\Users\\nadee\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\google_mlkit_commons-0.5.0\\
