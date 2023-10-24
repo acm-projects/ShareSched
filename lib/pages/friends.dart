@@ -3,6 +3,127 @@ import 'package:google_fonts/google_fonts.dart';
 import 'custom_widgets.dart';
 import 'package:myapp/colors/app_colors.dart';
 
+class Friend {
+  final String id;
+  final String name;
+  final String email;
+  final String status; // can be 'Online', 'Offline', etc.
+  final String imageUrl;
+
+  Friend({
+    required this.id,
+    required this.name,
+    required this.email,
+    required this.status,
+    required this.imageUrl,
+  });
+}
+
+class FriendModal extends StatefulWidget {
+  _FriendModalState createState() => _FriendModalState();
+}
+
+class _FriendModalState extends State<FriendModal> {
+  List<Friend> friendsList = [
+    Friend(
+        id: '1',
+        email: 'xor@gmail.com',
+        name: 'xor',
+        status: 'online',
+        imageUrl:
+            'https://images-ext-2.discordapp.net/external/YsCYJaiMfN5jYAiXQCki5mhOHlcvTwb5qwpnlUf6-fE/%3Fsize%3D128/https/cdn.discordapp.com/avatars/94487068729679872/9917684b0587481351ef72462ca57175.png?width=160&height=160'),
+    Friend(
+        id: '3',
+        email: 'josh@gmail.com',
+        name: 'Josh',
+        status: 'offline',
+        imageUrl: 'url_to_image_of_'),
+  ];
+
+  Future<List<Friend>> getFriendsFromDatabase() async {
+    // database logic to retrieve the list of friends.
+    List<Friend> friendsList = [
+      Friend(
+          id: '1',
+          email: 'alice@gmail.com',
+          name: 'Alice',
+          status: 'online',
+          imageUrl: 'url_to_image_of_Alice'),
+      Friend(
+          id: '2',
+          email: 'bob@gmail.com',
+          name: 'Bob',
+          status: 'offline',
+          imageUrl: 'url_to_image_of_Bob'),
+    ];
+    return friendsList;
+  }
+
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: friendsList.length,
+      itemBuilder: (context, index) {
+        return Column(
+          children: [
+            ListTile(
+              title: Padding(
+                padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 2),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(150, 80),
+                    backgroundColor: Colors.transparent,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                    ),
+                  ),
+                  onPressed: () => {},
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage:
+                            NetworkImage(friendsList[index].imageUrl),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(friendsList[index].name,
+                          style: const TextStyle(
+                            fontFamily: 'Quicksand',
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.primaryTextColor,
+                          )),
+                      Spacer(),
+                      // Status indicator
+                      Container(
+                        width: 10,
+                        height: 10,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: friendsList[index].status == 'online'
+                              ? Colors.green
+                              : friendsList[index].status == 'dnd'
+                                  ? Colors.red
+                                  : Color.fromARGB(255, 149, 149, 149),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            // Add a divider
+            Divider(
+              color: Colors.grey,
+              thickness: 1.0,
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+
 class FriendScreen extends StatefulWidget {
   @override
   _FriendScreenState createState() => _FriendScreenState();
@@ -27,6 +148,8 @@ class _FriendScreenState extends State<FriendScreen> {
           SingleChildScrollView(
             keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FriendWidget(toggleAddFriend: toggleAddFriend),
                 addFriendSelected
@@ -35,15 +158,21 @@ class _FriendScreenState extends State<FriendScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const SizedBox(height: 50),
-                          Text('Friends',
-                              style: GoogleFonts.quicksand(
-                                fontSize: 32,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              )),
-                        ],
-                      )
+                            const SizedBox(height: 20),
+                            Text('Friends',
+                                style: GoogleFonts.quicksand(
+                                  fontSize: 32,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                )),
+                            SizedBox(height: 30),
+                            Container(
+                              alignment: Alignment.center,
+                              height: 800,
+                              width: 400,
+                              child: FriendModal(),
+                            )
+                          ])
               ],
             ),
           ),
@@ -238,7 +367,7 @@ class _FriendWidgetState extends State<FriendWidget> {
               side: const BorderSide(
                   color: Color.fromARGB(99, 255, 255, 255), width: 2.0)),
           child: Icon(
-            Icons.person,
+            Icons.group,
             size: 30,
             color: (viewFriendSelected
                 ? Colors.white

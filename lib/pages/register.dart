@@ -63,9 +63,9 @@ class TextField extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const LoginScreen()),
                 );
               },
-              child: Text(
+              child: const Text(
                 'Log in',
-                style: const TextStyle(
+                style: TextStyle(
                     fontFamily: 'Quicksand-SemiBold',
                     fontSize: 16,
                     color: Color.fromARGB(255, 18, 101, 209)),
@@ -87,6 +87,7 @@ class _RegisterFormState extends State<RegisterForm> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  String? errorMessage;
   dynamic onSignUpButtonPressed() async {
     final AuthService _auth = AuthService();
     // save registration details to database here?
@@ -94,7 +95,16 @@ class _RegisterFormState extends State<RegisterForm> {
     String username = usernameController.text;
     String password = passwordController.text;
     dynamic result = await _auth.registerWithEmailAndPassword(email, password);
-
+    if (result == null || result.uid == null) {
+      setState(() {
+        errorMessage = 'Registration failed'; // Update error message
+      });
+    } else {
+      // Navigate or perform other actions on successful login
+      setState(() {
+        errorMessage = null; // Clear error message
+      });
+    }
     print("Email: $email");
     print("Username: $username");
     print("Password: $password");
@@ -127,7 +137,19 @@ class _RegisterFormState extends State<RegisterForm> {
               const SizedBox(height: 20),
               PasswordField(controller: passwordController),
               const SizedBox(height: 20),
-              SignUpButton(buttonPressed: onSignUpButtonPressed),
+              SignUpButton(
+                buttonPressed: onSignUpButtonPressed,
+                errorMessage: errorMessage,
+              ),
+              const SizedBox(height: 20),
+              if (errorMessage != null)
+                Text(
+                  errorMessage!,
+                  style: const TextStyle(
+                      color: Colors.red,
+                      fontSize: 16,
+                      fontFamily: 'Quicksand-SemiBold'),
+                ),
               const SizedBox(height: 20),
               const AuthButtons(),
             ],
@@ -366,39 +388,41 @@ class _PasswordField extends State<PasswordField> {
 }
 
 class SignUpButton extends StatelessWidget {
-  const SignUpButton({required this.buttonPressed});
-
+  SignUpButton({required this.buttonPressed, required this.errorMessage});
   final Function buttonPressed;
-
+  String? errorMessage;
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      minWidth: 335,
-      height: 52,
-      onPressed: () async {
-        dynamic result = await buttonPressed();
-        if (result != null && result.uid != null) {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => UploadScreen()));
-          print("Sign up successful");
-        } else {
-          print("Sign up unsuccessful");
-        }
-      },
-      color: AppColors.buttonColor1,
-      textColor: AppColors.secondaryTextColor,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(50.0),
-        side: const BorderSide(color: Colors.black, width: 0.3),
-      ),
-      child: const Text(
-        'SIGN UP',
-        style: TextStyle(
-          fontFamily: 'Mulish-Bold',
-          fontSize: 15,
-          letterSpacing: 1.25,
-        ),
-      ),
+    return Column(
+      children: [
+        MaterialButton(
+            minWidth: 335,
+            height: 52,
+            onPressed: () async {
+              dynamic result = await buttonPressed();
+              if (result != null && result.uid != null) {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => UploadScreen()));
+                print("Sign up successful");
+              } else {
+                print("Sign up unsuccessful");
+              }
+            },
+            color: AppColors.buttonColor1,
+            textColor: AppColors.secondaryTextColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50.0),
+              side: const BorderSide(color: Colors.black, width: 0.3),
+            ),
+            child: const Text(
+              'SIGN UP',
+              style: TextStyle(
+                fontFamily: 'Mulish-Bold',
+                fontSize: 15,
+                letterSpacing: 1.25,
+              ),
+            )),
+      ],
     );
   }
 }

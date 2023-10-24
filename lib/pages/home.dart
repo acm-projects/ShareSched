@@ -3,6 +3,26 @@ import 'package:time_planner/time_planner.dart';
 import 'package:myapp/colors/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+class Task {
+  final String name;
+  final String location;
+  final int day;
+  final int minute;
+  final int hour;
+  final int minuteDuration;
+  final int daysDuration;
+  int? professorName;
+  Task({
+    required this.name,
+    required this.location,
+    required this.day,
+    required this.minute,
+    required this.hour,
+    required this.minuteDuration,
+    required this.daysDuration,
+  });
+}
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   void addTaskButtonPressed() {
@@ -457,23 +477,34 @@ class _ScheduleState extends State<Schedule> {
                           setState(() {
                             taskName = nameController.text;
                             location = locationController.text;
+                            Task t = Task(
+                                name: taskName,
+                                location: location,
+                                day: day,
+                                hour: hour,
+                                minute: minute,
+                                minuteDuration: minuteDuration,
+                                daysDuration: daysDuration);
+
                             tasks.add(
                               TimePlannerTask(
                                   color: AppColors.getRandomColor(),
                                   dateTime: TimePlannerDateTime(
-                                      day: day, hour: hour, minutes: minute),
-                                  minutesDuration: minuteDuration,
-                                  daysDuration: daysDuration,
+                                      day: t.day,
+                                      hour: t.hour,
+                                      minutes: t.minute),
+                                  minutesDuration: t.minuteDuration,
+                                  daysDuration: t.daysDuration,
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
                                     children: [
-                                      CustomText(text: taskName),
+                                      CustomText(text: t.name),
                                       const SizedBox(
                                         height: 6,
                                       ),
-                                      CustomText(text: location),
+                                      CustomText(text: t.location),
                                       const SizedBox(
                                         height: 6,
                                       ),

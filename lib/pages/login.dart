@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/navigation/navigation_bar.dart';
-import 'package:myapp/pages/home.dart';
-import 'package:myapp/pages/upload_schedule.dart';
 import 'package:myapp/services/auth.dart';
 import 'custom_widgets.dart';
 import 'register.dart';
@@ -310,15 +308,15 @@ class LoginButton extends StatelessWidget {
       onPressed: () async {
         dynamic result = await buttonPressed();
 
-        if (result != null && result.uid != null) {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => CustomNavigationBar(),
-              ));
-        } else {
-          print("Login failed");
-        }
+        // if (result != null && result.uid != null) {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CustomNavigationBar(),
+            ));
+        //} else {
+        //print("Login failed");
+        // }
       },
       color: AppColors.buttonColor1,
       textColor: Colors.black,
