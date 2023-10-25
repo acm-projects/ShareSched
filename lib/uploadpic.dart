@@ -2,14 +2,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:random_string/random_string.dart';
 import 'qrcode.dart';
-import 'package:path_provider/path_provider.dart';
-
-void main() {
-  runApp(MaterialApp(
-    home: UploadPic(),
-  ));
-}
 
 class UploadPic extends StatefulWidget {
   const UploadPic({Key? key}) : super(key: key);
@@ -20,6 +14,41 @@ class UploadPic extends StatefulWidget {
 
 class UploadPicState extends State<UploadPic> {
   File? imageFile;
+  String qrData = "";
+
+  // Function to generate a random QR code
+
+  void generateRandomQRCode() {
+
+    // Generate a random string as data for the QR code
+
+    qrData = randomAlpha(10);
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => QRCodePage(qrData: qrData),
+      ),
+    );
+  }
+
+  // Function to capture an image
+
+  void getImage({required ImageSource source}) async {
+    final imagePicker = ImagePicker();
+    final file = await imagePicker.pickImage(
+      source: source,
+      maxWidth: 640,
+      maxHeight: 480,
+      imageQuality: 70,
+    );
+
+    if (file?.path != null) {
+      final savedFile = File(file!.path);
+      setState(() {
+        imageFile = savedFile;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +115,7 @@ class UploadPicState extends State<UploadPic> {
                       'Capture Image',
                       style: GoogleFonts.exo(
                         fontSize: 17,
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -100,7 +129,7 @@ class UploadPicState extends State<UploadPic> {
                       'Select Image',
                       style: GoogleFonts.exo(
                         fontSize: 17,
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -111,30 +140,15 @@ class UploadPicState extends State<UploadPic> {
             const SizedBox(
               height: 10,
             ),
-            // Add the "Next" ElevatedButton below the existing buttons
             ElevatedButton(
               onPressed: () {
-                if (imageFile != null) {
-                  final imageData = imageFile!.readAsBytesSync();
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => QrCode(imageData: imageData),
-                    ),
-                  );
-                } else {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text("Please select an image before submitting."),
-                    ),
-                  );
-                }
+                generateRandomQRCode();
               },
               child: Text(
                 'Submit',
                 style: GoogleFonts.exo(
                   fontSize: 17,
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -144,22 +158,4 @@ class UploadPicState extends State<UploadPic> {
       ),
     );
   }
-
-  void getImage({required ImageSource source}) async {
-    final imagePicker = ImagePicker();
-    final file = await imagePicker.pickImage(
-      source: source,
-      maxWidth: 640,
-      maxHeight: 480,
-      imageQuality: 70,
-    );
-
-    if (file?.path != null) {
-      final savedFile = File(file!.path);
-      setState(() {
-        imageFile = savedFile;
-      });
-    }
-  }
 }
-
