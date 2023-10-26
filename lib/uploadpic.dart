@@ -1,9 +1,17 @@
+
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:random_string/random_string.dart';
+import 'package:login_screen_sharesched/newuser.dart';
 import 'qrcode.dart';
+import 'package:path_provider/path_provider.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: UploadPic(),
+  ));
+}
 
 class UploadPic extends StatefulWidget {
   const UploadPic({Key? key}) : super(key: key);
@@ -14,41 +22,6 @@ class UploadPic extends StatefulWidget {
 
 class UploadPicState extends State<UploadPic> {
   File? imageFile;
-  String qrData = "";
-
-  // Function to generate a random QR code
-
-  void generateRandomQRCode() {
-
-    // Generate a random string as data for the QR code
-
-    qrData = randomAlpha(10);
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => QRCodePage(qrData: qrData),
-      ),
-    );
-  }
-
-  // Function to capture an image
-
-  void getImage({required ImageSource source}) async {
-    final imagePicker = ImagePicker();
-    final file = await imagePicker.pickImage(
-      source: source,
-      maxWidth: 640,
-      maxHeight: 480,
-      imageQuality: 70,
-    );
-
-    if (file?.path != null) {
-      final savedFile = File(file!.path);
-      setState(() {
-        imageFile = savedFile;
-      });
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +36,17 @@ class UploadPicState extends State<UploadPic> {
         ),
         centerTitle: true,
         backgroundColor: Colors.blue[800],
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) => newuser(),
+            ));
+          },
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -142,7 +126,16 @@ class UploadPicState extends State<UploadPic> {
             ),
             ElevatedButton(
               onPressed: () {
-                generateRandomQRCode();
+                if (imageFile != null) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ),
+                  );
+                } else {
+
+                }
               },
               child: Text(
                 'Submit',
@@ -158,4 +151,23 @@ class UploadPicState extends State<UploadPic> {
       ),
     );
   }
+
+  void getImage({required ImageSource source}) async {
+    final imagePicker = ImagePicker();
+    final file = await imagePicker.pickImage(
+      source: source,
+      maxWidth: 640,
+      maxHeight: 480,
+      imageQuality: 70,
+    );
+
+    if (file?.path != null) {
+      final savedFile = File(file!.path);
+      setState(() {
+        imageFile = savedFile;
+      });
+    }
+  }
 }
+
+
