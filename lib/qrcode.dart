@@ -32,12 +32,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey globalKey = GlobalKey();
   String qrData = "";
+  String scannedData = "";
 
   Future<void> scanQRCode() async {
     try {
       final result = await BarcodeScanner.scan();
       setState(() {
-        qrData = result.rawContent ?? "";
+        scannedData = result.rawContent ?? "";
       });
     } on Exception catch (e) {
       // Handle exceptions
@@ -97,7 +98,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   });
                 },
               ),
-
             ),
             SizedBox(height: 30),
             ElevatedButton(
@@ -111,6 +111,18 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: scanQRCode,
               child: Text("SCAN QR CODE"),
             ),
+            SizedBox(height: 20),
+            if (scannedData.isNotEmpty)
+              Container(
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 1.0),
+                ),
+                child: Text(
+                  "Scanned Data: $scannedData",
+                  style: TextStyle(fontSize: 16, color: Colors.white),
+                ),
+              ),
           ],
         ),
       ),
