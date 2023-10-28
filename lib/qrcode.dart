@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:barcode_scan2/barcode_scan2.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "QR Code Generator",
+      title: "QR Code Generator and Scanner",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -32,6 +33,18 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey globalKey = GlobalKey();
   String qrData = "";
 
+  Future<void> scanQRCode() async {
+    try {
+      final result = await BarcodeScanner.scan();
+      setState(() {
+        qrData = result.rawContent ?? "";
+      });
+    } on Exception catch (e) {
+      // Handle exceptions
+      print("Error: $e");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Center(
                   child: qrData.isEmpty
                       ? Text(
-                    "Enter Data",
+                    "Enter Username / Scan QR",
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   )
                       : Container(
@@ -84,13 +97,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   });
                 },
               ),
+
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
 
               },
               child: Text("SAVE"),
+            ),
+            SizedBox(height: 15),
+            ElevatedButton(
+              onPressed: scanQRCode,
+              child: Text("SCAN QR CODE"),
             ),
           ],
         ),
