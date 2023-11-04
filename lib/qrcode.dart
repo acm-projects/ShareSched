@@ -1,38 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:barcode_scan2/barcode_scan2.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'dart:math';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key});
+class QrPage extends StatefulWidget {
+  const QrPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "QR Code Generator and Scanner",
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomeScreen(),
-    );
-  }
+  State<QrPage> createState() => _QrScreenState();
 }
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key});
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
+class _QrScreenState extends State<QrPage> {
   final GlobalKey globalKey = GlobalKey();
   String qrData = "";
   String scannedData = "";
+
+  TextStyle textStyle = GoogleFonts.quicksand(
+    fontSize: 32,
+    color: Colors.white,
+    fontWeight: FontWeight.bold,
+  );
+
+
+  void onGenerateButtonPressed() {
+    final random = Random();
+    final randomString = String.fromCharCodes(
+      List.generate(10, (index) => random.nextInt(26) + 65),
+    );
+
+    setState(() {
+      qrData = randomString;
+    });
+  }
+
 
   Future<void> scanQRCode() async {
     try {
@@ -41,10 +43,10 @@ class _HomeScreenState extends State<HomeScreen> {
         scannedData = result.rawContent ?? "";
       });
     } on Exception catch (e) {
-      // Handle exceptions
       print("Error: $e");
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -57,74 +59,110 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 30),
+            const SizedBox(
+              height: 140,
+            ),
+            Text("ShareSched QR",
+              style: textStyle,
+            ),
+            SizedBox(height: 32),
             RepaintBoundary(
               key: globalKey,
               child: Container(
                 color: Colors.black,
                 child: Center(
                   child: qrData.isEmpty
-                      ? Text(
-                    "Enter Username / Scan QR",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  )
+                      ? SizedBox.shrink()
                       : Container(
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.white, width: 3.0),
+                      border: Border.all(color: Colors.white, width: 3),
                     ),
                     child: QrImage(
                       data: qrData,
                       version: QrVersions.auto,
                       size: 175,
-                      foregroundColor: Colors.white,
+                      foregroundColor: Colors.blue[800],
                     ),
                   ),
                 ),
               ),
             ),
             SizedBox(height: 50),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.8,
-              child: TextField(
-                style: TextStyle(color: Colors.white),
-                decoration: InputDecoration(
-                  hintText: "Enter Data",
-                  border: OutlineInputBorder(),
-                  hintStyle: TextStyle(color: Colors.white),
-                ),
-                onChanged: (value) {
-                  setState(() {
-                    qrData = value;
-                  });
-                },
-              ),
-            ),
-            SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-
-              },
-              child: Text("SAVE"),
-            ),
+            GenerateButton(onGenerateButtonPressed),
             SizedBox(height: 15),
-            ElevatedButton(
-              onPressed: scanQRCode,
-              child: Text("SCAN QR CODE"),
-            ),
+            ScanQRButton(scanQRCode),
             SizedBox(height: 20),
             if (scannedData.isNotEmpty)
-              Container(
-                padding: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 1.0),
-                ),
-                child: Text(
-                  "Scanned Data: $scannedData",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                ),
-              ),
+              ScannedDataContainer(scannedData),
           ],
         ),
+      ),
+    );
+  }
+}
+
+
+
+class GenerateButton extends StatelessWidget {
+  final VoidCallback onPressed;
+
+  GenerateButton(this.onPressed);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        primary: Colors.blue[900],
+      ),
+      child: Text("GENERATE",
+        style: TextStyle(
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+
+
+
+class ScanQRButton extends StatelessWidget {
+  final VoidCallback onPressed;
+
+  ScanQRButton(this.onPressed);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        primary: Colors.blue[900],
+      ),
+      child: Text("SCAN QR CODE",
+        style: TextStyle(
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+
+
+
+class ScannedDataContainer extends StatelessWidget {
+  final String scannedData;
+
+  ScannedDataContainer(this.scannedData);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white, width: 1.0),
+      ),
+      child: Text("Scanned Data: $scannedData",
+        style: TextStyle(fontSize: 16, color: Colors.white),
       ),
     );
   }
