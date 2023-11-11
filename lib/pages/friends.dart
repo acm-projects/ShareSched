@@ -2,60 +2,70 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'custom_widgets.dart';
 import 'package:myapp/colors/app_colors.dart';
-
-class Friend {
-  final String id;
-  final String name;
-  final String email;
-  final String status; // can be 'Online', 'Offline', etc.
-  final String imageUrl;
-
-  Friend({
-    required this.id,
-    required this.name,
-    required this.email,
-    required this.status,
-    required this.imageUrl,
-  });
-}
+import 'package:myapp/models/friend.dart';
 
 class FriendModal extends StatefulWidget {
+  final Offset? position;
+  final Friend? friend;
+
+  const FriendModal({required this.friend, required this.position});
   _FriendModalState createState() => _FriendModalState();
 }
 
 class _FriendModalState extends State<FriendModal> {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Positioned(
+          left: widget.position?.dx,
+          top: widget.position?.dy,
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(40.0),
+            ),
+            child: DefaultTextStyle(
+              style: const TextStyle(
+                fontFamily: 'Quicksand',
+                fontWeight: FontWeight.bold,
+                fontSize: 13.0,
+                letterSpacing: 1.5,
+                height: 1.0,
+                color: Colors.white,
+              ),
+              child: Text(widget.friend?.name ?? "No Friend Info"),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class FriendWidget extends StatefulWidget {
+  _FriendWidgetState createState() => _FriendWidgetState();
+}
+
+class _FriendWidgetState extends State<FriendWidget> {
+  Offset? _tapPosition;
   List<Friend> friendsList = [
     Friend(
         id: '1',
-        email: 'xor@gmail.com',
         name: 'xor',
         status: 'online',
-        imageUrl:
+        avatarURL:
             'https://images-ext-2.discordapp.net/external/YsCYJaiMfN5jYAiXQCki5mhOHlcvTwb5qwpnlUf6-fE/%3Fsize%3D128/https/cdn.discordapp.com/avatars/94487068729679872/9917684b0587481351ef72462ca57175.png?width=160&height=160'),
     Friend(
         id: '3',
-        email: 'josh@gmail.com',
         name: 'Josh',
         status: 'offline',
-        imageUrl: 'url_to_image_of_'),
+        avatarURL: 'url_to_image_of_'),
   ];
 
   Future<List<Friend>> getFriendsFromDatabase() async {
     // database logic to retrieve the list of friends.
-    List<Friend> friendsList = [
-      Friend(
-          id: '1',
-          email: 'alice@gmail.com',
-          name: 'Alice',
-          status: 'online',
-          imageUrl: 'url_to_image_of_Alice'),
-      Friend(
-          id: '2',
-          email: 'bob@gmail.com',
-          name: 'Bob',
-          status: 'offline',
-          imageUrl: 'url_to_image_of_Bob'),
-    ];
+    List<Friend> friendsList = [];
     return friendsList;
   }
 
@@ -66,8 +76,9 @@ class _FriendModalState extends State<FriendModal> {
         return Column(
           children: [
             ListTile(
-              title: Padding(
-                padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 2),
+                title: Padding(
+              padding: EdgeInsets.symmetric(vertical: 15.0, horizontal: 2),
+              child: GestureDetector(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     fixedSize: Size(150, 80),
@@ -76,12 +87,25 @@ class _FriendModalState extends State<FriendModal> {
                       borderRadius: BorderRadius.circular(25.0),
                     ),
                   ),
-                  onPressed: () => {},
+                  onPressed: () {
+                    final RenderBox renderBox =
+                        context.findRenderObject() as RenderBox;
+                    final Offset localPosition =
+                        renderBox.localToGlobal(Offset.zero);
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return FriendModal(
+                            friend: friendsList[index],
+                            position: localPosition,
+                          );
+                        });
+                  },
                   child: Row(
                     children: [
                       CircleAvatar(
                         backgroundImage:
-                            NetworkImage(friendsList[index].imageUrl),
+                            NetworkImage(friendsList[index].avatarURL),
                       ),
                       SizedBox(
                         width: 20,
@@ -111,7 +135,7 @@ class _FriendModalState extends State<FriendModal> {
                   ),
                 ),
               ),
-            ),
+            )),
             // Add a divider
             Divider(
               color: Colors.grey,
@@ -151,7 +175,7 @@ class _FriendScreenState extends State<FriendScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                FriendWidget(toggleAddFriend: toggleAddFriend),
+                FriendNavigationButton(toggleAddFriend: toggleAddFriend),
                 addFriendSelected
                     ? Center(child: SearchForm())
                     : Column(
@@ -170,7 +194,7 @@ class _FriendScreenState extends State<FriendScreen> {
                               alignment: Alignment.center,
                               height: 800,
                               width: 400,
-                              child: FriendModal(),
+                              child: FriendWidget(),
                             )
                           ])
               ],
@@ -322,15 +346,15 @@ class SearchButton extends StatelessWidget {
   }
 }
 
-class FriendWidget extends StatefulWidget {
+class FriendNavigationButton extends StatefulWidget {
   final Function toggleAddFriend;
-  FriendWidget({required this.toggleAddFriend});
+  const FriendNavigationButton({required this.toggleAddFriend});
 
   @override
-  _FriendWidgetState createState() => _FriendWidgetState();
+  _FriendNavigationButtonState createState() => _FriendNavigationButtonState();
 }
 
-class _FriendWidgetState extends State<FriendWidget> {
+class _FriendNavigationButtonState extends State<FriendNavigationButton> {
   @override
   bool viewFriendSelected = true;
   bool addFriendSelected = false;
@@ -406,7 +430,7 @@ class _FriendWidgetState extends State<FriendWidget> {
 }
 
 class FriendIcon extends StatelessWidget {
-  FriendIcon({super.key});
+  const FriendIcon({super.key});
 
   @override
   Widget build(BuildContext build) {

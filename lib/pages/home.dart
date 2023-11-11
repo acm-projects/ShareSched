@@ -1,90 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:time_planner/time_planner.dart';
 import 'package:myapp/colors/app_colors.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/providers/schedule_provider.dart';
+import 'package:myapp/models/schedule.dart';
+import 'package:myapp/models/course.dart';
 
-class Task {
-  final String name;
-  final String location;
-  final int day;
-  final int minute;
-  final int hour;
-  final int minuteDuration;
-  final int daysDuration;
-  int? professorName;
-  Task({
-    required this.name,
-    required this.location,
-    required this.day,
-    required this.minute,
-    required this.hour,
-    required this.minuteDuration,
-    required this.daysDuration,
-  });
-}
+final scheduleNotifierProvider =
+    StateNotifierProvider<ScheduleNotifier, Schedule>(
+        (ref) => ScheduleNotifier());
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
-  void addTaskButtonPressed() {
-    print('Pressed add task button');
-  }
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Schedule(),
+      body: _Schedule(),
     );
   }
-}
-
-class CustomText extends StatelessWidget {
-  final String text;
-  final double fontSize;
-  final Color color;
-  final FontWeight fontWeight;
-  final double letterSpacing;
-
-  const CustomText({
-    Key? key,
-    required this.text,
-    this.fontSize = 12.0,
-    this.color = AppColors.primaryTextColor,
-    this.fontWeight = FontWeight.bold,
-    this.letterSpacing = 1.5,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.2),
-            spreadRadius: 1,
-            blurRadius: 6,
-            offset: const Offset(0, 3),
-          ),
-        ],
-      ),
-      child: Text(
-        text,
-        style: TextStyle(
-          color: color,
-          fontSize: fontSize,
-          fontFamily: 'Quicksand',
-          fontWeight: fontWeight,
-          letterSpacing: letterSpacing,
-        ),
-      ),
-    );
-  }
-}
-
-class Schedule extends StatefulWidget {
-  const Schedule({super.key});
-
-  _ScheduleState createState() => _ScheduleState();
 }
 
 class TaskField extends StatefulWidget {
@@ -94,7 +28,8 @@ class TaskField extends StatefulWidget {
   final Icon icon;
 
   TaskField(
-      {required this.name,
+      {super.key,
+      required this.name,
       required this.labelText,
       required this.controller,
       required this.icon});
@@ -160,7 +95,7 @@ class _TaskFieldState extends State<TaskField> {
 class TimePicker extends StatefulWidget {
   TimeOfDay time;
   final Function onTimeChanged;
-  TimePicker({required this.time, required this.onTimeChanged});
+  TimePicker({super.key, required this.time, required this.onTimeChanged});
   _TimePickerState createState() => _TimePickerState();
 }
 
@@ -364,14 +299,102 @@ class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
   }
 }
 
-class _ScheduleState extends State<Schedule> {
+class CourseModal extends StatefulWidget {
+  String? courseName;
+  final String? professorName;
+  double? professorRating;
+  int? creditHours;
+  CourseModal(
+      {super.key,
+      required this.courseName,
+      this.professorName,
+      this.professorRating,
+      this.creditHours});
+
+  _CourseModalState createState() => _CourseModalState();
+}
+
+class _CourseModalState extends State<CourseModal> {
+  Widget build(BuildContext context) {
+    return Dialog(
+        alignment: Alignment.center,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(40.0),
+        ),
+        child: DefaultTextStyle(
+            style: const TextStyle(
+              fontFamily: 'Quicksand',
+              fontWeight: FontWeight.bold,
+              fontSize: 13.0,
+              letterSpacing: 1.5,
+              height: 1.0,
+              color: Colors.white,
+            ),
+            child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  gradient: const LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      AppColors.themeColor,
+                      Colors.black,
+                    ],
+                  ),
+                ),
+                child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: SingleChildScrollView(
+                        child:
+                            Column(mainAxisSize: MainAxisSize.min, children: [
+                      Row(
+                        children: [
+                          const Icon(Icons.book),
+                          const SizedBox(width: 10),
+                          Text('Course Name: ${widget.courseName}'),
+                        ],
+                      ),
+                      const SizedBox(height: 30),
+                      Row(
+                        children: [
+                          const Icon(Icons.person),
+                          const SizedBox(width: 10),
+                          Text('Professor: ${widget.professorName}'),
+                        ],
+                      ),
+                      const SizedBox(height: 30),
+                      Row(
+                        children: [
+                          const Icon(Icons.star),
+                          const SizedBox(width: 10),
+                          Text('Professor Rating: ${widget.professorRating}'),
+                        ],
+                      ),
+                      const SizedBox(height: 30),
+                      Row(
+                        children: [
+                          const Icon(Icons.access_time),
+                          const SizedBox(width: 10),
+                          Text('Credit Hours: ${widget.creditHours}'),
+                        ],
+                      )
+                    ]))))));
+  }
+}
+
+class _Schedule extends ConsumerStatefulWidget {
+  const _Schedule({Key? key}) : super(key: key);
+  @override
+  _ScheduleState createState() => _ScheduleState();
+}
+
+class _ScheduleState extends ConsumerState<_Schedule> {
   @override
   String taskName = "", location = "";
-  int day = 0, minute = 0, hour = 0;
   int minuteDuration = 90, daysDuration = 1;
   TimeOfDay selectedTime = TimeOfDay.now();
+  int day = 0, minute = TimeOfDay.now().minute, hour = TimeOfDay.now().hour;
   // void displayTaskInformation();
-
   void onTimeChanged(TimeOfDay newTime) {
     setState((() => selectedTime = newTime));
     minute = selectedTime.minute;
@@ -382,37 +405,19 @@ class _ScheduleState extends State<Schedule> {
     day = dayChosen;
   }
 
-  List<TimePlannerTask> tasks = [
-    TimePlannerTask(
-        // background color for task
-        color: AppColors.mathColor,
+  void onTaskTapped() async {
+    await showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return CourseModal(
+            courseName: 'Linear Algebra',
+            professorName: 'Luis Felipe Pereira',
+            professorRating: 3,
+            creditHours: 3,
+          );
+        });
+  }
 
-        // day: Index of header, hour: Task will be begin at this hour
-        // minutes: Task will be begin at this minutes
-        dateTime: TimePlannerDateTime(day: 1, hour: 14, minutes: 30),
-        // Minutes duration of task
-        minutesDuration: 90,
-        // Days duration of task (use for multi days task)
-        daysDuration: 1,
-        onTap: () {
-          print("Tapped");
-        },
-        child: const Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CustomText(text: 'MATH 2418'),
-            SizedBox(
-              height: 6,
-            ),
-            CustomText(text: 'SCI 2.420'),
-            SizedBox(
-              height: 6,
-            ),
-            CustomText(text: '218'),
-          ],
-        )),
-  ];
   void onTaskCreate() async {
     TextEditingController nameController = TextEditingController();
     TextEditingController locationController = TextEditingController();
@@ -472,46 +477,27 @@ class _ScheduleState extends State<Schedule> {
                         height: 20,
                       ),
                       AddCourseButton(
-                        onPressed: () => {
-                          print(taskName + '\n'),
-                          setState(() {
-                            taskName = nameController.text;
-                            location = locationController.text;
-                            Task t = Task(
-                                name: taskName,
-                                location: location,
-                                day: day,
-                                hour: hour,
-                                minute: minute,
-                                minuteDuration: minuteDuration,
-                                daysDuration: daysDuration);
-
-                            tasks.add(
-                              TimePlannerTask(
-                                  color: AppColors.getRandomColor(),
-                                  dateTime: TimePlannerDateTime(
-                                      day: t.day,
-                                      hour: t.hour,
-                                      minutes: t.minute),
-                                  minutesDuration: t.minuteDuration,
-                                  daysDuration: t.daysDuration,
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      CustomText(text: t.name),
-                                      const SizedBox(
-                                        height: 6,
-                                      ),
-                                      CustomText(text: t.location),
-                                      const SizedBox(
-                                        height: 6,
-                                      ),
-                                    ],
-                                  )),
-                            );
-                          }),
+                        onPressed: () {
+                          print(taskName + '\n');
+                          taskName = nameController.text;
+                          location = locationController.text;
+                          Course course = Course(
+                              name: taskName,
+                              location: location,
+                              day: day,
+                              hour: hour,
+                              minute: minute,
+                              minuteDuration: minuteDuration,
+                              daysDuration: daysDuration);
+                          print(selectedTime.toString());
+                          print(
+                              '${course.day}, ${course.hour}, ${course.minute}');
+                          ref
+                              .read(scheduleNotifierProvider.notifier)
+                              .addCourse(course);
+                          ref
+                              .read(scheduleNotifierProvider.notifier)
+                              .printCourses();
                         },
                       ),
                     ],
@@ -524,6 +510,7 @@ class _ScheduleState extends State<Schedule> {
   }
 
   Widget build(BuildContext context) {
+    ref.watch(scheduleNotifierProvider);
     return Scaffold(
       floatingActionButton: AddTaskButton(onPressed: onTaskCreate),
       body: TimePlanner(
@@ -561,7 +548,8 @@ class _ScheduleState extends State<Schedule> {
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.w700)),
         ],
-        tasks: tasks,
+        tasks:
+            ref.read(scheduleNotifierProvider.notifier).convertCoursesToTasks(),
         style: TimePlannerStyle(
             horizontalTaskPadding: BorderSide.strokeAlignCenter,
             backgroundColor: Colors.black,

@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:myapp/pages/custom_widgets.dart';
 import 'package:myapp/pages/home.dart';
 import 'package:myapp/pages/friends.dart';
 import 'package:myapp/pages/qrcode.dart';
 
-class CustomNavigationBar extends StatefulWidget {
+class CustomNavigationBar extends ConsumerStatefulWidget {
   CustomNavigationBar({Key? key}) : super(key: key);
 
   @override
   _CustomNavigationBarState createState() => _CustomNavigationBarState();
 }
 
-class _CustomNavigationBarState extends State<CustomNavigationBar> {
-  int _currentIndex = 0;
+final indexProvider = StateProvider(((ref) => 0));
 
+class _CustomNavigationBarState extends ConsumerState<CustomNavigationBar> {
   final Screens = [
     const HomeScreen(),
     FriendScreen(),
@@ -21,8 +22,10 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
   ];
   @override
   Widget build(BuildContext context) {
+    final pageIndex = ref.watch(indexProvider.notifier).state;
+    ref.watch(indexProvider);
     return Scaffold(
-      body: Screens[_currentIndex],
+      body: Screens[pageIndex],
       appBar: const CustomAppBar(),
       bottomNavigationBar: BottomAppBar(
         color: Colors.black,
@@ -52,16 +55,15 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
   }
 
   Widget _buildNavItem(int index, Widget icon, String label) {
-    Color iconColor = _currentIndex == index
+    final currentIndex = ref.watch(indexProvider.notifier).state;
+    Color iconColor = currentIndex == index
         ? const Color.fromARGB(255, 57, 60, 245)
         : const Color.fromARGB(255, 141, 141, 141);
 
     return Expanded(
       child: InkWell(
         onTap: () {
-          setState(() {
-            _currentIndex = index;
-          });
+          ref.read(indexProvider.notifier).state = index;
         },
         child: Center(
           child: Row(
@@ -73,14 +75,14 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
               ),
               AnimatedContainer(
                 duration: const Duration(milliseconds: 250),
-                width: _currentIndex == index ? 8 : 0,
+                width: ref.read(indexProvider.notifier).state == index ? 8 : 0,
                 child: const SizedBox(width: 8), // space between icon and text
               ),
               AnimatedDefaultTextStyle(
                 style: TextStyle(
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.bold,
-                  color: _currentIndex == index
+                  color: ref.read(indexProvider.notifier).state == index
                       ? const Color.fromARGB(255, 57, 60, 245)
                       : Colors.transparent,
                   fontSize: 14,

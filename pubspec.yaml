@@ -36,7 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
-
+  flutter_riverpod: ^2.4.4
   firebase_core: ^2.16.0
   firebase_auth: ^4.10.0
   cloud_firestore: ^4.9.2
@@ -46,6 +46,8 @@ dependencies:
     git:
       url: https://github.com/arcode35/time_planner.git
   image_picker: ^1.0.4
+  hooks_riverpod: ^2.4.5
+  riverpod: ^2.4.5
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -88,32 +90,8 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/page-1/images/facebook.png
-    - assets/page-1/images/apple.png
-    - assets/page-1/images/facebook-Rom.png
-    - assets/page-1/images/apple-M51.png
-    - assets/page-1/images/apple-MMh.png
-    - assets/page-1/images/google.png
-    - assets/page-1/images/facebook-2Yo.png
-    - assets/page-1/images/google-n4f.png
-    - assets/page-1/images/auto-group-txyr.png
-    - assets/page-1/images/objects.png
-    - assets/page-1/images/objects-TvP.png
-    - assets/page-1/images/google-FUK.png
-    - assets/page-1/images/custom/logo.png
-    - assets/page-1/images/custom/email_icon.png
-    - assets/page-1/images/custom/lock_icon.png
-    - assets/page-1/images/custom/user_icon.png
-    - assets/page-1/images/custom/apple.png
-    - assets/page-1/images/custom/facebook.png
-    - assets/page-1/images/custom/google.png
-    - assets/page-1/images/custom/home.png
-    - assets/page-1/images/custom/home2.png
-    - assets/page-1/images/custom/profile.png
-    - assets/page-1/images/custom/profile2.png
-    - assets/page-1/images/custom/modal.png
-    - assets/page-1/images/custom/logo_2.png
-    - assets/page-1/images/ocr.png
+    - assets/page-1/images/
+    - assets/page-1/images/custom/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

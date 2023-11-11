@@ -306,14 +306,14 @@ class LoginButton extends StatelessWidget {
       minWidth: 300,
       height: 52,
       onPressed: () async {
-        dynamic result = await buttonPressed();
-
-        // if (result != null && result.uid != null) {
         Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) => CustomNavigationBar(),
             ));
+        dynamic result = await buttonPressed();
+
+        // if (result != null && result.uid != null) {
         //} else {
         //print("Login failed");
         // }

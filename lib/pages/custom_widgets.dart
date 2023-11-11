@@ -180,3 +180,47 @@ class AuthButtons extends StatelessWidget {
     );
   }
 }
+
+class CustomText extends StatelessWidget {
+  final String text;
+  final double fontSize;
+  final Color color;
+  final FontWeight fontWeight;
+  final double letterSpacing;
+
+  const CustomText({
+    Key? key,
+    required this.text,
+    this.fontSize = 12.0,
+    this.color = AppColors.primaryTextColor,
+    this.fontWeight = FontWeight.bold,
+    this.letterSpacing = 1.5,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20.0),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            spreadRadius: 1,
+            blurRadius: 6,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: color,
+          fontSize: fontSize,
+          fontFamily: 'Quicksand',
+          fontWeight: fontWeight,
+          letterSpacing: letterSpacing,
+        ),
+      ),
+    );
+  }
+}

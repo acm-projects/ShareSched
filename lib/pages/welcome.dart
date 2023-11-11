@@ -2,6 +2,7 @@ import 'dart:async';
 import 'login.dart';
 import 'package:flutter/material.dart';
 import 'custom_widgets.dart';
+import 'friends.dart';
 
 class MyApp extends StatelessWidget {
   @override
