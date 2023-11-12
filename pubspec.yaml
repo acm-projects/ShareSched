@@ -48,6 +48,7 @@ dependencies:
   image_picker: ^1.0.4
   hooks_riverpod: ^2.4.5
   riverpod: ^2.4.5
+  multi_dropdown: ^2.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

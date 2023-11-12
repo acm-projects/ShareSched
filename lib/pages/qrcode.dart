@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'custom_widgets.dart';
 import 'package:myapp/colors/app_colors.dart';
 
 class QRScreen extends StatelessWidget {
@@ -8,10 +7,8 @@ class QRScreen extends StatelessWidget {
   const QRScreen({super.key});
 
   Widget build(BuildContext build) {
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        const BackgroundWidget2(),
+    return Scaffold(
+      body: Stack(children: [
         const Positioned(
           top: 70,
           child: NameWidget(),
@@ -20,7 +17,8 @@ class QRScreen extends StatelessWidget {
           height: 200,
         ),
         IconWidget(),
-      ],
+      ]),
+      backgroundColor: AppColors.backgroundColor,
     );
   }
 }
@@ -29,8 +27,8 @@ class NameWidget extends StatelessWidget {
   const NameWidget({super.key});
 
   Widget build(BuildContext build) {
-    return Text('QR Code',
-        style: GoogleFonts.quicksand(
+    return const Text('QR Code',
+        style: TextStyle(
           fontSize: 32,
           color: AppColors.primaryTextColor,
           fontWeight: FontWeight.bold,

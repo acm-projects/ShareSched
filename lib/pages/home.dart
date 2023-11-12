@@ -4,7 +4,8 @@ import 'package:time_planner/time_planner.dart';
 import 'package:myapp/colors/app_colors.dart';
 import 'package:myapp/providers/schedule_provider.dart';
 import 'package:myapp/models/schedule.dart';
-import 'package:myapp/models/course.dart';
+import 'package:myapp/models/class_model.dart';
+import 'package:multi_dropdown/multiselect_dropdown.dart';
 
 final scheduleNotifierProvider =
     StateNotifierProvider<ScheduleNotifier, Schedule>(
@@ -93,9 +94,14 @@ class _TaskFieldState extends State<TaskField> {
 }
 
 class TimePicker extends StatefulWidget {
+  String name;
   TimeOfDay time;
   final Function onTimeChanged;
-  TimePicker({super.key, required this.time, required this.onTimeChanged});
+  TimePicker(
+      {super.key,
+      required this.name,
+      required this.time,
+      required this.onTimeChanged});
   _TimePickerState createState() => _TimePickerState();
 }
 
@@ -108,7 +114,7 @@ class _TimePickerState extends State<TimePicker> {
         initialEntryMode: TimePickerEntryMode.dial,
         builder: (BuildContext context, Widget? child) {
           return Theme(
-            data: ThemeData.dark(), // Set the brightness to dark
+            data: ThemeData.dark(),
             child: child!,
           );
         });
@@ -124,8 +130,8 @@ class _TimePickerState extends State<TimePicker> {
   Widget build(BuildContext build) {
     return Column(
       children: [
-        const Text('Time',
-            style: TextStyle(
+        Text(widget.name,
+            style: const TextStyle(
               fontFamily: 'Quicksand',
               fontWeight: FontWeight.bold,
               fontSize: 13.0,
@@ -224,30 +230,23 @@ class _AddCourseButtonState extends State<AddCourseButton> {
 }
 
 class CustomDropDownMenu extends StatefulWidget {
-  final Function(int) onItemChosen;
-  const CustomDropDownMenu({Key? key, required this.onItemChosen})
-      : super(key: key);
+  final List<String> selectedDays;
+
+  CustomDropDownMenu({Key? key, required this.selectedDays}) : super(key: key);
 
   @override
   _CustomDropDownMenuState createState() => _CustomDropDownMenuState();
 }
 
 class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
-  String? selectedOption;
-  final List<String> days = [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday'
-  ];
+  final MultiSelectController _controller = MultiSelectController();
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         const Text(
-          'Day',
+          'Days',
           style: TextStyle(
             fontFamily: 'Quicksand',
             fontWeight: FontWeight.bold,
@@ -257,42 +256,57 @@ class _CustomDropDownMenuState extends State<CustomDropDownMenu> {
             color: Colors.white,
           ),
         ),
-        const SizedBox(height: 20),
-        DropdownButton<String>(
-          borderRadius: BorderRadius.circular(30),
-          icon: const Icon(Icons.arrow_drop_down, color: Colors.white),
-          dropdownColor: AppColors.themeColor,
-          value: selectedOption ?? days.first,
-          onChanged: (String? value) {
+        const SizedBox(height: 6),
+        MultiSelectDropDown(
+          controller: _controller,
+          onOptionSelected: (List<ValueItem> selectedOptions) {
             setState(() {
-              selectedOption = value!;
+              widget.selectedDays.clear();
+              widget.selectedDays.addAll(selectedOptions.map((e) => e.value!));
             });
-            widget.onItemChosen(days.indexOf(value!));
           },
-          items: days.map<DropdownMenuItem<String>>((String value) {
-            return DropdownMenuItem<String>(
-              value: value,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: AppColors.themeColor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                margin: const EdgeInsets.symmetric(vertical: 4),
-                padding: const EdgeInsets.all(10),
-                child: Text(
-                  value,
-                  style: const TextStyle(
-                    fontFamily: 'Quicksand',
-                    fontWeight: FontWeight.bold,
-                    fontSize: 13.0,
-                    letterSpacing: 1.5,
-                    height: 1.0,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            );
-          }).toList(),
+          options: const <ValueItem>[
+            ValueItem(label: 'Monday', value: 'Monday'),
+            ValueItem(label: 'Tuesday', value: 'Tuesday'),
+            ValueItem(label: 'Wednesday', value: 'Wednesday'),
+            ValueItem(label: 'Thursday', value: 'Thursday'),
+            ValueItem(label: 'Friday', value: 'Friday'),
+          ],
+          selectionType: SelectionType.multi,
+          chipConfig: const ChipConfig(
+              wrapType: WrapType.wrap,
+              backgroundColor: AppColors.buttonColor2,
+              labelStyle: TextStyle(
+                fontFamily: 'Quicksand',
+                fontWeight: FontWeight.bold,
+                fontSize: 12.0,
+                letterSpacing: 1.5,
+                height: 1.0,
+                color: Colors.white,
+              )),
+          dropdownHeight: 200,
+          optionTextStyle: const TextStyle(
+            fontFamily: 'Quicksand',
+            fontWeight: FontWeight.bold,
+            fontSize: 13.0,
+            letterSpacing: 1.5,
+            height: 1.0,
+            color: Colors.black,
+          ),
+          borderRadius: 20,
+          radiusGeometry: BorderRadius.circular(20),
+          selectedOptionIcon: const Icon(
+            Icons.check_circle,
+            color: AppColors.themeColor,
+          ),
+          focusedBorderColor: Colors.black54,
+          borderColor: Colors.grey,
+          optionsBackgroundColor: Colors.white,
+          hint: 'Select Days',
+          hintColor: Colors.grey,
+          hintStyle: TextStyle(color: Colors.grey[500]),
+          selectedOptionBackgroundColor: AppColors.themeColor,
+          showClearIcon: true,
         ),
       ],
     );
@@ -390,15 +404,40 @@ class _Schedule extends ConsumerStatefulWidget {
 
 class _ScheduleState extends ConsumerState<_Schedule> {
   @override
-  String taskName = "", location = "";
+  List<String> selectedDays = [];
   int minuteDuration = 90, daysDuration = 1;
-  TimeOfDay selectedTime = TimeOfDay.now();
-  int day = 0, minute = TimeOfDay.now().minute, hour = TimeOfDay.now().hour;
+  TimeOfDay startTime = TimeOfDay.now(), endTime = TimeOfDay.now();
+  int day = 0;
+  int startMinute = TimeOfDay.now().minute, startHour = TimeOfDay.now().hour;
+  int endMinute = TimeOfDay.now().minute, endHour = TimeOfDay.now().hour;
   // void displayTaskInformation();
-  void onTimeChanged(TimeOfDay newTime) {
-    setState((() => selectedTime = newTime));
-    minute = selectedTime.minute;
-    hour = selectedTime.hour;
+
+  String convertTimeOfDayToIso8601(TimeOfDay time,
+      {int offsetHours = 0, int offsetMinutes = 0}) {
+    DateTime now = DateTime.now();
+    DateTime dateTime =
+        DateTime(now.year, now.month, now.day, time.hour, time.minute);
+
+    DateTime dateTimeWithOffset =
+        dateTime.add(Duration(hours: offsetHours, minutes: offsetMinutes));
+
+    return dateTimeWithOffset.toIso8601String();
+  }
+
+  void onStartTimeChanged(TimeOfDay newTime) {
+    setState(() {
+      this.startTime = newTime;
+      startMinute = newTime.minute;
+      startHour = newTime.hour;
+    });
+  }
+
+  void onEndTimeChanged(TimeOfDay newTime) {
+    setState(() {
+      this.endTime = newTime;
+      endMinute = newTime.minute;
+      endHour = newTime.hour;
+    });
   }
 
   dynamic onDayChosen(int dayChosen) {
@@ -421,6 +460,8 @@ class _ScheduleState extends ConsumerState<_Schedule> {
   void onTaskCreate() async {
     TextEditingController nameController = TextEditingController();
     TextEditingController locationController = TextEditingController();
+    TextEditingController professorController = TextEditingController();
+
     await showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -455,14 +496,33 @@ class _ScheduleState extends ConsumerState<_Schedule> {
                       const SizedBox(
                         height: 40,
                       ),
-                      CustomDropDownMenu(onItemChosen: onDayChosen),
+                      CustomDropDownMenu(selectedDays: selectedDays),
                       const SizedBox(
                         height: 40,
                       ),
                       TimePicker(
-                        time: selectedTime,
-                        onTimeChanged: onTimeChanged,
+                        name: 'Start Time',
+                        time: startTime,
+                        onTimeChanged: onStartTimeChanged,
                       ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TimePicker(
+                        name: 'End Time',
+                        time: endTime,
+                        onTimeChanged: onEndTimeChanged,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TaskField(
+                          labelText: 'Professor',
+                          name: 'Enter your professor\'s name',
+                          controller: professorController,
+                          icon: const Icon(
+                            Icons.person,
+                          )),
                       const SizedBox(
                         height: 20,
                       ),
@@ -478,20 +538,47 @@ class _ScheduleState extends ConsumerState<_Schedule> {
                       ),
                       AddCourseButton(
                         onPressed: () {
-                          print(taskName + '\n');
-                          taskName = nameController.text;
-                          location = locationController.text;
-                          Course course = Course(
-                              name: taskName,
-                              location: location,
-                              day: day,
-                              hour: hour,
-                              minute: minute,
-                              minuteDuration: minuteDuration,
-                              daysDuration: daysDuration);
-                          print(selectedTime.toString());
+                          print("on pressed initated");
+                          print("name: ${nameController.text}");
+
+                          List<String> fullCourse =
+                              ScheduleNotifier.stringSplit(nameController.text);
+                          String subjectPrefix = fullCourse[0];
+                          String courseNumber = fullCourse[1];
+
                           print(
-                              '${course.day}, ${course.hour}, ${course.minute}');
+                              "course name parsed: ${subjectPrefix} ${courseNumber} ");
+
+                          List<String> location = ScheduleNotifier.stringSplit(
+                              locationController.text);
+                          String building = location[0];
+                          String room = location[1];
+
+                          print("location parsed: ${building} ${room}");
+
+                          String? professor = professorController.text;
+
+                          String? startingTime =
+                              convertTimeOfDayToIso8601(startTime).toString();
+                          String? endingTime =
+                              convertTimeOfDayToIso8601(endTime).toString();
+
+                          print(
+                              "Starting Time: ${startingTime}\n Ending Time: ${endingTime} ");
+
+                          ClassModel course = ClassModel(
+                              subjectPrefix: subjectPrefix,
+                              courseNumber: courseNumber,
+                              catalogYear: '2023',
+                              sectionNumber: '000',
+                              start_time: startingTime,
+                              end_time: endingTime,
+                              building: building,
+                              room: room,
+                              map_uri: "www.google.com",
+                              meetingDays: selectedDays,
+                              professor: professor);
+
                           ref
                               .read(scheduleNotifierProvider.notifier)
                               .addCourse(course);
