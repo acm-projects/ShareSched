@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/navigation/navigation_bar.dart';
-import 'custom_widgets.dart';
+import 'package:myapp/providers/friend_provider.dart';
 import 'package:myapp/colors/app_colors.dart';
-import 'package:myapp/models/friend.dart';
 
 final friendIndexProvider = StateProvider((ref) => 0);
 
@@ -25,7 +23,7 @@ class FriendScreen extends ConsumerWidget {
                 children: [
                   ViewFriendsButton(),
                   const SizedBox(
-                    width: 100,
+                    width: 50,
                   ),
                   AddFriendsButton(),
                 ],
@@ -49,21 +47,25 @@ class ViewFriendsButton extends ConsumerWidget {
         ref.read(friendIndexProvider.notifier).state = 0;
       },
       color: Colors.black,
-      minWidth: 150,
+      minWidth: 50,
       height: 40,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18.0),
       ),
       child: AnimatedContainer(
-        width: 400,
-        duration: Duration(milliseconds: 200),
+        width: 100,
+        duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
           border: isSelected
               ? const Border(
                   bottom: BorderSide(width: 3.0, color: Colors.white))
               : Border.all(color: Colors.transparent),
         ),
-        child: const Icon(Icons.group, color: Colors.white),
+        child: const Icon(
+          Icons.group,
+          color: Colors.white,
+          size: 30,
+        ),
       ),
     );
   }
@@ -78,14 +80,14 @@ class AddFriendsButton extends ConsumerWidget {
         ref.read(friendIndexProvider.notifier).state = 1;
       },
       color: Colors.black,
-      minWidth: 150,
+      minWidth: 50,
       height: 40,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18.0),
       ),
       child: AnimatedContainer(
-        width: 400,
-        duration: Duration(milliseconds: 200),
+        width: 100,
+        duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
           border: isSelected
               ? const Border(
@@ -98,11 +100,55 @@ class AddFriendsButton extends ConsumerWidget {
   }
 }
 
-class ViewFriendsForm extends StatelessWidget {
+class ViewFriendsForm extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    return const Center(
-        child: Text('Hello', style: TextStyle(color: Colors.white)));
+  Widget build(BuildContext context, WidgetRef ref) {
+    final friendsList = ref.read(friendsProvider.notifier).state;
+    return Center(
+      child: Container(
+        height: 600,
+        width: 300, // Slightly increased width for a better layout
+        child: ListView.separated(
+          separatorBuilder: (context, index) => const Divider(
+            color: Colors.white70,
+          ),
+          itemCount: friendsList.length,
+          itemBuilder: (context, index) {
+            return Container(
+              margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: ListTile(
+                dense: true,
+                onTap: () {},
+                leading: CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Colors.white,
+                    backgroundImage:
+                        NetworkImage(friendsList[index].avatarURL!)),
+                title: Text(
+                  friendsList[index].username,
+                  style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontFamily: 'Quicksand'),
+                ),
+                trailing: const Icon(Icons.view_headline_rounded,
+                    size: 30, color: Colors.white),
+                contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                tileColor: Colors
+                    .transparent, // Tile color made transparent to show gradient
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    );
   }
 }
 

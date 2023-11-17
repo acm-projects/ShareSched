@@ -5,6 +5,7 @@ class Schedule {
   List<ClassModel> courses;
 
   Schedule({required this.id, required this.courses});
+
   Schedule copyWith({String? id, List<ClassModel>? courses}) {
     return Schedule(
       id: id ?? this.id,
