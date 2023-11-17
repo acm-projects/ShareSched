@@ -6,6 +6,7 @@ import 'package:myapp/providers/schedule_provider.dart';
 import 'package:myapp/models/schedule.dart';
 import 'package:myapp/models/class_model.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
+import 'custom_widgets.dart';
 
 final scheduleNotifierProvider =
     StateNotifierProvider<ScheduleNotifier, Schedule>(
@@ -19,77 +20,6 @@ class HomeScreen extends StatelessWidget {
     return const Scaffold(
       body: _Schedule(),
     );
-  }
-}
-
-class TaskField extends StatefulWidget {
-  final String name;
-  final String labelText;
-  final TextEditingController controller;
-  final Icon icon;
-
-  TaskField(
-      {super.key,
-      required this.name,
-      required this.labelText,
-      required this.controller,
-      required this.icon});
-
-  _TaskFieldState createState() => _TaskFieldState();
-}
-
-class _TaskFieldState extends State<TaskField> {
-  bool isFocused = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(children: [
-      Text(widget.labelText,
-          style: const TextStyle(
-            fontFamily: 'Quicksand',
-            fontWeight: FontWeight.bold,
-            fontSize: 13.0,
-            letterSpacing: 1.5,
-            height: 1.0,
-            color: Colors.white,
-          )),
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: FocusScope(
-          child: Focus(
-            onFocusChange: (hasFocus) {
-              setState(() {
-                isFocused = hasFocus;
-              });
-            },
-            child: TextField(
-              controller: widget.controller,
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: isFocused ? Colors.lightBlue[50] : Colors.white,
-                hintText: widget.name,
-                hintStyle: TextStyle(color: Colors.grey[500]),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                  borderSide: const BorderSide(color: Colors.blue, width: 2.0),
-                ),
-                prefixIcon: widget.icon,
-                suffixIcon: widget.controller.text.isNotEmpty
-                    ? IconButton(
-                        icon: const Icon(Icons.close),
-                        onPressed: () => widget.controller.clear(),
-                      )
-                    : null,
-              ),
-            ),
-          ),
-        ),
-      )
-    ]);
   }
 }
 
@@ -393,6 +323,77 @@ class _CourseModalState extends State<CourseModal> {
                         ],
                       )
                     ]))))));
+  }
+}
+
+class TaskField extends StatefulWidget {
+  final String name;
+  final String labelText;
+  final TextEditingController controller;
+  final Icon icon;
+
+  TaskField(
+      {super.key,
+      required this.name,
+      required this.labelText,
+      required this.controller,
+      required this.icon});
+
+  _TaskFieldState createState() => _TaskFieldState();
+}
+
+class _TaskFieldState extends State<TaskField> {
+  bool isFocused = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      Text(widget.labelText,
+          style: const TextStyle(
+            fontFamily: 'Quicksand',
+            fontWeight: FontWeight.bold,
+            fontSize: 13.0,
+            letterSpacing: 1.5,
+            height: 1.0,
+            color: Colors.white,
+          )),
+      Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: FocusScope(
+          child: Focus(
+            onFocusChange: (hasFocus) {
+              setState(() {
+                isFocused = hasFocus;
+              });
+            },
+            child: TextField(
+              controller: widget.controller,
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: isFocused ? Colors.lightBlue[50] : Colors.white,
+                hintText: widget.name,
+                hintStyle: TextStyle(color: Colors.grey[500]),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  borderSide: const BorderSide(color: Colors.blue, width: 2.0),
+                ),
+                prefixIcon: widget.icon,
+                suffixIcon: widget.controller.text.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.close),
+                        onPressed: () => widget.controller.clear(),
+                      )
+                    : null,
+              ),
+            ),
+          ),
+        ),
+      )
+    ]);
   }
 }
 

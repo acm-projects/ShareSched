@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/providers/friend_provider.dart';
 import 'package:myapp/colors/app_colors.dart';
+import 'package:myapp/models/schedule.dart';
+import 'package:time_planner/time_planner.dart';
 
 final friendIndexProvider = StateProvider((ref) => 0);
 
@@ -105,9 +107,9 @@ class ViewFriendsForm extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final friendsList = ref.read(friendsProvider.notifier).state;
     return Center(
-      child: Container(
+      child: SizedBox(
         height: 600,
-        width: 300, // Slightly increased width for a better layout
+        width: 300,
         child: ListView.separated(
           separatorBuilder: (context, index) => const Divider(
             color: Colors.white70,
@@ -121,7 +123,17 @@ class ViewFriendsForm extends ConsumerWidget {
               ),
               child: ListTile(
                 dense: true,
-                onTap: () {},
+                onTap: () {
+                  final tappedUser = friendsList[index];
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return MiniSchedule(
+                          username: tappedUser.username,
+                          schedule: tappedUser.schedule);
+                    },
+                  );
+                },
                 leading: CircleAvatar(
                     radius: 30,
                     backgroundColor: Colors.white,
@@ -138,8 +150,7 @@ class ViewFriendsForm extends ConsumerWidget {
                     size: 30, color: Colors.white),
                 contentPadding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                tileColor: Colors
-                    .transparent, // Tile color made transparent to show gradient
+                tileColor: Colors.transparent,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -153,10 +164,72 @@ class ViewFriendsForm extends ConsumerWidget {
 }
 
 class AddFriendsForm extends StatelessWidget {
+  TextEditingController nameController = TextEditingController();
+
+  // Future<bool> sendFriendRequest(String name) {
+  //   // send friend request logic here
+  // }
+  Widget build(BuildContext context) {
+    return Center(
+        child: SizedBox(
+      height: 600,
+      width: 300,
+      child: Column(children: [
+        SizedBox(
+          height: 20,
+        ),
+        TextField(
+            controller: nameController,
+            decoration: InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                filled: true,
+                fillColor:
+                    Colors.lightBlue[50], // Background color of the TextField
+                hintText: 'Enter name',
+                hintStyle: TextStyle(color: Colors.grey[500]),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  borderSide: BorderSide.none,
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                ))),
+        SizedBox(height: 90),
+        SearchButton(buttonPressed: () {}),
+      ]),
+    ));
+  }
+}
+
+class SearchButton extends StatelessWidget {
+  final Function buttonPressed;
+
+  const SearchButton({super.key, required this.buttonPressed});
+
   @override
   Widget build(BuildContext context) {
-    return const Center(
-        child: Text('Not hello', style: TextStyle(color: Colors.white)));
+    return MaterialButton(
+      minWidth: 300,
+      height: 52,
+      onPressed: () async {
+        dynamic result = await buttonPressed();
+      },
+      color: AppColors.buttonColor1,
+      textColor: Colors.black,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0),
+        side: const BorderSide(color: Colors.black, width: 0.3),
+      ),
+      child: const Text(
+        'SEARCH',
+        style: TextStyle(
+          fontFamily: 'Mulish-Bold',
+          fontSize: 15,
+          letterSpacing: 1.25,
+        ),
+      ),
+    );
   }
 }
 
@@ -170,5 +243,96 @@ class NameWidget extends StatelessWidget {
           color: AppColors.primaryTextColor,
           fontWeight: FontWeight.bold,
         ));
+  }
+}
+
+class MiniSchedule extends StatelessWidget {
+  // To instantiate this MiniSchedule class, we'll need to retrieve a User object from the db
+  String? username;
+  final Schedule schedule;
+
+  MiniSchedule({Key? key, this.username, required this.schedule})
+      : super(key: key);
+
+  Widget build(BuildContext context) {
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+      child: Container(
+        decoration: BoxDecoration(
+          color: AppColors.themeColor,
+          borderRadius: BorderRadius.circular(12.0),
+        ),
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('${username!}\'s schedule',
+                style: const TextStyle(
+                    color: AppColors.primaryTextColor,
+                    fontFamily: 'Quicksand',
+                    fontWeight: FontWeight.w900,
+                    fontSize: 16)),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          ConstrainedBox(
+              constraints: BoxConstraints(
+                maxHeight: MediaQuery.of(context).size.height *
+                    0.7, // 70% of screen height
+                maxWidth: MediaQuery.of(context).size.width *
+                    0.9, // 90% of screen width
+              ),
+              child: SingleChildScrollView(
+                child: Container(
+                    height: 800,
+                    width: 450,
+                    child: TimePlanner(
+                      startHour: 8,
+                      endHour: 22,
+                      headers: const [
+                        TimePlannerTitle(
+                            title: 'Monday',
+                            titleStyle: TextStyle(
+                                color: AppColors.primaryTextColor,
+                                fontFamily: 'Quicksand',
+                                fontWeight: FontWeight.w700)),
+                        TimePlannerTitle(
+                            title: 'Tuesday',
+                            titleStyle: TextStyle(
+                                color: AppColors.primaryTextColor,
+                                fontFamily: 'Quicksand',
+                                fontWeight: FontWeight.w700)),
+                        TimePlannerTitle(
+                            title: 'Wednesday',
+                            titleStyle: TextStyle(
+                                color: AppColors.primaryTextColor,
+                                fontFamily: 'Quicksand',
+                                fontWeight: FontWeight.w700)),
+                        TimePlannerTitle(
+                            title: 'Thursday',
+                            titleStyle: TextStyle(
+                                color: AppColors.primaryTextColor,
+                                fontFamily: 'Quicksand',
+                                fontWeight: FontWeight.w700)),
+                        TimePlannerTitle(
+                          title: 'Friday',
+                          titleStyle: TextStyle(
+                              color: AppColors.primaryTextColor,
+                              fontFamily: 'Quicksand',
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ],
+                      style: TimePlannerStyle(
+                          horizontalTaskPadding: BorderSide.strokeAlignCenter,
+                          backgroundColor: Colors.black,
+                          dividerColor: const Color.fromRGBO(53, 51, 205, 1),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20.0))),
+                      use24HourFormat: false,
+                    )),
+              )),
+        ]),
+      ),
+    );
   }
 }
