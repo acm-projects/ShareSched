@@ -1,18 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/colors/app_colors.dart';
+import 'package:myapp/pages/profile.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+class CustomAppBar extends ConsumerWidget implements PreferredSizeWidget {
+  bool? isOnProfilePage;
+  CustomAppBar({super.key, this.isOnProfilePage = false});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return AppBar(
       title: Image.asset(
         'assets/page-1/images/custom/logo_2.png',
         fit: BoxFit.cover,
         height: 40,
       ),
+      actions: <Widget>[
+        if (!isOnProfilePage!)
+          (IconButton(
+            icon: const Icon(
+              Icons.account_circle_outlined,
+              size: 30,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(),
+                  ));
+            },
+          ))
+      ],
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       bottomOpacity: 20,
       centerTitle: true,
@@ -115,71 +135,7 @@ class BackgroundWidget3 extends StatelessWidget {
   }
 }
 
-class AuthButtons extends StatelessWidget {
-  const AuthButtons({super.key});
 
-  @override
-  Widget build(BuildContext build) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SizedBox(
-          width: 110,
-          height: 50,
-          child: ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-            ),
-            child: Image.asset(
-              "assets/page-1/images/custom/google.png",
-              height: 20,
-              width: 20,
-            ),
-          ),
-        ),
-        const SizedBox(width: 5),
-        SizedBox(
-            width: 110,
-            height: 50,
-            child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                ),
-                child: Image.asset(
-                  "assets/page-1/images/custom/apple.png",
-                  height: 16.85,
-                  width: 20,
-                ))),
-        const SizedBox(width: 5),
-        SizedBox(
-            width: 110,
-            height: 50,
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-              ),
-              child: Image.asset(
-                "assets/page-1/images/custom/facebook.png",
-                height: 20,
-                width: 20,
-              ),
-            )),
-      ],
-    );
-  }
-}
 
 class CustomText extends StatelessWidget {
   final String text;

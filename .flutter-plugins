@@ -1,13 +1,16 @@
 # This is a generated file; do not edit or check into version control.
-cloud_firestore=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\cloud_firestore-4.9.2\\
-cloud_firestore_web=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\cloud_firestore_web-3.7.1\\
+barcode_scan2=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\barcode_scan2-4.3.0\\
+cloud_firestore=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\cloud_firestore-4.13.1\\
+cloud_firestore_web=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\cloud_firestore_web-3.8.5\\
 file_selector_linux=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\file_selector_linux-0.9.2+1\\
 file_selector_macos=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\file_selector_macos-0.9.3+3\\
 file_selector_windows=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\file_selector_windows-0.9.3+1\\
-firebase_auth=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_auth-4.10.0\\
-firebase_auth_web=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_auth_web-5.8.1\\
-firebase_core=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_core-2.16.0\\
-firebase_core_web=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_core_web-2.8.0\\
+firebase_auth=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_auth-4.14.0\\
+firebase_auth_web=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_auth_web-5.8.7\\
+firebase_core=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_core-2.22.0\\
+firebase_core_web=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_core_web-2.8.1\\
+firebase_storage=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_storage-11.5.1\\
+firebase_storage_web=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\firebase_storage_web-3.6.13\\
 flutter_plugin_android_lifecycle=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\flutter_plugin_android_lifecycle-2.0.16\\
 image_picker=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\image_picker-1.0.4\\
 image_picker_android=C:\\Users\\ROSHA\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\image_picker_android-0.8.8+1\\

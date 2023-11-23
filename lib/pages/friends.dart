@@ -178,6 +178,17 @@ class AddFriendsForm extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
+        const Text('Add Friends',
+            style: TextStyle(
+              fontFamily: 'Mulish-ExtraBold',
+              fontWeight: FontWeight.w800,
+              fontSize: 12.0,
+              letterSpacing: 1.5,
+              color: AppColors.primaryTextColor,
+            )),
+        SizedBox(
+          height: 20,
+        ),
         TextField(
             controller: nameController,
             decoration: InputDecoration(

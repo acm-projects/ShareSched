@@ -6,7 +6,6 @@ import 'package:myapp/providers/schedule_provider.dart';
 import 'package:myapp/models/schedule.dart';
 import 'package:myapp/models/class_model.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
-import 'custom_widgets.dart';
 
 final scheduleNotifierProvider =
     StateNotifierProvider<ScheduleNotifier, Schedule>(

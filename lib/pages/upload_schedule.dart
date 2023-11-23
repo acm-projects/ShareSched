@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/navigation/navigation_bar.dart';
 import 'custom_widgets.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
@@ -38,7 +39,6 @@ class _UploadScreen extends State<UploadScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
       body: Stack(
         children: [
           const BackgroundWidget(),
@@ -70,7 +70,21 @@ class _UploadScreen extends State<UploadScreen> {
                   ),
                   UploadButton(buttonPressed: uploadImage),
                 ],
-              )
+              ),
+              SizedBox(
+                height: 100,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 250,
+                  ),
+                  NextButton(
+                    buttonPressed: () {},
+                  ),
+                ],
+              ),
             ],
           )
         ],
@@ -134,11 +148,11 @@ class UploadButton extends StatelessWidget {
             Text(
               'Upload Picture',
               style: TextStyle(
-                fontFamily: 'Mulish',
-                fontWeight: FontWeight.w700,
-                fontSize: 15,
-                letterSpacing: 1.25,
-              ),
+                  fontFamily: 'Mulish',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15,
+                  letterSpacing: 1.25,
+                  color: Colors.white),
             ),
           ],
         ));
@@ -174,11 +188,54 @@ class TakePictureButton extends StatelessWidget {
             Text(
               'Take Picture',
               style: TextStyle(
-                fontFamily: 'Mulish',
-                fontWeight: FontWeight.w700,
-                fontSize: 15,
-                letterSpacing: 1.25,
-              ),
+                  fontFamily: 'Mulish',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15,
+                  letterSpacing: 1.25,
+                  color: Colors.white),
+            ),
+          ],
+        ));
+  }
+}
+
+class NextButton extends StatelessWidget {
+  final Function buttonPressed;
+
+  const NextButton({super.key, required this.buttonPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+        minWidth: 100,
+        height: 52,
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => CustomNavigationBar()));
+        },
+        color: AppColors.buttonColor1,
+        textColor: AppColors.secondaryTextColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50.0),
+          side: const BorderSide(color: Colors.black, width: 0.3),
+        ),
+        child: const Row(
+          children: [
+            Icon(
+              Icons.navigate_next,
+              color: Colors.white,
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              'Next',
+              style: TextStyle(
+                  fontFamily: 'Mulish',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15,
+                  letterSpacing: 1.25,
+                  color: Colors.white),
             ),
           ],
         ));

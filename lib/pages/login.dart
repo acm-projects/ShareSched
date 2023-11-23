@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/models/schedule.dart';
+import 'package:myapp/models/user_model.dart';
 import 'package:myapp/navigation/navigation_bar.dart';
 import 'package:myapp/services/auth.dart';
 import 'custom_widgets.dart';
 import 'register.dart';
 import 'package:myapp/colors/app_colors.dart';
+import 'package:myapp/providers/user_model_provider.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -41,12 +45,12 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-class LoginForm extends StatefulWidget {
+class LoginForm extends ConsumerStatefulWidget {
   @override
   _LoginFormState createState() => _LoginFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _LoginFormState extends ConsumerState<LoginForm> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   String? errorMessage;
@@ -63,6 +67,7 @@ class _LoginFormState extends State<LoginForm> {
     // Save to login details to database here?
     String email = emailController.text;
     String password = passwordController.text;
+
     dynamic result = await _auth.signInWithEmailAndPassword(email, password);
 
     if (result == null || result.uid == null) {
@@ -75,6 +80,13 @@ class _LoginFormState extends State<LoginForm> {
         errorMessage = null; // Clear error message
       });
     }
+
+    ref.read(userModelProvider.notifier).state = UserModel(
+        email: email,
+        password: password,
+        schedule: Schedule(id: '1', courses: []),
+        username: '',
+        avatarURL: '');
     print("Email: $email");
     print("Password: $password");
     print(result.uid);
@@ -117,7 +129,6 @@ class _LoginFormState extends State<LoginForm> {
                 ), // Conditionally display error message
               LoginButton(buttonPressed: onLoginButtonPressed),
               const SizedBox(height: 30),
-              const AuthButtons(),
               const SizedBox(height: 30),
               TextField(),
               const SizedBox(height: 20),
@@ -306,17 +317,14 @@ class LoginButton extends StatelessWidget {
       minWidth: 300,
       height: 52,
       onPressed: () async {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => CustomNavigationBar(),
-            ));
         dynamic result = await buttonPressed();
-
-        // if (result != null && result.uid != null) {
-        //} else {
-        //print("Login failed");
-        // }
+        if (result != null && result.uid != null) {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CustomNavigationBar(),
+              ));
+        }
       },
       color: AppColors.buttonColor1,
       textColor: Colors.black,

@@ -1,5 +1,5 @@
 {
   "java.configuration.updateBuildConfiguration": "disabled",
   "cmake.configureOnOpen": true,
-  "window.zoomLevel": -1
+  "window.zoomLevel": 0
 }

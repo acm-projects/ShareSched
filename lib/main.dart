@@ -1,9 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/repositories/user_respository.dart';
 import 'pages/welcome.dart';
 import 'package:myapp/firebase_options.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/get.dart';
 
 Future<void> main() async {
   Paint.enableDithering = true;
@@ -21,6 +23,9 @@ Future<void> main() async {
     persistenceEnabled: true, // Enable local persistence
     // Add more settings as needed
   );
+
+  Get.put(UserRepository());
+
   runApp(const ProviderScope(child: MyApp()));
 }
 

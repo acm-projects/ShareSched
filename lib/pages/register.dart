@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/models/schedule.dart';
+import 'package:myapp/models/user_model.dart';
+import 'package:myapp/providers/user_model_provider.dart';
 import 'package:myapp/services/auth.dart';
+import 'package:myapp/services/controllers/register_controller.dart';
 import 'custom_widgets.dart';
 import 'package:myapp/pages/upload_schedule.dart';
 import 'login.dart';
@@ -78,12 +85,12 @@ class TextField extends StatelessWidget {
   }
 }
 
-class RegisterForm extends StatefulWidget {
+class RegisterForm extends ConsumerStatefulWidget {
   @override
   _RegisterFormState createState() => _RegisterFormState();
 }
 
-class _RegisterFormState extends State<RegisterForm> {
+class _RegisterFormState extends ConsumerState<RegisterForm> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -91,9 +98,21 @@ class _RegisterFormState extends State<RegisterForm> {
   dynamic onSignUpButtonPressed() async {
     final AuthService _auth = AuthService();
     // save registration details to database here?
+    final registerRepo = Get.put(RegisterController());
+
     String email = emailController.text;
     String username = usernameController.text;
     String password = passwordController.text;
+
+    if (email != "" && username != "" && password != "") {
+      await registerRepo.createUser(UserModel(
+          username: username,
+          email: email,
+          password: password,
+          avatarURL: '',
+          schedule: Schedule(id: '1', courses: [])));
+    }
+
     dynamic result = await _auth.registerWithEmailAndPassword(email, password);
     if (result == null || result.uid == null) {
       setState(() {
@@ -105,6 +124,14 @@ class _RegisterFormState extends State<RegisterForm> {
         errorMessage = null; // Clear error message
       });
     }
+
+    ref.read(userModelProvider.notifier).state = UserModel(
+        email: email,
+        password: password,
+        schedule: Schedule(id: '1', courses: []),
+        username: '',
+        avatarURL: '');
+
     print("Email: $email");
     print("Username: $username");
     print("Password: $password");
@@ -151,7 +178,6 @@ class _RegisterFormState extends State<RegisterForm> {
                       fontFamily: 'Quicksand-SemiBold'),
                 ),
               const SizedBox(height: 20),
-              const AuthButtons(),
             ],
           ),
         ),

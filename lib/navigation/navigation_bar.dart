@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:myapp/colors/app_colors.dart';
 import 'package:myapp/pages/custom_widgets.dart';
 import 'package:myapp/pages/home.dart';
 import 'package:myapp/pages/friends.dart';
@@ -17,8 +18,8 @@ final indexProvider = StateProvider(((ref) => 0));
 class _CustomNavigationBarState extends ConsumerState<CustomNavigationBar> {
   final Screens = [
     const HomeScreen(),
-    FriendScreen(),
-    const QRScreen(),
+    const FriendScreen(),
+    const QrScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class _CustomNavigationBarState extends ConsumerState<CustomNavigationBar> {
     ref.watch(indexProvider);
     return Scaffold(
       body: Screens[pageIndex],
-      appBar: const CustomAppBar(),
+      appBar: CustomAppBar(),
       bottomNavigationBar: BottomAppBar(
         color: Colors.black,
         child: Container(
@@ -83,7 +84,7 @@ class _CustomNavigationBarState extends ConsumerState<CustomNavigationBar> {
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.bold,
                   color: ref.read(indexProvider.notifier).state == index
-                      ? const Color.fromARGB(255, 57, 60, 245)
+                      ? AppColors.themeColor
                       : Colors.transparent,
                   fontSize: 14,
                 ),
