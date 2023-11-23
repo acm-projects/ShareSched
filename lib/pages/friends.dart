@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/providers/friend_provider.dart';
 import 'package:myapp/colors/app_colors.dart';
 import 'package:myapp/models/schedule.dart';
+import 'package:myapp/providers/user_model_provider.dart';
 import 'package:time_planner/time_planner.dart';
 
 final friendIndexProvider = StateProvider((ref) => 0);
@@ -32,7 +33,8 @@ class FriendScreen extends ConsumerWidget {
               )),
           Positioned(
               top: 150,
-              child: (index == 0) ? (ViewFriendsForm()) : (AddFriendsForm())),
+              child:
+                  (index == 0) ? (ViewFriendsForm()) : (AddFriendsFormState())),
         ],
       ),
       backgroundColor: Colors.black,
@@ -163,12 +165,20 @@ class ViewFriendsForm extends ConsumerWidget {
   }
 }
 
-class AddFriendsForm extends StatelessWidget {
+class AddFriendsFormState extends ConsumerStatefulWidget {
+  _AddFriendsForm createState() => _AddFriendsForm();
+}
+
+class _AddFriendsForm extends ConsumerState<AddFriendsFormState> {
   TextEditingController nameController = TextEditingController();
 
-  // Future<bool> sendFriendRequest(String name) {
-  //   // send friend request logic here
-  // }
+  // to access the friends name, do nameController.text
+
+  // to access your email, do ref.read(userModelProvider).email;
+
+  // create the function here and pass it as an argument to the SearchButton
+
+  @override
   Widget build(BuildContext context) {
     return Center(
         child: SizedBox(
