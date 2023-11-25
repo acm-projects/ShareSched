@@ -5,9 +5,10 @@ import 'package:myapp/models/user_model.dart';
 
 final userModelProvider = StateProvider(
   (ref) => UserModel(
-      username: 'test',
-      password: '....',
-      email: 'test@gmail.com',
-      schedule: Schedule(id: '1', courses: []),
-      avatarURL: ''),
+    username: 'test',
+    password: '....',
+    email: 'test@gmail.com',
+    schedule: Schedule(id: '1', courses: []),
+    avatarURL: '',
+  ),
 );

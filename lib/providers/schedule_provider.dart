@@ -5,6 +5,7 @@ import 'package:time_planner/time_planner.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/colors/app_colors.dart';
 import 'package:myapp/pages/custom_widgets.dart';
+import 'package:myapp/models/course_modal.dart';
 
 class ScheduleNotifier extends StateNotifier<Schedule> {
   ScheduleNotifier() : super(Schedule(id: "123", courses: []));
@@ -24,15 +25,15 @@ class ScheduleNotifier extends StateNotifier<Schedule> {
     }
   }
 
-  List<TimePlannerTask> convertCoursesToTasks() {
+  List<TimePlannerTask> convertCoursesToTasks(BuildContext context) {
     print("Conversion started");
     List<TimePlannerTask> tasks = [];
     for (int i = 0; i < state.courses.length; ++i) {
       String? courseName =
-          '${state.courses[i].subjectPrefix}  ${state.courses[i].courseNumber}';
+          '${state.courses[i].subjectPrefix} ${state.courses[i].courseNumber}';
       print('Course name: ${courseName}\n');
       String? location =
-          '${state.courses[i].building}  ${state.courses[i].room}';
+          '${state.courses[i].building} ${state.courses[i].room}';
 
       String? professorName = '${state.courses[i].professor}';
       print('Location: ${location}\n');
@@ -44,6 +45,18 @@ class ScheduleNotifier extends StateNotifier<Schedule> {
       print('Minute duration: ${minuteDuration}');
       for (int i = 0; i < days.length; ++i) {
         tasks.add(TimePlannerTask(
+            onTap: () {
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return CourseModal(
+                      courseName: courseName,
+                      professorName: professorName,
+                      professorRating: 3,
+                      creditHours: 3,
+                    );
+                  });
+            },
             minutesDuration: minuteDuration,
             dateTime: TimePlannerDateTime(
                 day: days[i],

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -171,12 +172,70 @@ class AddFriendsFormState extends ConsumerStatefulWidget {
 
 class _AddFriendsForm extends ConsumerState<AddFriendsFormState> {
   TextEditingController nameController = TextEditingController();
+  bool friendRequestSuccessful = false;
+  String? errorMessage;
+  String successMessage = "Friend request sent successfully";
+  Future<bool> onSearchButtonPressed() async {
+    try {
+      // Add search db logic here
 
-  // to access the friends name, do nameController.text
+      String userDocID = ref.read(userModelProvider).userDocID;
+      String friendName = nameController.text;
 
-  // to access your email, do ref.read(userModelProvider).email;
+      QuerySnapshot<Map<String, dynamic>> snapshot = await FirebaseFirestore
+          .instance
+          .collection("Users")
+          .where("Username", isEqualTo: friendName)
+          .limit(1)
+          .get();
 
-  // create the function here and pass it as an argument to the SearchButton
+      if (snapshot.docs.isEmpty) {
+        print("No user found with this username.");
+        return false;
+      }
+
+      String friendDocID = snapshot.docs.first.id;
+
+      print("Friend ID: ${friendDocID}");
+      List<String> newFriends = [friendDocID];
+      return await addFriendsToUser(userDocID, newFriends);
+    } catch (e) {
+      print('Error searching for user: $e');
+      return false;
+    }
+  }
+
+  Future<bool> addFriendsToUser(String userId, List<String> newFriends) async {
+    try {
+      // Get a reference to the user document in Firestore
+      DocumentReference userDocRef =
+          FirebaseFirestore.instance.collection('Users').doc(userId);
+
+      // Retrieve the current friends array from the user document
+      DocumentSnapshot userSnapshot = await userDocRef.get();
+
+      if (userSnapshot.exists) {
+        Map<String, dynamic> userData =
+            userSnapshot.data() as Map<String, dynamic>;
+        List<String> currentFriends =
+            List<String>.from(userData['Friends'] ?? []);
+
+        // Add new friends to the current friends list
+        currentFriends.addAll(newFriends);
+
+        // Update the user document with the modified friends list
+        await userDocRef.update({'Friends': currentFriends});
+        print('Friends added successfully.');
+        return true;
+      } else {
+        print('User document does not exist.');
+        return false;
+      }
+    } catch (e) {
+      print('Error adding friends: $e');
+      return false;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -216,8 +275,36 @@ class _AddFriendsForm extends ConsumerState<AddFriendsFormState> {
                   borderRadius: BorderRadius.circular(20.0),
                   borderSide: BorderSide(color: Colors.blue, width: 2.0),
                 ))),
-        SizedBox(height: 90),
-        SearchButton(buttonPressed: () {}),
+        SizedBox(height: 60),
+        SearchButton(buttonPressed: () async {
+          bool success = await onSearchButtonPressed();
+          setState(() {
+            friendRequestSuccessful = success;
+            if (friendRequestSuccessful) {
+              errorMessage = null; // Clear any previous error message
+            } else {
+              errorMessage = "Friend request failed";
+            }
+          });
+        }),
+        SizedBox(height: 40),
+        if (friendRequestSuccessful)
+          Text(
+            successMessage,
+            style: const TextStyle(
+                color: Colors.green,
+                fontSize: 16,
+                fontFamily: 'Quicksand-SemiBold'),
+          )
+        else if (errorMessage != null)
+          Text(
+            errorMessage!,
+            style: const TextStyle(
+                color: Colors.red,
+                fontSize: 16,
+                fontFamily: 'Quicksand-SemiBold'),
+          ),
+        const SizedBox(height: 20),
       ]),
     ));
   }

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -81,12 +82,25 @@ class _LoginFormState extends ConsumerState<LoginForm> {
       });
     }
 
+    QuerySnapshot<Map<String, dynamic>> snapshot = await FirebaseFirestore
+        .instance
+        .collection("Users")
+        .where("Email", isEqualTo: email)
+        .limit(1)
+        .get();
+
+    String userDocID = snapshot.docs.first.id;
+
+    print("User DOC ID: userDocID");
+
     ref.read(userModelProvider.notifier).state = UserModel(
         email: email,
         password: password,
         schedule: Schedule(id: '1', courses: []),
         username: '',
-        avatarURL: '');
+        avatarURL: '',
+        userDocID: userDocID);
+
     print("Email: $email");
     print("Password: $password");
     print(result.uid);

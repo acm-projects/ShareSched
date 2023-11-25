@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:myapp/models/schedule.dart';
 
 class UserModel {
@@ -8,7 +9,7 @@ class UserModel {
   final String password;
   final String? avatarURL;
   Schedule schedule;
-
+  final String userDocID;
   UserModel({
     //required this.id,
     this.id,
@@ -17,6 +18,7 @@ class UserModel {
     required this.password,
     required this.avatarURL,
     required this.schedule,
+    this.userDocID = "",
   });
 
   toJson() {

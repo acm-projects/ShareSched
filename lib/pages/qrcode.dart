@@ -34,18 +34,11 @@ class _QrScreenState extends ConsumerState<QrScreen> {
   Future<void> generateQrData() async {
     final email = ref.read(userModelProvider).email;
     print(email);
-    QuerySnapshot<Map<String, dynamic>> snapshot = await FirebaseFirestore
-        .instance
-        .collection("Users")
-        .where("Email", isEqualTo: email)
-        .limit(1)
-        .get();
-    print("Grabbed the document ID for ${email}: ${snapshot.docs.first.id}");
-    if (snapshot.docs.isNotEmpty) {
+    final userDocID = ref.read(userModelProvider).userDocID;
+    print("Grabbed the document ID for ${email}: ${userDocID}");
+    if (userDocID.isNotEmpty) {
       setState(() {
-        String documentId = snapshot.docs.first.id;
-        // Use the document ID as needed here
-        qrData = documentId; // Store the document ID in qrData
+        qrData = userDocID;
       });
     } else {
       print("No document found for the specified email");
