@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/models/user_model.dart';
 import 'package:myapp/providers/friend_provider.dart';
 import 'package:myapp/colors/app_colors.dart';
 import 'package:myapp/models/schedule.dart';
@@ -106,6 +107,79 @@ class AddFriendsButton extends ConsumerWidget {
 }
 
 class ViewFriendsForm extends ConsumerWidget {
+  void _showPopupMenu(BuildContext context, Offset position, UserModel friend) {
+    final RenderBox overlay =
+        Overlay.of(context)!.context.findRenderObject() as RenderBox;
+    showMenu(
+      color: Colors.black,
+      context: context,
+      position: RelativeRect.fromRect(
+        position & const Size(40, 40), // smaller rectangle, the touch area
+        Offset.zero & overlay.size, // Bigger rectangle, the entire screen
+      ),
+      items: [
+        PopupMenuItem(
+          value: "option1",
+          child: Container(
+            width: 250,
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: AppColors.backgroundColor,
+              border: Border.all(
+                color: Colors.grey,
+                width: 2.0,
+              ),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Text(
+              "View Schedule",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontFamily: 'Quicksand',
+                  fontSize: 16,
+                  color: AppColors.primaryTextColor),
+            ),
+          ),
+        ),
+        PopupMenuItem(
+          value: "option2",
+          child: Container(
+            width: 250,
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: AppColors.backgroundColor,
+              border: Border.all(
+                color: Colors.grey,
+                width: 2.0,
+              ),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Text(
+              textAlign: TextAlign.center,
+              "Compare Schedules",
+              style: TextStyle(
+                  fontFamily: 'Quicksand',
+                  fontSize: 16,
+                  color: AppColors.primaryTextColor),
+            ),
+          ),
+        ),
+      ],
+    ).then((value) {
+      if (value == "option1") {
+        showDialog(
+          context: context,
+          builder: (context) {
+            return MiniSchedule(
+                username: friend.username, schedule: friend.schedule);
+          },
+        );
+      } else if (value == "option2") {
+        // Handle Option 2
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final friendsList = ref.read(friendsProvider.notifier).state;
@@ -119,43 +193,38 @@ class ViewFriendsForm extends ConsumerWidget {
           ),
           itemCount: friendsList.length,
           itemBuilder: (context, index) {
-            return Container(
-              margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: ListTile(
-                dense: true,
-                onTap: () {
-                  final tappedUser = friendsList[index];
-                  showDialog(
-                    context: context,
-                    builder: (context) {
-                      return MiniSchedule(
-                          username: tappedUser.username,
-                          schedule: tappedUser.schedule);
-                    },
-                  );
-                },
-                leading: CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.white,
-                    backgroundImage:
-                        NetworkImage(friendsList[index].avatarURL!)),
-                title: Text(
-                  friendsList[index].username,
-                  style: const TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                      fontFamily: 'Quicksand'),
-                ),
-                trailing: const Icon(Icons.view_headline_rounded,
-                    size: 30, color: Colors.white),
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                tileColor: Colors.transparent,
-                shape: RoundedRectangleBorder(
+            return GestureDetector(
+              onTapDown: (details) {
+                _showPopupMenu(
+                    context, details.globalPosition, friendsList[index]);
+              },
+              child: Container(
+                margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
+                ),
+                child: ListTile(
+                  dense: true,
+                  leading: CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Colors.white,
+                      backgroundImage:
+                          NetworkImage(friendsList[index].avatarURL!)),
+                  title: Text(
+                    friendsList[index].username,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontFamily: 'Quicksand'),
+                  ),
+                  trailing: const Icon(Icons.view_headline_rounded,
+                      size: 30, color: Colors.white),
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  tileColor: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
               ),
             );
@@ -244,7 +313,7 @@ class _AddFriendsForm extends ConsumerState<AddFriendsFormState> {
       height: 600,
       width: 300,
       child: Column(children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         const Text('Add Friends',
@@ -255,13 +324,13 @@ class _AddFriendsForm extends ConsumerState<AddFriendsFormState> {
               letterSpacing: 1.5,
               color: AppColors.primaryTextColor,
             )),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         TextField(
             controller: nameController,
             decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 filled: true,
                 fillColor:
                     Colors.lightBlue[50], // Background color of the TextField
@@ -273,9 +342,9 @@ class _AddFriendsForm extends ConsumerState<AddFriendsFormState> {
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20.0),
-                  borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                  borderSide: const BorderSide(color: Colors.blue, width: 2.0),
                 ))),
-        SizedBox(height: 60),
+        const SizedBox(height: 60),
         SearchButton(buttonPressed: () async {
           bool success = await onSearchButtonPressed();
           setState(() {
@@ -287,7 +356,7 @@ class _AddFriendsForm extends ConsumerState<AddFriendsFormState> {
             }
           });
         }),
-        SizedBox(height: 40),
+        const SizedBox(height: 40),
         if (friendRequestSuccessful)
           Text(
             successMessage,
@@ -380,7 +449,7 @@ class MiniSchedule extends StatelessWidget {
                     fontWeight: FontWeight.w900,
                     fontSize: 16)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           ConstrainedBox(
