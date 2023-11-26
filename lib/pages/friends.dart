@@ -1,13 +1,17 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/providers/user_model_provider.dart';
 import 'custom_widgets.dart';
 
-class FriendScreen extends StatefulWidget {
+class FriendScreen extends ConsumerStatefulWidget {
   @override
-  _FriendScreenState createState() => _FriendScreenState();
+  ConsumerState<FriendScreen> createState() => _FriendScreenState();
 }
 
-class _FriendScreenState extends State<FriendScreen> {
+class _FriendScreenState extends ConsumerState<FriendScreen> {
   bool addFriendSelected = false;
 
   void toggleAddFriend(bool value) {
@@ -52,19 +56,54 @@ class _FriendScreenState extends State<FriendScreen> {
   }
 }
 
-class SearchForm extends StatefulWidget {
+class SearchForm extends ConsumerStatefulWidget {
   @override
-  _SearchFormState createState() => _SearchFormState();
+  ConsumerState<SearchForm> createState() => _SearchFormState();
 }
 
-class _SearchFormState extends State<SearchForm> {
+class _SearchFormState extends ConsumerState<SearchForm> {
   TextEditingController friendName = TextEditingController();
 
-  void onSearchButtonPressed() {
+  Future<void> onSearchButtonPressed() async {
     // add search db logic here
     String username = friendName.text;
-    print("Username: $username");
+    QuerySnapshot<Map<String, dynamic>> snapshot = await FirebaseFirestore.instance
+    .collection("Users")
+    .where("Username", isEqualTo: friendName.text)
+    .limit(1)
+    .get();
+
+    String friendDocID = snapshot.docs.first.id;
+    List<String> newFriends = [friendDocID];
+    
+
+    addFriendsToUser(newFriends);
   }
+
+  void addFriendsToUser(List<String> newFriends) async {
+  try {
+    final email = ref.read(userModelProvider).email;
+    QuerySnapshot<Map<String, dynamic>> user = await FirebaseFirestore.instance
+    .collection("Users")
+    .where("Email", isEqualTo: email)
+    .limit(1)
+    .get();
+    String userDocID = user.docs.first.id;
+    DocumentReference userDocRef = FirebaseFirestore.instance.collection('Users').doc(userDocID);
+    
+    DocumentSnapshot<Map<String, dynamic>> userDocSnapshot = await userDocRef.get() as DocumentSnapshot<Map<String, dynamic>>;
+    List<dynamic> currentFriends = userDocSnapshot.data()?['Friends'] ?? <String>[];//get current friends
+
+
+    List mergedFriends = currentFriends+newFriends;//merged friends lists
+    await userDocRef.set({'Friends': mergedFriends}, SetOptions(merge: true));//update friends list in DB
+
+
+  } catch (e) {
+    print('Error adding friends: $e');
+    // Handle error as needed
+  }
+}
 
   @override
   Widget build(BuildContext context) {

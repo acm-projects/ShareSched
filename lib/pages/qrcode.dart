@@ -1,5 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:myapp/repositories/user_respository.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,11 +32,21 @@ class _QrScreenState extends State<QrPage> {
   }
 
   Future<void> generateQrData() async {
-    String id = await UserRepository.instance.getUserDocId();
-    if (user != null) {
+     QuerySnapshot<Map<String, dynamic>> snapshot = await FirebaseFirestore.instance
+    .collection("Users")
+    .where("Email", isEqualTo: "test@gmail.com")
+    .limit(1)
+    .get();
+
+    print(snapshot.docs.first.id);
+    if (snapshot.docs.isNotEmpty) {
       setState(() {
-        qrData = id; // document id stored in the qr code
+        String documentId = snapshot.docs.first.id;
+        // Use the document ID as needed here
+        qrData = documentId; // Store the document ID in qrData
       });
+    } else {
+      print("No document found for the specified email");
     }
   }
 

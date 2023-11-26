@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'firebase_options.dart';
 import 'pages/welcome.dart';
 
@@ -26,7 +27,11 @@ Future <void> main() async {
     persistenceEnabled: true, // Enable local persistence
     // Add more settings as needed
   );
-  runApp(MyApp());
+  runApp(
+    ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 // class UploadPic extends StatefulWidget {

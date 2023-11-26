@@ -118,6 +118,10 @@ fixnum
 2.19
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/fixnum-1.1.0/
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/fixnum-1.1.0/lib/
+flutter_hooks
+2.17
+file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_hooks-0.20.3/
+file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_hooks-0.20.3/lib/
 flutter_lints
 2.19
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.3/
@@ -126,6 +130,10 @@ flutter_plugin_android_lifecycle
 2.19
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.16/
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.16/lib/
+flutter_riverpod
+2.17
+file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_riverpod-2.4.8/
+file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_riverpod-2.4.8/lib/
 get
 2.15
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/get-4.6.6/
@@ -194,6 +202,10 @@ google_mlkit_translation
 2.16
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/google_mlkit_translation-0.8.0/
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/google_mlkit_translation-0.8.0/lib/
+hooks_riverpod
+2.17
+file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/hooks_riverpod-2.4.8/
+file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/hooks_riverpod-2.4.8/lib/
 http
 3.0
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.1.0/
@@ -314,6 +326,10 @@ qr_flutter
 2.12
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/qr_flutter-4.0.0/
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/qr_flutter-4.0.0/lib/
+riverpod
+2.17
+file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/riverpod-2.4.8/
+file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/riverpod-2.4.8/lib/
 source_span
 2.18
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0/
@@ -322,6 +338,10 @@ stack_trace
 2.18
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.0/
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.0/lib/
+state_notifier
+2.12
+file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/state_notifier-1.0.0/
+file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/state_notifier-1.0.0/lib/
 stream_channel
 2.14
 file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.1/

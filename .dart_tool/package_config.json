@@ -182,6 +182,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_hooks",
+      "rootUri": "file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_hooks-0.20.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.3",
       "packageUri": "lib/",
@@ -192,6 +198,12 @@
       "rootUri": "file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.16",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "flutter_riverpod",
+      "rootUri": "file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_riverpod-2.4.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_test",
@@ -306,6 +318,12 @@
       "rootUri": "file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/google_mlkit_translation-0.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.16"
+    },
+    {
+      "name": "hooks_riverpod",
+      "rootUri": "file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/hooks_riverpod-2.4.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "http",
@@ -488,6 +506,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "riverpod",
+      "rootUri": "file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/riverpod-2.4.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/scr/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -504,6 +528,12 @@
       "rootUri": "file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "state_notifier",
+      "rootUri": "file:///C:/Users/noele/AppData/Local/Pub/Cache/hosted/pub.dev/state_notifier-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "stream_channel",
@@ -572,7 +602,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-11-23T01:30:22.417681Z",
+  "generated": "2023-11-25T06:29:01.912143Z",
   "generator": "pub",
   "generatorVersion": "3.1.2"
 }

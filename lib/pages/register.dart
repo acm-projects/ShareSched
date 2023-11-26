@@ -1,20 +1,16 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-
-import 'package:myapp/models/user.dart';
 import 'package:myapp/models/user_model.dart';
-import 'package:myapp/repositories/user_respository.dart';
+import 'package:myapp/providers/user_model_provider.dart';
 import 'package:myapp/services/auth.dart';
 import 'package:myapp/services/controllers/register_controller.dart';
 import 'custom_widgets.dart';
-
 import 'package:myapp/pages/upload_schedule.dart';
 import 'login.dart';
-import 'custom_widgets.dart';
+import 'package:myapp/colors/app_colors.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -54,14 +50,16 @@ class RegisterScreen extends StatelessWidget {
   }
 }
 
-
 class TextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text.rich(
       TextSpan(
         text: "Already have an account? ",
-        style: GoogleFonts.quicksand(fontSize: 16, color: Colors.white),
+        style: const TextStyle(
+            fontFamily: 'Quicksand-SemiBold',
+            fontSize: 16,
+            color: AppColors.primaryTextColor),
         children: [
           WidgetSpan(
             child: GestureDetector(
@@ -71,12 +69,12 @@ class TextField extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const LoginScreen()),
                 );
               },
-              child: Text(
+              child: const Text(
                 'Log in',
-                style: GoogleFonts.quicksand(
-                  fontSize: 16,
-                  color: Colors.blue,
-                ),
+                style: TextStyle(
+                    fontFamily: 'Quicksand-SemiBold',
+                    fontSize: 16,
+                    color: Color.fromARGB(255, 18, 101, 209)),
               ),
             ),
           ),
@@ -86,41 +84,60 @@ class TextField extends StatelessWidget {
   }
 }
 
-
-class RegisterForm extends StatefulWidget {
+class RegisterForm extends ConsumerStatefulWidget {
   @override
   _RegisterFormState createState() => _RegisterFormState();
 }
 
-class _RegisterFormState extends State<RegisterForm> {
+class _RegisterFormState extends ConsumerState<RegisterForm> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  void onSignUpButtonPressed() async{
+  String? errorMessage;
+  dynamic onSignUpButtonPressed() async {
     final AuthService _auth = AuthService();
-    final registerRepo = Get.put(RegisterController());
     // save registration details to database here?
-    String email1 = emailController.text;
-    String username1 = usernameController.text;
-    String password1 = passwordController.text;
+    final registerRepo = Get.put(RegisterController());
 
-    final user = UserModel(
-      username: username1,
-      email: email1, 
-      password: password1,
-      );
-    if(user.username != "" && user.email != "" && user.password != ""){
-      await registerRepo.createUser(user);
+    String email = emailController.text;
+    String username = usernameController.text;
+    String password = passwordController.text;
+
+    if (email != "" && username != "" && password != "") {
+      await registerRepo.createUser(UserModel(
+          username: username,
+          email: email,
+          password: password,
+          avatarURL: '',
+      ));
     }
-    dynamic result = await _auth.registerWithEmailAndPassword(email1,password1);
-    //const ref = this.db.collection('Users');
-    //ref.valueChanges({idField: 'customIdName'});
-    //print(registerRepo.getUserDocId());
-    print("Email: $email1");
-    print("Username: $username1");
-    print("Password: $password1");
+
+    dynamic result = await _auth.registerWithEmailAndPassword(email, password);
+    if (result == null || result.uid == null) {
+      setState(() {
+        errorMessage = 'Registration failed'; // Update error message
+      });
+    } else {
+      // Navigate or perform other actions on successful login
+      setState(() {
+        errorMessage = null; // Clear error message
+      });
+    }
+
+    ref.read(userModelProvider.notifier).state = UserModel(
+        email: email,
+        password: password,
+        schedule: Schedule(id: '1', courses: []),
+        username: '',
+        avatarURL: '');
+
+    print("Email: $email");
+    print("Username: $username");
+    print("Password: $password");
+
+    return result;
   }
-  
+
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -133,7 +150,6 @@ class _RegisterFormState extends State<RegisterForm> {
               color: Colors.white,
               fontWeight: FontWeight.bold,
             )),
-
         const SizedBox(height: 20),
         Form(
           child: Column(
@@ -147,9 +163,20 @@ class _RegisterFormState extends State<RegisterForm> {
               const SizedBox(height: 20),
               PasswordField(controller: passwordController),
               const SizedBox(height: 20),
-              SignUpButton(buttonPressed: onSignUpButtonPressed),
+              SignUpButton(
+                buttonPressed: onSignUpButtonPressed,
+                errorMessage: errorMessage,
+              ),
               const SizedBox(height: 20),
-              const AuthButtons(),
+              if (errorMessage != null)
+                Text(
+                  errorMessage!,
+                  style: const TextStyle(
+                      color: Colors.red,
+                      fontSize: 16,
+                      fontFamily: 'Quicksand-SemiBold'),
+                ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
@@ -158,47 +185,20 @@ class _RegisterFormState extends State<RegisterForm> {
   }
 }
 
+class EmailField extends StatefulWidget {
+  final TextEditingController controller;
 
-// class EmailField extends StatelessWidget {
-//   const EmailField({super.key});
-//   //String email = '';
+  EmailField({required this.controller, Key? key}) : super(key: key);
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.symmetric(horizontal: 35),
-//       child: TextFormField(
-//         keyboardType: TextInputType.emailAddress,
-//         decoration: InputDecoration(
-//           labelText: "Email",
-//           hintText: 'Enter email',
-//           hintStyle: GoogleFonts.montserrat(),
-//           labelStyle: GoogleFonts.montserrat(),
-//           prefixIcon: const Icon(Icons.email),
-//           border: const OutlineInputBorder(),
-//         ),
-//         onChanged: (String Value) {
-//           // setState(() => email = val);
-//         },
-//         validator: (value) {
-//           return value!.isEmpty ? 'Please Enter Email' : null;
-//         },
-//       ),
-//     );
-//   }
-// }
-class EmailField extends StatelessWidget {
+  @override
+  _EmailFieldState createState() => _EmailFieldState();
+}
 
-  TextEditingController controller = TextEditingController();
-
-  EmailField({required this.controller});
-
-
+class _EmailFieldState extends State<EmailField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
-
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -206,19 +206,19 @@ class EmailField extends StatelessWidget {
           const Text(
             '   EMAIL',
             style: TextStyle(
-              fontFamily: 'Mulish',
+              fontFamily: 'Mulish-ExtraBold',
               fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontSize: 12.0,
               letterSpacing: 1.5,
-              height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
           // Email Text Field
           TextFormField(
-            controller: controller,
+            controller: widget.controller,
             keyboardType: TextInputType.emailAddress,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: InputDecoration(
               labelText: 'name@email.com',
               prefixIcon: Padding(
@@ -246,7 +246,11 @@ class EmailField extends StatelessWidget {
             },
             validator: (String? value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your email';
+                return 'Please enter your email.';
+              } else if (!value.contains('@') ||
+                  !RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")
+                      .hasMatch(value)) {
+                return 'Please enter a valid email.';
               }
               return null;
             },
@@ -257,12 +261,14 @@ class EmailField extends StatelessWidget {
   }
 }
 
+class UsernameField extends StatefulWidget {
+  final TextEditingController controller;
+  UsernameField({Key? key, required this.controller}) : super(key: key);
+  @override
+  _UsernameFieldState createState() => _UsernameFieldState();
+}
 
-class UsernameField extends StatelessWidget {
-  TextEditingController controller = TextEditingController();
-
-  UsernameField({required this.controller});
-
+class _UsernameFieldState extends State<UsernameField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -274,19 +280,19 @@ class UsernameField extends StatelessWidget {
           const Text(
             '   USERNAME',
             style: TextStyle(
-              fontFamily: 'Mulish',
+              fontFamily: 'Mulish-ExtraBold',
               fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontSize: 12.0,
               letterSpacing: 1.5,
-              height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
           // Username Text Field
           TextFormField(
-            controller: controller,
+            controller: widget.controller,
             keyboardType: TextInputType.emailAddress,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: InputDecoration(
               labelText: 'johndoe',
               prefixIcon: Padding(
@@ -314,7 +320,16 @@ class UsernameField extends StatelessWidget {
             },
             validator: (String? value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your username';
+                return 'Please enter your username.';
+              }
+              final RegExp regex = RegExp(r'^[a-zA-Z0-9_]+$');
+
+              if (!regex.hasMatch(value)) {
+                return 'Username must contain only alphanumeric characters.';
+              }
+
+              if (value.length > 20 || value.length < 3) {
+                return 'Username must be between 3 and 20 characters.';
               }
               return null;
             },
@@ -325,65 +340,37 @@ class UsernameField extends StatelessWidget {
   }
 }
 
-
-// class PasswordField extends StatelessWidget {
-//   const PasswordField({super.key});
-//   String password = ' ';
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.symmetric(horizontal: 35),
-//       child: TextFormField(
-//         keyboardType: TextInputType.visiblePassword,
-//         decoration: InputDecoration(
-//           labelText: "Password",
-//           hintText: 'Enter password',
-//           hintStyle: GoogleFonts.montserrat(),
-//           labelStyle: GoogleFonts.montserrat(),
-//           prefixIcon: const Icon(Icons.password),
-//           border: const OutlineInputBorder(),
-//         ),
-//         onChanged: (String Value) {
-//           // setState(() => password = val);
-//         },
-//         validator: (value) {
-//           return value!.isEmpty ? 'Please Enter Password' : null;
-//         },
-//       ),
-//     );
-//   }
-// }
-
-class PasswordField extends StatelessWidget {
-  TextEditingController controller = TextEditingController();
-
+class PasswordField extends StatefulWidget {
+  TextEditingController controller;
+  @override
   PasswordField({super.key, required this.controller});
+  _PasswordField createState() => _PasswordField();
+}
+
+class _PasswordField extends State<PasswordField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
-
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Username Label
           const Text(
             '   PASSWORD',
             style: TextStyle(
-              fontFamily: 'Mulish',
+              fontFamily: 'Mulish-ExtraBold',
               fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontSize: 12.0,
               letterSpacing: 1.5,
-              height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
-          // Username Text Field
           TextFormField(
-            controller: controller,
+            controller: widget.controller,
             obscureText: true,
             keyboardType: TextInputType.emailAddress,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             decoration: InputDecoration(
               labelText: '********',
               prefixIcon: Padding(
@@ -398,7 +385,7 @@ class PasswordField extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15.0),
               ),
               enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: Colors.black, width: 1.5),
+                borderSide: const BorderSide(color: Colors.white, width: 1.5),
                 borderRadius: BorderRadius.circular(15.0),
               ),
               focusedBorder: OutlineInputBorder(
@@ -411,7 +398,10 @@ class PasswordField extends StatelessWidget {
             },
             validator: (String? value) {
               if (value == null || value.isEmpty) {
-                return 'Please enter your password';
+                return 'Please enter your password.';
+              }
+              if (value.length < 6) {
+                return 'Password must be at least 6 characters long.';
               }
               return null;
             },
@@ -422,60 +412,42 @@ class PasswordField extends StatelessWidget {
   }
 }
 
-
-
-// class SignUpButton extends StatelessWidget {
-//   const SignUpButton({super.key});
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.symmetric(horizontal: 100),
-//       child: MaterialButton(
-//         minWidth: double.infinity,
-//         onPressed: () async {
-//           print(email);
-//           print(password);
-//         },
-//         color: Colors.black,
-//         textColor: Colors.white,
-//         child: Text('Sign Up',
-//             style: GoogleFonts.exo(fontSize: 20, color: Colors.white)),
-//       ),
-//     );
-//   }
-// }
-
 class SignUpButton extends StatelessWidget {
-  const SignUpButton({required this.buttonPressed});
-
+  SignUpButton({required this.buttonPressed, required this.errorMessage});
   final Function buttonPressed;
-
+  String? errorMessage;
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      minWidth: 335,
-      height: 52,
-      onPressed: (){
-        buttonPressed();
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => UploadScreen()));
-      },
-      color: const Color(0xFF1264D1),
-      textColor: Colors.black,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(50.0),
-        side: const BorderSide(color: Colors.black, width: 0.3),
-      ),
-      child: const Text(
-        'SIGN UP',
-        style: TextStyle(
-          fontFamily: 'Mulish',
-          fontWeight: FontWeight.w700,
-          fontSize: 15,
-          letterSpacing: 1.25,
-        ),
-      ),
+    return Column(
+      children: [
+        MaterialButton(
+            minWidth: 335,
+            height: 52,
+            onPressed: () async {
+              dynamic result = await buttonPressed();
+              if (result != null && result.uid != null) {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => UploadScreen()));
+                print("Sign up successful");
+              } else {
+                print("Sign up unsuccessful");
+              }
+            },
+            color: AppColors.buttonColor1,
+            textColor: AppColors.secondaryTextColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50.0),
+              side: const BorderSide(color: Colors.black, width: 0.3),
+            ),
+            child: const Text(
+              'SIGN UP',
+              style: TextStyle(
+                fontFamily: 'Mulish-Bold',
+                fontSize: 15,
+                letterSpacing: 1.25,
+              ),
+            )),
+      ],
     );
   }
 }
-

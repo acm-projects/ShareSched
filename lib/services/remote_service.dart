@@ -22,12 +22,12 @@ class RemoteService {
     var uri = Uri.parse(newUrl);
     var response = await client.get(uri, headers: headers);
 
-    print(newUrl);
-    print("API Response Status Code: ${response.statusCode}");
+    //print(newUrl);
+    //print("API Response Status Code: ${response.statusCode}");
 
     if (response.statusCode == 200) {
       var json = response.body;
-      print(json);
+      //print(json);
       try {
         CourseData? courseData = courseDataFromJson(json);
         return courseData;
@@ -57,7 +57,7 @@ class RemoteService {
 
     if (response.statusCode == 200) {
       var json = response.body;
-    print(json);
+    //print(json);
       try {
         return scheduleModelFromJson(json);
       } catch (e) {

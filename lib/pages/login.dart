@@ -1,5 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/models/user_model.dart';
+import 'package:myapp/providers/user_model_provider.dart';
 import 'package:myapp/services/auth.dart';
 import 'custom_widgets.dart';
 import 'register.dart';
@@ -41,12 +45,12 @@ class LoginScreen extends StatelessWidget {
 }
 
 
-class LoginForm extends StatefulWidget {
+class LoginForm extends ConsumerStatefulWidget {
   @override
-  _LoginFormState createState() => _LoginFormState();
+  ConsumerState<LoginForm> createState() => _LoginFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _LoginFormState extends ConsumerState<LoginForm> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -63,6 +67,19 @@ class _LoginFormState extends State<LoginForm> {
     String email = emailController.text;
     String password = passwordController.text;
     dynamic result = await _auth.signInWithEmailAndPassword(email, password);
+    QuerySnapshot<Map<String, dynamic>> user = await FirebaseFirestore.instance
+    .collection("Users")
+    .where("Email", isEqualTo: email)
+    .limit(1)
+    .get();
+
+
+    ref.read(userModelProvider.notifier).state = UserModel(
+        email: email,
+        password: password,
+        schedule: Schedule(id: '1', courses: []),
+        username: user.docs[0]["Username"],
+        avatarURL: '');
     print("Email: $email");
     print("Password: $password");
     print(result.uid);

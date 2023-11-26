@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:logger/logger.dart';
@@ -7,34 +8,31 @@ import 'package:myapp/models/class_model.dart';
 import 'package:myapp/models/course_data.dart';
 import 'package:myapp/models/course_model.dart';
 import 'package:myapp/models/schedule_model.dart';
+import 'package:myapp/navigation/navigation_bar.dart';
+import 'package:myapp/providers/user_model_provider.dart';
 import 'package:myapp/services/remote_service.dart';
 import 'package:myapp/services/upload_image.dart';
 import 'custom_widgets.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
-import 'package:intl/intl.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:myapp/repositories/user_respository.dart';
+import 'package:myapp/colors/app_colors.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 
 List<ClassModel> classes = [];
 
-
-class UploadScreen extends StatefulWidget {
+class UploadScreen extends ConsumerStatefulWidget {
   @override
-  _UploadScreen createState() => _UploadScreen();
+  ConsumerState<UploadScreen> createState() => _UploadScreenState();
 }
 
-class _UploadScreen extends State<UploadScreen> {
-  
-  //inal TextRecognizer textRecognizer = FirebaseVision.instance.textRecognizer();
-  final logger = Logger();
+class _UploadScreenState extends ConsumerState<UploadScreen> {
   final ImagePicker picker = ImagePicker();
+  final logger = Logger();
   File? _image;
     bool textScanning = false;
     
   String scannedText = "";
-
 
   Future<void> takeImage() async {
     final XFile? photo = await picker.pickImage(source: ImageSource.camera);
@@ -61,7 +59,6 @@ class _UploadScreen extends State<UploadScreen> {
   }
 
   Future<void> uploadImage() async {
-    //callApi("CS", "2337", "23", "003");
     final XFile? photo = await picker.pickImage(source: ImageSource.gallery);
     Uint8List? bytes = await photo?.readAsBytes();
     if (photo != null) {
@@ -80,6 +77,55 @@ class _UploadScreen extends State<UploadScreen> {
          //_processImage();
       
       }
+  }
+
+  Future<void> nextButton() async {
+    try {
+    final user = ref.read(userModelProvider).username;
+
+    final coursesSnapshot = await FirebaseFirestore.instance.collection("courses").get();
+
+    for (QueryDocumentSnapshot<Map<String, dynamic>> doc in coursesSnapshot.docs) {
+      final data = doc.data();
+
+      final course = data['course'];
+      final number = data['number'];
+      final section = data['section'];
+      callApi(course, number, "23", section);
+    }
+
+    for (ClassModel c in classes) {
+      final email = ref.read(userModelProvider).email;
+
+      final usersSnapshot = await FirebaseFirestore.instance.collection("Users")
+          .where("Email", isEqualTo: email)
+          .limit(1)
+          .get();
+      final documentId = usersSnapshot.docs.first.id;
+      final user = ref.read(userModelProvider).username;
+      final collectionRef = FirebaseFirestore.instance.collection('Schedules');
+
+      await collectionRef.doc(documentId).collection('$user Classes').add({
+        'subjectPrefix': c.subjectPrefix,
+        'courseNumber': c.courseNumber,
+        'catalogYear': c.catalogYear,
+        'sectionNumber': c.sectionNumber,
+        'start_time': c.start_time,
+        'end_time': c.end_time,
+        'building': c.building,
+        'room': c.room,
+        'map_uri': c.map_uri,
+        'meetingDays': c.meetingDays,
+        'professor': c.professor,
+      });
+    }
+    print(classes.toString());
+  } catch (e) {
+    print('Error in nextButton(): $e');
+    // Handle error accordingly
+  }
+    Navigator.push(context,
+              MaterialPageRoute(builder: (context) => CustomNavigationBar()));
   }
 
   Future<void> callApi(String? sP, String? cN, String? cY, String sN) async{
@@ -127,30 +173,13 @@ class _UploadScreen extends State<UploadScreen> {
 
         classes.add(classM);
         
-        print(classes);
+        //print(classes);
         //printCourses();
       }
 
   }
 
-
-// void printCourses() async {
-//   final QuerySnapshot<Map<String, dynamic>> snapshot =
-//       await FirebaseFirestore.instance.collection('courses').get();
-
-//   for (QueryDocumentSnapshot<Map<String, dynamic>> doc in snapshot.docs) {
-//     final data = doc.data();
-
-//     // Add your if-else check here
-//     if (data.containsKey('course') && data.containsKey('number') && data.containsKey('section')) {
-//       print('Course: ${data['course']}, Number: ${data['number']}, Section: ${data['section']}');
-//     } else {
-//       print('Invalid data format for course: $data');
-//     }
-//   }
-// }
-
-Future<List<String>> getCoursesAsString() async {
+  Future<List<String>> getCoursesAsString() async {
   final QuerySnapshot<Map<String, dynamic>> snapshot =
       await FirebaseFirestore.instance.collection('courses').get();
 
@@ -175,14 +204,9 @@ Future<List<String>> getCoursesAsString() async {
   return coursesList;
 }
 
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
       body: Stack(
         children: [
           const BackgroundWidget(),
@@ -213,17 +237,28 @@ Future<List<String>> getCoursesAsString() async {
                     width: 20,
                   ),
                   UploadButton(buttonPressed: uploadImage),
-
                 ],
-              )
+              ),
+              SizedBox(
+                height: 100,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 250,
+                  ),
+                  NextButton(buttonPressed: nextButton),
+                ],
+              ),
             ],
           )
         ],
       ),
     );
   }
-
 }
+
 class UploadText extends StatelessWidget {
   const UploadText({super.key});
   @override
@@ -234,7 +269,7 @@ class UploadText extends StatelessWidget {
         SizedBox(height: 80),
         Text('Upload',
             style: GoogleFonts.quicksand(
-                color: Colors.white,
+                color: AppColors.primaryTextColor,
                 fontSize: 32,
                 fontWeight: FontWeight.bold)),
         const SizedBox(
@@ -242,7 +277,7 @@ class UploadText extends StatelessWidget {
         ),
         Text('Snap a photo of your schedule to auto-fill course details.',
             style: GoogleFonts.quicksand(
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
               fontSize: 15,
             ))
       ],
@@ -261,8 +296,8 @@ class UploadButton extends StatelessWidget {
         minWidth: 180,
         height: 52,
         onPressed: () => buttonPressed(),
-        color: const Color(0xFF1264D1),
-        textColor: Colors.black,
+        color: AppColors.buttonColor1,
+        textColor: AppColors.secondaryTextColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50.0),
           side: const BorderSide(color: Colors.black, width: 0.3),
@@ -279,11 +314,11 @@ class UploadButton extends StatelessWidget {
             Text(
               'Upload Picture',
               style: TextStyle(
-                fontFamily: 'Mulish',
-                fontWeight: FontWeight.w700,
-                fontSize: 15,
-                letterSpacing: 1.25,
-              ),
+                  fontFamily: 'Mulish',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15,
+                  letterSpacing: 1.25,
+                  color: Colors.white),
             ),
           ],
         ));
@@ -301,8 +336,8 @@ class TakePictureButton extends StatelessWidget {
         minWidth: 180,
         height: 52,
         onPressed: () => buttonPressed(),
-        color: const Color(0xFF1264D1),
-        textColor: Colors.black,
+        color: AppColors.buttonColor1,
+        textColor: AppColors.secondaryTextColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50.0),
           side: const BorderSide(color: Colors.black, width: 0.3),
@@ -319,11 +354,51 @@ class TakePictureButton extends StatelessWidget {
             Text(
               'Take Picture',
               style: TextStyle(
-                fontFamily: 'Mulish',
-                fontWeight: FontWeight.w700,
-                fontSize: 15,
-                letterSpacing: 1.25,
-              ),
+                  fontFamily: 'Mulish',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15,
+                  letterSpacing: 1.25,
+                  color: Colors.white),
+            ),
+          ],
+        ));
+  }
+}
+
+class NextButton extends StatelessWidget {
+  final Function buttonPressed;
+
+  const NextButton({super.key, required this.buttonPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+        minWidth: 100,
+        height: 52,
+        onPressed:() => buttonPressed(),
+        color: AppColors.buttonColor1,
+        textColor: AppColors.secondaryTextColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50.0),
+          side: const BorderSide(color: Colors.black, width: 0.3),
+        ),
+        child: const Row(
+          children: [
+            Icon(
+              Icons.navigate_next,
+              color: Colors.white,
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              'Next',
+              style: TextStyle(
+                  fontFamily: 'Mulish',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15,
+                  letterSpacing: 1.25,
+                  color: Colors.white),
             ),
           ],
         ));

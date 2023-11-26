@@ -35,4 +35,9 @@ class ClassModel {
       "Catalog Year": catalogYear,
     };
   }
+
+  @override
+  String toString() {
+    return 'ClassModel{subjectPrefix: $subjectPrefix, courseNumber: $courseNumber, catalogYear: $catalogYear, sectionNumber: $sectionNumber, start_time: $start_time, end_time: $end_time, building: $building, room: $room, map_uri: $map_uri, meetingDays: $meetingDays, professor: $professor}';
+  }
 }
