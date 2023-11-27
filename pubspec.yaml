@@ -93,30 +93,8 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/page-1/images/facebook.png
-    - assets/page-1/images/apple.png
-    - assets/page-1/images/facebook-Rom.png
-    - assets/page-1/images/apple-M51.png
-    - assets/page-1/images/apple-MMh.png
-    - assets/page-1/images/google.png
-    - assets/page-1/images/facebook-2Yo.png
-    - assets/page-1/images/google-n4f.png
-    - assets/page-1/images/auto-group-txyr.png
-    - assets/page-1/images/objects.png
-    - assets/page-1/images/objects-TvP.png
-    - assets/page-1/images/google-FUK.png
-    - assets/page-1/images/custom/logo.png
-    - assets/page-1/images/custom/email_icon.png
-    - assets/page-1/images/custom/lock_icon.png
-    - assets/page-1/images/custom/user_icon.png
-    - assets/page-1/images/custom/apple.png
-    - assets/page-1/images/custom/facebook.png
-    - assets/page-1/images/custom/google.png
-    - assets/page-1/images/custom/home.png
-    - assets/page-1/images/custom/profile.png
-    - assets/page-1/images/custom/modal.png
-    - assets/page-1/images/custom/logo_2.png
-    - assets/page-1/images/ocr.png
+    - assets/page-1/images/
+    - assets/page-1/images/custom/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

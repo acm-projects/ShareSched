@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/models/user_model.dart';
-import 'package:myapp/providers/user_model_provider.dart';
+import 'package:myapp/navigation/navigation_bar.dart';
 import 'package:myapp/services/auth.dart';
 import 'custom_widgets.dart';
 import 'register.dart';
-import 'package:myapp/navigation/navigation_bar.dart';
+import 'package:myapp/colors/app_colors.dart';
+import 'package:myapp/providers/user_model_provider.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -44,15 +45,15 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-
 class LoginForm extends ConsumerStatefulWidget {
   @override
-  ConsumerState<LoginForm> createState() => _LoginFormState();
+  _LoginFormState createState() => _LoginFormState();
 }
 
 class _LoginFormState extends ConsumerState<LoginForm> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  String? errorMessage;
 
   @override
   void dispose() {
@@ -61,29 +62,49 @@ class _LoginFormState extends ConsumerState<LoginForm> {
     super.dispose();
   }
 
-  void onLoginButtonPressed() async{
+  dynamic onLoginButtonPressed() async {
     final AuthService _auth = AuthService();
-    // Save to login details to database here?
     String email = emailController.text;
     String password = passwordController.text;
+
     dynamic result = await _auth.signInWithEmailAndPassword(email, password);
-    QuerySnapshot<Map<String, dynamic>> user = await FirebaseFirestore.instance
-    .collection("Users")
-    .where("Email", isEqualTo: email)
-    .limit(1)
-    .get();
 
+    if (result == null || result.uid == null) {
+      setState(() {
+        errorMessage = 'Login failed'; // Update error message
+      });
+      return; // Exit the function if login fails
+    }
 
-    ref.read(userModelProvider.notifier).state = UserModel(
-        email: email,
-        password: password,
-        schedule: Schedule(id: '1', courses: []),
-        username: user.docs[0]["Username"],
-        avatarURL: '');
-    print("Email: $email");
-    print("Password: $password");
+    // Navigate or perform other actions on successful login
+    setState(() {
+      errorMessage = null; // Clear error message
+    });
+
+    UserModel? userModel = await UserModel.fromEmail(email);
+
+    if (userModel != null) {
+      // User found, proceed with your logic
+      ref.read(userModelProvider.notifier).state = userModel;
+      print("UserModel updated successfully");
+    } else {
+      // Handle the case where no user is found
+      print("No user found for this email");
+    }
+    String? pEmail = ref.read(userModelProvider).email;
+    String? pPassword = ref.read(userModelProvider).password;
+    String? pUsername = ref.read(userModelProvider).username;
+    String? pDocID = ref.read(userModelProvider).userDocID;
+    String? avatarURL = ref.read(userModelProvider).avatarURL;
+
+    print("Email: ${pEmail}");
+    print("Password: ${pPassword}");
+    print("Username: ${pUsername}");
+    print("Document ID: ${pDocID}");
+    print("Avatar URL: ${avatarURL}");
     print(result.uid);
-    
+
+    return result;
   }
 
   Widget build(BuildContext context) {
@@ -94,7 +115,7 @@ class _LoginFormState extends ConsumerState<LoginForm> {
         Text('Log In',
             style: GoogleFonts.quicksand(
               fontSize: 32,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
               fontWeight: FontWeight.bold,
             )),
         const SizedBox(height: 20),
@@ -106,10 +127,22 @@ class _LoginFormState extends ConsumerState<LoginForm> {
               const SizedBox(height: 20),
               PasswordField(controller: passwordController),
               const SizedBox(height: 20),
+              if (errorMessage != null)
+                Column(
+                  children: [
+                    Text(
+                      errorMessage!,
+                      style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 16,
+                          fontFamily: 'Quicksand-SemiBold'),
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                ), // Conditionally display error message
               LoginButton(buttonPressed: onLoginButtonPressed),
-              const SizedBox(height: 20),
-              const AuthButtons(),
-              const SizedBox(height: 20),
+              const SizedBox(height: 30),
+              const SizedBox(height: 30),
               TextField(),
               const SizedBox(height: 20),
             ],
@@ -126,7 +159,10 @@ class TextField extends StatelessWidget {
     return Text.rich(
       TextSpan(
         text: "Don't have an account? ",
-        style: GoogleFonts.quicksand(fontSize: 16, color: Colors.white),
+        style: const TextStyle(
+            fontFamily: 'Quicksand-SemiBold',
+            fontSize: 16,
+            color: AppColors.primaryTextColor),
         children: [
           WidgetSpan(
             child: GestureDetector(
@@ -134,15 +170,15 @@ class TextField extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => RegisterScreen()),
+                      builder: (context) => const RegisterScreen()),
                 );
               },
               child: Text(
                 'Sign up',
-                style: GoogleFonts.quicksand(
-                  fontSize: 16,
-                  color: Colors.blue,
-                ),
+                style: const TextStyle(
+                    fontFamily: 'Quicksand-SemiBold',
+                    fontSize: 16,
+                    color: Color.fromARGB(255, 18, 101, 209)),
               ),
             ),
           ),
@@ -151,7 +187,6 @@ class TextField extends StatelessWidget {
     );
   }
 }
-
 
 class EmailField extends StatelessWidget {
   final TextEditingController controller;
@@ -162,7 +197,6 @@ class EmailField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
-      
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -170,12 +204,11 @@ class EmailField extends StatelessWidget {
           const Text(
             '   EMAIL',
             style: TextStyle(
-              fontFamily: 'Mulish',
+              fontFamily: 'Mulish-ExtraBold',
               fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontSize: 12.0,
               letterSpacing: 1.5,
-              height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
@@ -221,8 +254,6 @@ class EmailField extends StatelessWidget {
   }
 }
 
-
-
 class PasswordField extends StatelessWidget {
   final TextEditingController controller;
   const PasswordField({required this.controller});
@@ -237,12 +268,11 @@ class PasswordField extends StatelessWidget {
           const Text(
             '   PASSWORD',
             style: TextStyle(
-              fontFamily: 'Mulish',
+              fontFamily: 'Mulish-ExtraBold',
               fontWeight: FontWeight.w800,
-              fontSize: 13.0,
+              fontSize: 12.0,
               letterSpacing: 1.5,
-              height: 1.0,
-              color: Colors.white,
+              color: AppColors.primaryTextColor,
             ),
           ),
           const SizedBox(height: 5),
@@ -289,27 +319,7 @@ class PasswordField extends StatelessWidget {
   }
 }
 
-// class LoginButton extends StatelessWidget {
-//   const LoginButton({super.key});
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.symmetric(horizontal: 100),
-//       child: MaterialButton(
-//         minWidth: double.infinity,
-//         onPressed: () {},
-//         color: Colors.black,
-//         textColor: Colors.white,
-//         child: Text('Log In',
-//             style: GoogleFonts.exo(fontSize: 20, color: Colors.white)),
-//       ),
-//     );
-//   }
-// }
-
 class LoginButton extends StatelessWidget {
-
-
   final Function buttonPressed;
 
   const LoginButton({super.key, required this.buttonPressed});
@@ -319,15 +329,17 @@ class LoginButton extends StatelessWidget {
     return MaterialButton(
       minWidth: 300,
       height: 52,
-      onPressed: () async{
-        buttonPressed();
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => CustomNavigationBar(),
-            ));
+      onPressed: () async {
+        dynamic result = await buttonPressed();
+        if (result != null && result.uid != null) {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CustomNavigationBar(),
+              ));
+        }
       },
-      color: const Color(0xFF1264D1),
+      color: AppColors.buttonColor1,
       textColor: Colors.black,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(50.0),
@@ -336,8 +348,7 @@ class LoginButton extends StatelessWidget {
       child: const Text(
         'LOG IN',
         style: TextStyle(
-          fontFamily: 'Mulish',
-          fontWeight: FontWeight.w700,
+          fontFamily: 'Mulish-Bold',
           fontSize: 15,
           letterSpacing: 1.25,
         ),
@@ -345,4 +356,3 @@ class LoginButton extends StatelessWidget {
     );
   }
 }
-

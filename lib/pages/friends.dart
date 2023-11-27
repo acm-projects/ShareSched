@@ -111,7 +111,7 @@ class _SearchFormState extends ConsumerState<SearchForm> {
       alignment: Alignment.center,
       children: [
         Positioned(
-          top: 70,
+          top: 70,  
           child: Text('Add Friends',
               style: GoogleFonts.quicksand(
                 fontSize: 32,

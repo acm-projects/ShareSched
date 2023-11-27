@@ -1,7 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:myapp/models/user_model.dart';
-import 'package:myapp/models/schedule.dart';
-
 class Friend {
   static String? id = '1';
   static String email = 'roshanaldrin@gmail.com';
@@ -34,21 +32,18 @@ class Friend3 {
 
 final friendsProvider = StateProvider<List<UserModel>>((ref) => [
       UserModel(
-          id: '1',
           username: Friend.username,
           email: Friend.email,
           password: Friend.password,
           schedule: Friend.schedule,
           avatarURL: Friend.avatarURL),
       UserModel(
-          id: '2',
           username: Friend2.username,
           email: Friend2.email,
           password: Friend2.password,
           schedule: Friend2.schedule,
           avatarURL: Friend2.avatarURL),
       UserModel(
-          id: '3',
           username: Friend3.username,
           email: Friend3.email,
           password: Friend3.password,

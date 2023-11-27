@@ -11,33 +11,50 @@ class ClassModel {
   final List<String>? meetingDays;
   final String? professor;
 
-
-
-
   const ClassModel({
-    required this.subjectPrefix,
-    required this.courseNumber,
-    required this.catalogYear,
-    required this.sectionNumber,
-    required this.start_time,
-    required this.end_time,
-    required this.building,
-    required this.room,
-    required this.map_uri,
-    required this.meetingDays,
-    required this.professor,
+    this.subjectPrefix,
+    this.courseNumber,
+    this.catalogYear,
+    this.sectionNumber,
+    this.start_time,
+    this.end_time,
+    this.building,
+    this.room,
+    this.map_uri,
+    this.meetingDays,
+    this.professor,
   });
 
-  toJson(){
-    return{
-      "Subject Prefix": subjectPrefix,
-      "Course Number": courseNumber,
-      "Catalog Year": catalogYear,
-    };
+  factory ClassModel.fromJson(Map<String, dynamic> json) {
+    return ClassModel(
+      subjectPrefix: json['subjectPrefix'] as String?,
+      courseNumber: json['courseNumber'] as String?,
+      catalogYear: json['catalogYear'] as String?,
+      sectionNumber: json['sectionNumber'] as String?,
+      start_time: json['start_time'] as String?,
+      end_time: json['end_time'] as String?,
+      building: json['building'] as String?,
+      room: json['room'] as String?,
+      map_uri: json['map_uri'] as String?,
+      meetingDays: json['meetingDays'] != null
+          ? List<String>.from(json['meetingDays'])
+          : null,
+      professor: json['professor'] as String?,
+    );
   }
-
-  @override
-  String toString() {
-    return 'ClassModel{subjectPrefix: $subjectPrefix, courseNumber: $courseNumber, catalogYear: $catalogYear, sectionNumber: $sectionNumber, start_time: $start_time, end_time: $end_time, building: $building, room: $room, map_uri: $map_uri, meetingDays: $meetingDays, professor: $professor}';
+  Map<String, dynamic> toJson() {
+    return {
+      'subjectPrefix': subjectPrefix,
+      'courseNumber': courseNumber,
+      'catalogYear': catalogYear,
+      'sectionNumber': sectionNumber,
+      'start_time': start_time,
+      'end_time': end_time,
+      'building': building,
+      'room': room,
+      'map_uri': map_uri,
+      'meetingDays': meetingDays,
+      'professor': professor,
+    };
   }
 }

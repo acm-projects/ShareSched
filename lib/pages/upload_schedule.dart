@@ -94,6 +94,19 @@ class _UploadScreenState extends ConsumerState<UploadScreen> {
       callApi(course, number, "23", section);
     }
 
+    final email = ref.read(userModelProvider).email;
+
+      final usersSnapshot = await FirebaseFirestore.instance.collection("Users")
+          .where("Email", isEqualTo: email)
+          .limit(1)
+          .get();
+      final documentId = usersSnapshot.docs.first.id;
+      final collectionRef = FirebaseFirestore.instance.collection('Schedules');
+
+      await collectionRef.doc(documentId).set({
+        'id': '1',
+      });
+
     for (ClassModel c in classes) {
       final email = ref.read(userModelProvider).email;
 
@@ -105,7 +118,7 @@ class _UploadScreenState extends ConsumerState<UploadScreen> {
       final user = ref.read(userModelProvider).username;
       final collectionRef = FirebaseFirestore.instance.collection('Schedules');
 
-      await collectionRef.doc(documentId).collection('$user Classes').add({
+      await collectionRef.doc(documentId).collection('Classes').add({
         'subjectPrefix': c.subjectPrefix,
         'courseNumber': c.courseNumber,
         'catalogYear': c.catalogYear,
