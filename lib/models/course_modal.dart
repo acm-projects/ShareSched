@@ -209,7 +209,7 @@ class CustomPieChart extends StatelessWidget {
       centerTextStyle: const TextStyle(
         fontFamily: 'Quicksand',
         fontSize: 16,
-        color: Colors.black, // Set the 'Grades' text to black
+        color: Colors.black,
       ),
       legendOptions: const LegendOptions(
         showLegendsInRow: false,
@@ -227,7 +227,7 @@ class CustomPieChart extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      colorList: colorList, // Set the list of colors for the chart
+      colorList: colorList,
     );
   }
 }
