@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/models/schedule.dart';
 import 'package:myapp/models/user_model.dart';
 import 'package:myapp/providers/user_model_provider.dart';
 import 'package:myapp/services/auth.dart';

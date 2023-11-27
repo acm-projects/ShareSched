@@ -1,6 +1,6 @@
 import 'package:myapp/models/class_model.dart';
-import 'package:myapp/models/schedule.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:myapp/models/user_model.dart';
 import 'package:time_planner/time_planner.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/colors/app_colors.dart';

@@ -1,5 +1,5 @@
 name: myapp
-description: A exported flutter project from FUNCTION12
+description: A revolutionary app that allows you to share and compare schedules with ease.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -52,6 +52,8 @@ dependencies:
   qr_flutter: ^4.1.0
   barcode_scan2: ^4.3.0
   firebase_storage: ^11.5.1
+  logger: ^2.0.2+1
+  pie_chart: ^5.4.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -96,6 +98,7 @@ flutter:
   assets:
     - assets/page-1/images/
     - assets/page-1/images/custom/
+    - assets/grades/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

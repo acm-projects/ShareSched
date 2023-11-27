@@ -36,7 +36,7 @@ class _QrScreenState extends ConsumerState<QrScreen> {
     print(email);
     final userDocID = ref.read(userModelProvider).userDocID;
     print("Grabbed the document ID for ${email}: ${userDocID}");
-    if (userDocID.isNotEmpty) {
+    if (userDocID!.isNotEmpty) {
       setState(() {
         qrData = userDocID;
       });

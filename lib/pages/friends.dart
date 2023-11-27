@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/models/user_model.dart';
+import 'package:myapp/pages/chat.dart';
 import 'package:myapp/providers/friend_provider.dart';
 import 'package:myapp/colors/app_colors.dart';
-import 'package:myapp/models/schedule.dart';
 import 'package:myapp/providers/user_model_provider.dart';
 import 'package:time_planner/time_planner.dart';
 
@@ -164,71 +164,117 @@ class ViewFriendsForm extends ConsumerWidget {
             ),
           ),
         ),
+        PopupMenuItem(
+          value: "option3",
+          child: Container(
+            width: 250,
+            padding: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: AppColors.backgroundColor,
+              border: Border.all(
+                color: Colors.grey,
+                width: 2.0,
+              ),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Text(
+              textAlign: TextAlign.center,
+              "Chat",
+              style: TextStyle(
+                  fontFamily: 'Quicksand',
+                  fontSize: 16,
+                  color: AppColors.primaryTextColor),
+            ),
+          ),
+        ),
       ],
     ).then((value) {
-      if (value == "option1") {
-        showDialog(
-          context: context,
-          builder: (context) {
-            return MiniSchedule(
-                username: friend.username, schedule: friend.schedule);
-          },
-        );
-      } else if (value == "option2") {
-        // Handle Option 2
+      switch (value) {
+        case "option1":
+          showDialog(
+            context: context,
+            builder: (context) {
+              return MiniSchedule(
+                username: friend.username,
+                schedule: friend.schedule!,
+              );
+            },
+          );
+          break;
+        case "option2":
+          // Handle Option 2
+          break;
+        case "option3":
+          {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ChatScreen(
+                          friend: friend,
+                        )));
+          }
+          break;
       }
     });
   }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final friendsList = ref.read(friendsProvider.notifier).state;
+    // Watch the friendsListStreamProvider for real-time updates
+    AsyncValue<List<UserModel>> friendsListAsyncValue =
+        ref.watch(friendsListStreamProvider);
+
     return Center(
       child: SizedBox(
         height: 600,
         width: 300,
-        child: ListView.separated(
-          separatorBuilder: (context, index) => const Divider(
-            color: Colors.white70,
-          ),
-          itemCount: friendsList.length,
-          itemBuilder: (context, index) {
-            return GestureDetector(
-              onTapDown: (details) {
-                _showPopupMenu(
-                    context, details.globalPosition, friendsList[index]);
+        child: friendsListAsyncValue.when(
+          data: (List<UserModel> friendsList) {
+            return ListView.separated(
+              separatorBuilder: (context, index) =>
+                  const Divider(color: Colors.white70),
+              itemCount: friendsList.length,
+              itemBuilder: (context, index) {
+                return GestureDetector(
+                  onTapDown: (details) {
+                    _showPopupMenu(
+                        context, details.globalPosition, friendsList[index]);
+                  },
+                  child: Container(
+                    margin:
+                        const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                    child: ListTile(
+                      dense: true,
+                      leading: CircleAvatar(
+                        radius: 30,
+                        backgroundColor: Colors.white,
+                        backgroundImage:
+                            NetworkImage(friendsList[index].avatarURL!),
+                      ),
+                      title: Text(
+                        friendsList[index].username!,
+                        style: const TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontFamily: 'Quicksand'),
+                      ),
+                      trailing: const Icon(Icons.view_headline_rounded,
+                          size: 30, color: Colors.white),
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 10),
+                      tileColor: Colors.transparent,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                    ),
+                  ),
+                );
               },
-              child: Container(
-                margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: ListTile(
-                  dense: true,
-                  leading: CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Colors.white,
-                      backgroundImage:
-                          NetworkImage(friendsList[index].avatarURL!)),
-                  title: Text(
-                    friendsList[index].username,
-                    style: const TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                        fontFamily: 'Quicksand'),
-                  ),
-                  trailing: const Icon(Icons.view_headline_rounded,
-                      size: 30, color: Colors.white),
-                  contentPadding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                  tileColor: Colors.transparent,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
             );
           },
+          loading: () => CircularProgressIndicator(),
+          error: (error, stack) => Text('Error: $error'),
         ),
       ),
     );
@@ -248,7 +294,7 @@ class _AddFriendsForm extends ConsumerState<AddFriendsFormState> {
     try {
       // Add search db logic here
 
-      String userDocID = ref.read(userModelProvider).userDocID;
+      String userDocID = ref.read(userModelProvider).userDocID!;
       String friendName = nameController.text;
 
       QuerySnapshot<Map<String, dynamic>> snapshot = await FirebaseFirestore
@@ -267,39 +313,31 @@ class _AddFriendsForm extends ConsumerState<AddFriendsFormState> {
 
       print("Friend ID: ${friendDocID}");
       List<String> newFriends = [friendDocID];
-      return await addFriendsToUser(userDocID, newFriends);
+      return await addFriendsToUser(newFriends);
     } catch (e) {
       print('Error searching for user: $e');
       return false;
     }
   }
 
-  Future<bool> addFriendsToUser(String userId, List<String> newFriends) async {
+  Future<bool> addFriendsToUser(List<String> newFriends) async {
     try {
-      // Get a reference to the user document in Firestore
+      final email = ref.read(userModelProvider).email;
+      String userDocID = ref.read(userModelProvider).userDocID!;
       DocumentReference userDocRef =
-          FirebaseFirestore.instance.collection('Users').doc(userId);
+          FirebaseFirestore.instance.collection('Users').doc(userDocID);
 
-      // Retrieve the current friends array from the user document
-      DocumentSnapshot userSnapshot = await userDocRef.get();
+      DocumentSnapshot<Map<String, dynamic>> userDocSnapshot =
+          await userDocRef.get() as DocumentSnapshot<Map<String, dynamic>>;
+      List<dynamic> currentFriends = userDocSnapshot.data()?['Friends'] ??
+          <String>[]; //get current friends
 
-      if (userSnapshot.exists) {
-        Map<String, dynamic> userData =
-            userSnapshot.data() as Map<String, dynamic>;
-        List<String> currentFriends =
-            List<String>.from(userData['Friends'] ?? []);
+      List mergedFriends = currentFriends + newFriends; //merged friends lists
+      await userDocRef.set({'Friends': mergedFriends},
+          SetOptions(merge: true)); //update friends list in DB
 
-        // Add new friends to the current friends list
-        currentFriends.addAll(newFriends);
-
-        // Update the user document with the modified friends list
-        await userDocRef.update({'Friends': currentFriends});
-        print('Friends added successfully.');
-        return true;
-      } else {
-        print('User document does not exist.');
-        return false;
-      }
+      print('Friends added successfully.');
+      return true;
     } catch (e) {
       print('Error adding friends: $e');
       return false;

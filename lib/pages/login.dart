@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/models/schedule.dart';
 import 'package:myapp/models/user_model.dart';
 import 'package:myapp/navigation/navigation_bar.dart';
 import 'package:myapp/services/auth.dart';
@@ -65,7 +64,6 @@ class _LoginFormState extends ConsumerState<LoginForm> {
 
   dynamic onLoginButtonPressed() async {
     final AuthService _auth = AuthService();
-    // Save to login details to database here?
     String email = emailController.text;
     String password = passwordController.text;
 
@@ -75,34 +73,35 @@ class _LoginFormState extends ConsumerState<LoginForm> {
       setState(() {
         errorMessage = 'Login failed'; // Update error message
       });
-    } else {
-      // Navigate or perform other actions on successful login
-      setState(() {
-        errorMessage = null; // Clear error message
-      });
+      return; // Exit the function if login fails
     }
 
-    QuerySnapshot<Map<String, dynamic>> snapshot = await FirebaseFirestore
-        .instance
-        .collection("Users")
-        .where("Email", isEqualTo: email)
-        .limit(1)
-        .get();
+    // Navigate or perform other actions on successful login
+    setState(() {
+      errorMessage = null; // Clear error message
+    });
 
-    String userDocID = snapshot.docs.first.id;
+    UserModel? userModel = await UserModel.fromEmail(email);
 
-    print("User DOC ID: userDocID");
+    if (userModel != null) {
+      // User found, proceed with your logic
+      ref.read(userModelProvider.notifier).state = userModel;
+      print("UserModel updated successfully");
+    } else {
+      // Handle the case where no user is found
+      print("No user found for this email");
+    }
+    String? pEmail = ref.read(userModelProvider).email;
+    String? pPassword = ref.read(userModelProvider).password;
+    String? pUsername = ref.read(userModelProvider).username;
+    String? pDocID = ref.read(userModelProvider).userDocID;
+    String? avatarURL = ref.read(userModelProvider).avatarURL;
 
-    ref.read(userModelProvider.notifier).state = UserModel(
-        email: email,
-        password: password,
-        schedule: Schedule(id: '1', courses: []),
-        username: '',
-        avatarURL: '',
-        userDocID: userDocID);
-
-    print("Email: $email");
-    print("Password: $password");
+    print("Email: ${pEmail}");
+    print("Password: ${pPassword}");
+    print("Username: ${pUsername}");
+    print("Document ID: ${pDocID}");
+    print("Avatar URL: ${avatarURL}");
     print(result.uid);
 
     return result;

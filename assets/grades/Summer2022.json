@@ -1,0 +1,8970 @@
+[
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "2301",
+        "Section": "5U1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 3.0,
+            "C": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Files, Rebecca L",
+            "Gu, Dongdi"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "2302",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 4.0,
+            "A-": 3.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 3.0,
+            "C": 4.0,
+            "C-": 2.0,
+            "D+": 4.0,
+            "D": 3.0,
+            "D-": 1.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Zolton, Kathy",
+            "He, Jiapeng"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "3331",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 1.0,
+            "A-": 4.0,
+            "B+": 2.0,
+            "B-": 1.0,
+            "C+": 3.0,
+            "C": 1.0,
+            "C-": 3.0,
+            "D": 1.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Zhou, Yibin",
+            "Gu, Dongdi"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "3341",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "C+": 2.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "D": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Johnson, Jennifer",
+            "Zhang, Yang"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "3350",
+        "Section": "5U1",
+        "Grades": {
+            "A": 2.0,
+            "A-": 2.0,
+            "B": 6.0,
+            "B-": 2.0,
+            "C+": 3.0,
+            "C": 1.0,
+            "D": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Gamino, John P"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "4334",
+        "Section": "5U1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 1.0,
+            "B+": 3.0,
+            "B": 5.0,
+            "B-": 1.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "D+": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hes, Christopher A",
+            "Gu, Dongdi"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "4340",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 7.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 4.0,
+            "B-": 4.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Johnson, Jennifer"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6194",
+        "Section": "SW1",
+        "Grades": {
+            "A": 6.0,
+            "B": 2.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Johnson, Jennifer"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6202",
+        "Section": "0W1",
+        "Grades": {
+            "A": 9.0,
+            "A-": 13.0,
+            "B+": 12.0,
+            "B": 11.0,
+            "B-": 5.0,
+            "C+": 3.0,
+            "C": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Janakiraman, Surya",
+            "Zhang, Yang"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6301",
+        "Section": "5U1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 4.0,
+            "B+": 7.0,
+            "B": 5.0,
+            "B-": 3.0,
+            "C": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Ballew, Gregory E",
+            "Holstead, Cameron"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6305",
+        "Section": "0W1",
+        "Grades": {
+            "A": 15.0,
+            "A-": 11.0,
+            "B+": 12.0,
+            "B": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Janakiraman, Surya",
+            "Zhang, Yang"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6330",
+        "Section": "0W1",
+        "Grades": {
+            "A": 1.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "C": 3.0,
+            "F": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Cready, William M",
+            "Holstead, Cameron"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6331",
+        "Section": "0W1",
+        "Grades": {
+            "A": 1.0,
+            "B": 8.0,
+            "C": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Cready, William M",
+            "Holstead, Cameron"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6331",
+        "Section": "SW1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 8.0,
+            "B+": 4.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Janakiraman, Surya",
+            "Zhang, Yang"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6333",
+        "Section": "5U1",
+        "Grades": {
+            "A": 7.0,
+            "B": 6.0,
+            "C": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Zolton, Kathy",
+            "He, Jiapeng"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6338",
+        "Section": "5D1",
+        "Grades": {
+            "A": 16.0,
+            "A-": 3.0,
+            "B": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Goodrich, Mary Beth W"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6344",
+        "Section": "0W1",
+        "Grades": {
+            "A": 25.0,
+            "A-": 16.0,
+            "B+": 14.0,
+            "B": 4.0,
+            "B-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Gurun, Umit",
+            "Gu, Dongdi",
+            "Holstead, Cameron"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6344",
+        "Section": "SW1",
+        "Grades": {
+            "A": 9.0,
+            "A-": 4.0,
+            "B+": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Solcher, Steven J",
+            "Zolton, Kathy"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6353",
+        "Section": "PPA",
+        "Grades": {
+            "A": 12.0,
+            "A-": 12.0,
+            "B+": 3.0,
+            "B": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Solcher, Steven J"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6365",
+        "Section": "5U1",
+        "Grades": {
+            "A": 17.0,
+            "A-": 19.0,
+            "B+": 21.0,
+            "B": 9.0,
+            "B-": 8.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Cheng, Samuel"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6367",
+        "Section": "5U1",
+        "Grades": {
+            "A": 38.0,
+            "A-": 5.0,
+            "B+": 1.0,
+            "B": 4.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Gamino, John P",
+            "Frost, Sandra M"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6384",
+        "Section": "0W1",
+        "Grades": {
+            "A": 56.0,
+            "A-": 5.0,
+            "B+": 2.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Kromer, Jeffrey",
+            "He, Jiapeng"
+        ]
+    },
+    {
+        "Subject": "ACCT",
+        "CatalogNumber": "6392",
+        "Section": "5U1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 20.0,
+            "B+": 20.0,
+            "B": 14.0,
+            "B-": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hes, Christopher A",
+            "Gu, Dongdi"
+        ]
+    },
+    {
+        "Subject": "ACN",
+        "CatalogNumber": "6338",
+        "Section": "0U1",
+        "Grades": {
+            "A": 5.0,
+            "B": 4.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Sultana, Rukhsana"
+        ]
+    },
+    {
+        "Subject": "ACN",
+        "CatalogNumber": "6344",
+        "Section": "0W1",
+        "Grades": {
+            "A": 12.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Orrick, Erika D"
+        ]
+    },
+    {
+        "Subject": "ACN",
+        "CatalogNumber": "6395",
+        "Section": "0W1",
+        "Grades": {
+            "A": 10.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hooge, Kimberley O"
+        ]
+    },
+    {
+        "Subject": "ACN",
+        "CatalogNumber": "6V81",
+        "Section": "0U1",
+        "Grades": {
+            "A": 17.0,
+            "A-": 1.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "McWilliams, Steven P"
+        ]
+    },
+    {
+        "Subject": "AMS",
+        "CatalogNumber": "2300",
+        "Section": "0U1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Werhnyak, Larissa"
+        ]
+    },
+    {
+        "Subject": "AMS",
+        "CatalogNumber": "3316",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 14.0,
+            "A": 7.0,
+            "A-": 6.0,
+            "B+": 1.0,
+            "C+": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Winstead, Elizabeth L"
+        ]
+    },
+    {
+        "Subject": "AMS",
+        "CatalogNumber": "4385",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 8.0,
+            "A": 9.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 4.0,
+            "C+": 1.0,
+            "F": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Winstead, Elizabeth L"
+        ]
+    },
+    {
+        "Subject": "ARTS",
+        "CatalogNumber": "1301",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 13.0,
+            "A": 6.0,
+            "A-": 1.0,
+            "B+": 3.0,
+            "B": 2.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "D": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Wilder, James E",
+            "Bennett, Rodger"
+        ]
+    },
+    {
+        "Subject": "ARTS",
+        "CatalogNumber": "1316",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 8.0,
+            "A": 5.0,
+            "A-": 2.0,
+            "B": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Miranda, Jeffrey"
+        ]
+    },
+    {
+        "Subject": "ARTS",
+        "CatalogNumber": "3367",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 10.0,
+            "A": 3.0,
+            "A-": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Miranda, Jeffrey"
+        ]
+    },
+    {
+        "Subject": "ARTS",
+        "CatalogNumber": "3379",
+        "Section": "591",
+        "Grades": {
+            "A+": 9.0,
+            "A": 4.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Loving, Emily"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "2300",
+        "Section": "051",
+        "Grades": {
+            "A+": 4.0,
+            "A": 6.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ferreira de Souza, Leticia"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "2301",
+        "Section": "551",
+        "Grades": {
+            "A": 7.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B-": 1.0,
+            "C+": 2.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nguyen, Tuoc K"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "2302",
+        "Section": "051",
+        "Grades": {
+            "A+": 5.0,
+            "A": 1.0,
+            "A-": 2.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Minnish, Roxanne W"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "2303",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 16.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Stewart, Michael C"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "2350",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 8.0,
+            "A": 3.0,
+            "A-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hoggatt, Zane C"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3301",
+        "Section": "0U1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 3.0,
+            "B+": 1.0,
+            "B-": 4.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Heaslip, Audra"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3301",
+        "Section": "0W1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 5.0,
+            "B+": 3.0,
+            "F": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Ramakrishnan, Sharathchandra"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3301",
+        "Section": "0W2",
+        "Grades": {
+            "A+": 10.0,
+            "A": 4.0,
+            "A-": 4.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Fraley, James M"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3305",
+        "Section": "0U1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 7.0,
+            "B-": 3.0,
+            "C-": 1.0,
+            "D-": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "McComber, Sean"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3306",
+        "Section": "0U1",
+        "Grades": {
+            "A": 5.0,
+            "A-": 3.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "F": 4.0,
+            "W": 2
+        },
+        "Instructors": [
+            "McCord, Peter A"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3307",
+        "Section": "0U1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 2.0,
+            "B+": 4.0,
+            "B": 2.0,
+            "B-": 5.0,
+            "C+": 1.0,
+            "C-": 2.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "McCord, Peter A"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3337",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 2.0,
+            "A-": 7.0,
+            "B": 1.0,
+            "D": 1.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Wood, Harold G"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3338",
+        "Section": "051",
+        "Grades": {
+            "A+": 7.0,
+            "A": 4.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "B": 4.0,
+            "B-": 3.0,
+            "C+": 2.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Camacho, Christopher J"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3350",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 7.0,
+            "A": 8.0,
+            "A-": 6.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "D-": 1.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hewitt, Sharon"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3367",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 4.0,
+            "A-": 3.0,
+            "B": 3.0,
+            "D-": 1.0,
+            "F": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Lewis, Timothy M"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "3388",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 13.0,
+            "A": 3.0,
+            "A-": 5.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "B-": 2.0,
+            "D+": 1.0,
+            "D-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Fraley, James M"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "4319",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 6.0,
+            "C+": 1.0,
+            "C-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Fechter, Todd A",
+            "McComber, Sean"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "4320",
+        "Section": "591",
+        "Grades": {
+            "A+": 5.0,
+            "A": 5.0,
+            "A-": 8.0,
+            "B+": 2.0,
+            "B-": 1.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rheams, David C"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "4330",
+        "Section": "051",
+        "Grades": {
+            "A+": 5.0,
+            "A": 1.0,
+            "A-": 2.0,
+            "B-": 2.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nielsen, Christina R"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "4350",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 8.0,
+            "A": 4.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hewitt, Sharon"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "4364",
+        "Section": "051",
+        "Grades": {
+            "A+": 25.0,
+            "A": 2.0,
+            "B": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Trosper, Elizabeth M"
+        ]
+    },
+    {
+        "Subject": "ATCM",
+        "CatalogNumber": "4384",
+        "Section": "551",
+        "Grades": {
+            "A+": 12.0,
+            "A": 4.0,
+            "A-": 5.0,
+            "B+": 3.0,
+            "B": 2.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rheams, David C"
+        ]
+    },
+    {
+        "Subject": "AUD",
+        "CatalogNumber": "6216",
+        "Section": "0U1",
+        "Grades": {
+            "A": 11.0,
+            "A-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Cokely, Carol G",
+            "Woodford, Allison S"
+        ]
+    },
+    {
+        "Subject": "AUD",
+        "CatalogNumber": "6352",
+        "Section": "5U1",
+        "Grades": {
+            "A": 24.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Clark, Jackie L",
+            "Zang, Andie L"
+        ]
+    },
+    {
+        "Subject": "AUD",
+        "CatalogNumber": "7325",
+        "Section": "0U1",
+        "Grades": {
+            "A": 8.0,
+            "A-": 3.0,
+            "B": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Thibodeau, Linda K",
+            "Warner-Czyz, Andrea D",
+            "Jansen, Conner L",
+            "Vu, Katrina D"
+        ]
+    },
+    {
+        "Subject": "BA",
+        "CatalogNumber": "1320",
+        "Section": "5U1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 3.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Lewin, Peter",
+            "Kelly, Matthew L"
+        ]
+    },
+    {
+        "Subject": "BCOM",
+        "CatalogNumber": "3300",
+        "Section": "0U1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 5.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "B-": 7.0,
+            "C+": 4.0,
+            "C": 2.0,
+            "C-": 4.0,
+            "D+": 1.0,
+            "D-": 2.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Fry, Jennifer L"
+        ]
+    },
+    {
+        "Subject": "BCOM",
+        "CatalogNumber": "3300",
+        "Section": "5U1",
+        "Grades": {
+            "A-": 5.0,
+            "B+": 3.0,
+            "B": 4.0,
+            "B-": 1.0,
+            "C+": 2.0,
+            "C-": 3.0,
+            "D": 3.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Fry, Jennifer L"
+        ]
+    },
+    {
+        "Subject": "BCOM",
+        "CatalogNumber": "4300",
+        "Section": "091",
+        "Grades": {
+            "A-": 1.0,
+            "B+": 3.0,
+            "B": 4.0,
+            "B-": 5.0,
+            "C+": 2.0,
+            "C": 3.0,
+            "C-": 3.0,
+            "D+": 3.0,
+            "D-": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Stewart, Julie"
+        ]
+    },
+    {
+        "Subject": "BCOM",
+        "CatalogNumber": "4300",
+        "Section": "0U1",
+        "Grades": {
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 5.0,
+            "B-": 5.0,
+            "C+": 2.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "D-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Said, Stacey"
+        ]
+    },
+    {
+        "Subject": "BCOM",
+        "CatalogNumber": "4300",
+        "Section": "0U2",
+        "Grades": {
+            "A": 2.0,
+            "A-": 7.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Walton, Michaella"
+        ]
+    },
+    {
+        "Subject": "BCOM",
+        "CatalogNumber": "4300",
+        "Section": "0U3",
+        "Grades": {
+            "A": 3.0,
+            "A-": 4.0,
+            "B+": 2.0,
+            "B": 4.0,
+            "B-": 1.0,
+            "D": 1.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Walton, Michaella"
+        ]
+    },
+    {
+        "Subject": "BCOM",
+        "CatalogNumber": "4300",
+        "Section": "0U4",
+        "Grades": {
+            "A": 1.0,
+            "A-": 3.0,
+            "B+": 3.0,
+            "B-": 6.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Harrison, Megan K"
+        ]
+    },
+    {
+        "Subject": "BCOM",
+        "CatalogNumber": "4300",
+        "Section": "0U5",
+        "Grades": {
+            "A": 2.0,
+            "A-": 4.0,
+            "B+": 3.0,
+            "B": 6.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C-": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Blockley, Caylin"
+        ]
+    },
+    {
+        "Subject": "BCOM",
+        "CatalogNumber": "4300",
+        "Section": "5E1",
+        "Grades": {
+            "A": 2.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Moore, Sarah E"
+        ]
+    },
+    {
+        "Subject": "BCOM",
+        "CatalogNumber": "4300",
+        "Section": "5U1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 6.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "B-": 9.0,
+            "C+": 3.0,
+            "C": 3.0,
+            "C-": 1.0,
+            "D-": 3.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Moore, Sarah E"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "2111",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 1.0,
+            "A-": 4.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 4.0,
+            "C+": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sarcar, Subha N",
+            "Kwende, Sharon A",
+            "Xu, Linyi"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "2112",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 3.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 7.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 3.0,
+            "C-": 2.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "F": 6.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Wu, Zhuoru",
+            "Tiwari, Suman",
+            "Alemi, Parinazsadat",
+            "Chase, Rebecca L"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "2112",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 10.0,
+            "A": 1.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 4.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "D-": 2.0,
+            "F": 7.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Wu, Zhuoru",
+            "Tiwari, Suman",
+            "Chase, Rebecca L",
+            "Alemi, Parinazsadat"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "2281",
+        "Section": "3U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Lin, Wen J",
+            "Xia, Jing",
+            "Easterwood, Shayne",
+            "Basu, Ujjaini",
+            "Do, Hung P",
+            "Mittal, Shubham"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "2281",
+        "Section": "3U3",
+        "Grades": {
+            "A": 3.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 2.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Lin, Wen J",
+            "Xia, Jing",
+            "Easterwood, Shayne",
+            "Basu, Ujjaini",
+            "Do, Hung P",
+            "Mittal, Shubham"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "2281",
+        "Section": "3U4",
+        "Grades": {
+            "A+": 1.0,
+            "A": 4.0,
+            "A-": 4.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "D-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Lin, Wen J",
+            "Ratevosyan, Richard",
+            "Mittal, Shubham",
+            "Do, Hung P",
+            "Basu, Ujjaini",
+            "Easterwood, Shayne"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "2311",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 1.0,
+            "A-": 4.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 4.0,
+            "C+": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sarcar, Subha N",
+            "Xu, Linyi",
+            "Kwende, Sharon A"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "2312",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 13.0,
+            "A": 4.0,
+            "A-": 4.0,
+            "B+": 4.0,
+            "B": 11.0,
+            "B-": 3.0,
+            "C+": 2.0,
+            "C": 3.0,
+            "C-": 2.0,
+            "D+": 2.0,
+            "D": 2.0,
+            "D-": 3.0,
+            "F": 13.0,
+            "W": 7
+        },
+        "Instructors": [
+            "Wu, Zhuoru",
+            "Tiwari, Suman",
+            "Chase, Rebecca L",
+            "Alemi, Parinazsadat"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3101",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 12.0,
+            "A": 5.0,
+            "A-": 8.0,
+            "B+": 5.0,
+            "B": 2.0,
+            "B-": 5.0,
+            "C": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Srikanth, Uma",
+            "Afolami, Olufemi Ifeoluwa"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3101",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 5.0,
+            "A": 13.0,
+            "A-": 6.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "D+": 2.0,
+            "D": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Srikanth, Uma",
+            "Salaudeen, Ibrahim O"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3101",
+        "Section": "0U3",
+        "Grades": {
+            "A+": 3.0,
+            "A": 6.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 5.0,
+            "C+": 1.0,
+            "C": 3.0,
+            "C-": 2.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Srikanth, Uma",
+            "Salamat, Narges"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3101",
+        "Section": "0U4",
+        "Grades": {
+            "A+": 5.0,
+            "A": 2.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 4.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "D+": 4.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Srikanth, Uma",
+            "Bach, Thao Nguyen"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3101",
+        "Section": "0U5",
+        "Grades": {
+            "A+": 5.0,
+            "A": 10.0,
+            "A-": 3.0,
+            "B+": 1.0,
+            "B": 4.0,
+            "B-": 5.0,
+            "C+": 3.0,
+            "C": 2.0,
+            "D+": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Srikanth, Uma",
+            "Akter, Zakia"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3101",
+        "Section": "0U6",
+        "Grades": {
+            "A": 5.0,
+            "A-": 1.0,
+            "B": 1.0,
+            "B-": 4.0,
+            "C+": 2.0,
+            "C-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Srikanth, Uma",
+            "Zaheen Khan, Fabiha"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3102",
+        "Section": "0U1",
+        "Grades": {
+            "A-": 2.0,
+            "B+": 2.0,
+            "C+": 3.0,
+            "C-": 1.0,
+            "D": 4.0,
+            "D-": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Srikanth, Uma",
+            "Yamauchi, Stephanie A"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3102",
+        "Section": "0U3",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 5.0,
+            "C+": 4.0,
+            "D-": 4.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Srikanth, Uma",
+            "Patel, Umar J"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3161",
+        "Section": "0U1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 6.0,
+            "B+": 7.0,
+            "B": 2.0,
+            "B-": 6.0,
+            "C+": 4.0,
+            "C": 2.0,
+            "C-": 3.0,
+            "D+": 2.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Candas, Mehmet",
+            "Lakoduk, Ashley"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3161",
+        "Section": "0U2",
+        "Grades": {
+            "A": 1.0,
+            "A-": 2.0,
+            "B+": 5.0,
+            "B": 1.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Candas, Mehmet",
+            "Lakoduk, Ashley"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3162",
+        "Section": "0U2",
+        "Grades": {
+            "A": 1.0,
+            "A-": 3.0,
+            "B+": 6.0,
+            "B": 1.0,
+            "B-": 3.0,
+            "C+": 3.0,
+            "C": 3.0,
+            "C-": 2.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Candas, Mehmet",
+            "Lakoduk, Ashley"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3301",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 30.0,
+            "A": 41.0,
+            "A-": 20.0,
+            "B+": 10.0,
+            "B": 13.0,
+            "B-": 25.0,
+            "C+": 9.0,
+            "C": 9.0,
+            "C-": 4.0,
+            "D+": 9.0,
+            "D": 3.0,
+            "F": 1.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Srikanth, Uma",
+            "Afolami, Olufemi Ifeoluwa",
+            "Akter, Zakia",
+            "Salamat, Narges",
+            "Salaudeen, Ibrahim O",
+            "Bach, Thao Nguyen"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3302",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "A-": 4.0,
+            "B+": 4.0,
+            "B": 1.0,
+            "B-": 5.0,
+            "C+": 7.0,
+            "C-": 1.0,
+            "D": 4.0,
+            "D-": 6.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Srikanth, Uma",
+            "Patel, Umar J",
+            "Ballew, Luke",
+            "Yamauchi, Stephanie A"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3318",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 24.0,
+            "A-": 25.0,
+            "B+": 14.0,
+            "B": 6.0,
+            "B-": 6.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "C-": 3.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Henson, Uyen N"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3361",
+        "Section": "0U1",
+        "Grades": {
+            "A": 5.0,
+            "A-": 8.0,
+            "B+": 12.0,
+            "B": 2.0,
+            "B-": 5.0,
+            "C+": 5.0,
+            "C": 2.0,
+            "C-": 3.0,
+            "D+": 2.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Candas, Mehmet",
+            "Lakoduk, Ashley",
+            "Falah, Rafah M",
+            "Yaqub, Muneer O"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3362",
+        "Section": "0U1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 3.0,
+            "B+": 5.0,
+            "B": 1.0,
+            "B-": 3.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "D+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Candas, Mehmet",
+            "Lakoduk, Ashley",
+            "Petter, Andrew T",
+            "Soladogun, Adedamola S"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3380",
+        "Section": "3U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 3.0,
+            "A-": 1.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "B-": 4.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Rippel, Scott A",
+            "Pickett, Elizabeth A",
+            "Zhi, Jiahe",
+            "Zhabilov, Dannie"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3380",
+        "Section": "3U2",
+        "Grades": {
+            "B": 1.0,
+            "C+": 4.0,
+            "C": 1.0,
+            "C-": 2.0,
+            "D-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pickett, Elizabeth A",
+            "Rippel, Scott A",
+            "Zhi, Jiahe",
+            "Zhabilov, Dannie"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3380",
+        "Section": "3U3",
+        "Grades": {
+            "A+": 1.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 3.0,
+            "C": 1.0,
+            "C-": 2.0,
+            "D+": 2.0,
+            "D": 2.0,
+            "D-": 1.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Rippel, Scott A",
+            "Pickett, Elizabeth A",
+            "Mazambani, Simbarashe",
+            "Berisha, Eranda"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3380",
+        "Section": "3U4",
+        "Grades": {
+            "A-": 3.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 4.0,
+            "C": 2.0,
+            "C-": 3.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "F": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Pickett, Elizabeth A",
+            "Rippel, Scott A",
+            "Mazambani, Simbarashe",
+            "Berisha, Eranda"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3455",
+        "Section": "3U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "D+": 2.0,
+            "D-": 3.0,
+            "F": 4.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Ramirez, Ruben D",
+            "Veera, Kavya",
+            "Deese, Alexander R",
+            "Wickramasinghe, Piumi B"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3455",
+        "Section": "3U2",
+        "Grades": {
+            "A": 2.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "B-": 4.0,
+            "C+": 1.0,
+            "C": 3.0,
+            "C-": 3.0,
+            "D+": 1.0,
+            "D": 4.0,
+            "D-": 4.0,
+            "F": 2.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Ramirez, Ruben D",
+            "Veera, Kavya",
+            "Deese, Alexander R",
+            "Wickramasinghe, Piumi B"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3456",
+        "Section": "3U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 5.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "B-": 5.0,
+            "C+": 3.0,
+            "C": 3.0,
+            "C-": 1.0,
+            "D+": 2.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Yu, Wen H",
+            "Cornelius, Samuel A"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3520",
+        "Section": "3U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 6.0,
+            "A-": 8.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Mehta, Iti",
+            "Dahl, Haley C",
+            "Shashikanth Raj Urs, Karthik Urs Bangalore"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3520",
+        "Section": "3U2",
+        "Grades": {
+            "A+": 2.0,
+            "A": 5.0,
+            "A-": 5.0,
+            "B+": 3.0,
+            "B": 4.0,
+            "B-": 2.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Mehta, Iti",
+            "Shipman, Braden M",
+            "Kunder, Nikesh Prakash"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "3V00",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 3.0,
+            "A-": 5.0,
+            "B+": 1.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sarcar, Subha N"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "4380",
+        "Section": "3U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 8.0,
+            "A-": 3.0,
+            "B+": 2.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Maynard, Caitlin S",
+            "Zhang, Bei",
+            "Shryock, Douglas G",
+            "Joshi, Ketki",
+            "Dhar, Roopal"
+        ]
+    },
+    {
+        "Subject": "BIOL",
+        "CatalogNumber": "5330",
+        "Section": "0W1",
+        "Grades": {
+            "A": 11.0,
+            "A-": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hajeri, Vinita"
+        ]
+    },
+    {
+        "Subject": "BIS",
+        "CatalogNumber": "2190",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 9.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B": 1.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Edwards, Christopher W",
+            "Robinson, Katie L",
+            "Slattery, Ryan P"
+        ]
+    },
+    {
+        "Subject": "BIS",
+        "CatalogNumber": "3320",
+        "Section": "091",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "C-": 2.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Wright, David A"
+        ]
+    },
+    {
+        "Subject": "BIS",
+        "CatalogNumber": "3320",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "A-": 3.0,
+            "B+": 4.0,
+            "B": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Wright, David A"
+        ]
+    },
+    {
+        "Subject": "BLAW",
+        "CatalogNumber": "2301",
+        "Section": "5U1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 5.0,
+            "B+": 4.0,
+            "B": 6.0,
+            "B-": 5.0,
+            "C+": 1.0,
+            "C": 5.0,
+            "C-": 4.0,
+            "D": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Betanzos, Christina L"
+        ]
+    },
+    {
+        "Subject": "BMEN",
+        "CatalogNumber": "3150",
+        "Section": "1U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 2.0,
+            "A-": 1.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "C+": 1.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ali, Tariq M",
+            "Chaudhary, Sugandha"
+        ]
+    },
+    {
+        "Subject": "BMEN",
+        "CatalogNumber": "3350",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 1.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ali, Tariq M"
+        ]
+    },
+    {
+        "Subject": "BMEN",
+        "CatalogNumber": "3402",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "D": 4.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ardestani Khoubrouy, Soudeh",
+            "Kian Pour, Bahareh"
+        ]
+    },
+    {
+        "Subject": "BMEN",
+        "CatalogNumber": "4388",
+        "Section": "0U1",
+        "Grades": {
+            "A": 2.0,
+            "A-": 8.0,
+            "B+": 3.0,
+            "B": 4.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Polk, Todd W",
+            "Molaei Imenabadi, Rouzbeh",
+            "Kang, Taek"
+        ]
+    },
+    {
+        "Subject": "BMEN",
+        "CatalogNumber": "6V87",
+        "Section": "0U1",
+        "Grades": {
+            "A": 12.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Porter, Benjamin A"
+        ]
+    },
+    {
+        "Subject": "BPS",
+        "CatalogNumber": "4305",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 8.0,
+            "A-": 8.0,
+            "B+": 9.0,
+            "B": 6.0,
+            "B-": 5.0,
+            "C+": 3.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Lee, Minjung"
+        ]
+    },
+    {
+        "Subject": "BPS",
+        "CatalogNumber": "4395",
+        "Section": "0U1",
+        "Grades": {
+            "A": 44.0,
+            "B+": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Parks, David"
+        ]
+    },
+    {
+        "Subject": "BPS",
+        "CatalogNumber": "6310",
+        "Section": "0W1",
+        "Grades": {
+            "A": 12.0,
+            "A-": 9.0,
+            "B+": 12.0,
+            "B": 10.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Xia, Jun",
+            "Garg, Suyash"
+        ]
+    },
+    {
+        "Subject": "BPS",
+        "CatalogNumber": "6310",
+        "Section": "GW1",
+        "Grades": {
+            "A": 7.0,
+            "A-": 10.0,
+            "B+": 5.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Choi, Emily"
+        ]
+    },
+    {
+        "Subject": "BPS",
+        "CatalogNumber": "7303",
+        "Section": "0U1",
+        "Grades": {
+            "A": 15.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Watson, John M"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6312",
+        "Section": "0W1",
+        "Grades": {
+            "A": 12.0,
+            "A-": 13.0,
+            "B+": 6.0,
+            "B": 5.0,
+            "B-": 3.0,
+            "C+": 3.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Blueshtein, Moran",
+            "Nguyen, Nam H"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6320",
+        "Section": "5U1",
+        "Grades": {
+            "A": 17.0,
+            "A-": 10.0,
+            "B+": 8.0,
+            "B": 4.0,
+            "B-": 9.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Srikanth, K.",
+            "Srivastava, Bhupesh K"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6320",
+        "Section": "SW1",
+        "Grades": {
+            "A": 9.0,
+            "B": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Narayan, Ravishankar L"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6337",
+        "Section": "0W1",
+        "Grades": {
+            "A": 8.0,
+            "A-": 7.0,
+            "B+": 7.0,
+            "B": 5.0,
+            "B-": 5.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Subramanian, Upender",
+            "Madan, Anmol",
+            "Roshangarzadeh, Reza"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6337",
+        "Section": "0W2",
+        "Grades": {
+            "A": 11.0,
+            "A-": 10.0,
+            "B+": 9.0,
+            "B": 13.0,
+            "B-": 11.0,
+            "C+": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Subramanian, Upender",
+            "Madan, Anmol",
+            "Roshangarzadeh, Reza"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6340",
+        "Section": "5U1",
+        "Grades": {
+            "A": 8.0,
+            "A-": 10.0,
+            "B+": 14.0,
+            "B": 7.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pandian, Thiru",
+            "Zhu, Wangsheng"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6340",
+        "Section": "SW1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 6.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Neouchi, Rabih"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6341",
+        "Section": "5U1",
+        "Grades": {
+            "A": 8.0,
+            "A-": 9.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sabir, Muhammad F",
+            "Joseph, Shailender"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6346",
+        "Section": "5D1",
+        "Grades": {
+            "A": 11.0,
+            "A-": 3.0,
+            "B+": 5.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "El-Youssef, Rami",
+            "Tang, Ping"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6346",
+        "Section": "5U1",
+        "Grades": {
+            "A": 25.0,
+            "A-": 4.0,
+            "B+": 8.0,
+            "B": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "El-Youssef, Rami",
+            "Tang, Ping"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6346",
+        "Section": "SU1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 3.0,
+            "B+": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Perez, Jerry"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6346",
+        "Section": "SW1",
+        "Grades": {
+            "A": 13.0,
+            "A-": 7.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Paes, Antonio P"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6356",
+        "Section": "5U1",
+        "Grades": {
+            "A": 5.0,
+            "A-": 5.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Shrivastava, Prakash C",
+            "Kengalapura Shivamurthy, Sourabha"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6359",
+        "Section": "5U1",
+        "Grades": {
+            "A": 7.0,
+            "A-": 3.0,
+            "B": 4.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 5.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ramezani, Rasoul",
+            "Ghosh, Pramit"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6398",
+        "Section": "0W2",
+        "Grades": {
+            "A": 52.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Alimirzaei, Athena",
+            "Qu, Zihao"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6398",
+        "Section": "5U1",
+        "Grades": {
+            "A": 13.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sethi, Awanti"
+        ]
+    },
+    {
+        "Subject": "BUAN",
+        "CatalogNumber": "6398",
+        "Section": "SW1",
+        "Grades": {
+            "A": 30.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Alimirzaei, Athena",
+            "Qu, Zihao"
+        ]
+    },
+    {
+        "Subject": "CE",
+        "CatalogNumber": "2310",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "C": 1.0,
+            "D": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Nikoubin, Tooraj",
+            "Datta, Rajesh K",
+            "Parchamdar, Baharealsadat"
+        ]
+    },
+    {
+        "Subject": "CE",
+        "CatalogNumber": "3161",
+        "Section": "051",
+        "Grades": {
+            "A+": 1.0,
+            "A": 6.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Mezenner, Rabah"
+        ]
+    },
+    {
+        "Subject": "CE",
+        "CatalogNumber": "3301",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 2.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Tacca, Marco",
+            "Luo, Ziyang"
+        ]
+    },
+    {
+        "Subject": "CE",
+        "CatalogNumber": "3303",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B-": 2.0,
+            "C+": 3.0,
+            "C": 3.0,
+            "D-": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Kehtarnavaz, Nasser",
+            "Uddin, Mohammed Belal"
+        ]
+    },
+    {
+        "Subject": "CE",
+        "CatalogNumber": "4203",
+        "Section": "0H1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 4.0,
+            "A-": 1.0,
+            "B+": 4.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Kehtarnavaz, Nasser",
+            "Ni, Aoxin",
+            "Gogineni, Susmitha"
+        ]
+    },
+    {
+        "Subject": "CE",
+        "CatalogNumber": "4388",
+        "Section": "0U1",
+        "Grades": {
+            "A": 5.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Tacca, Marco"
+        ]
+    },
+    {
+        "Subject": "CGS",
+        "CatalogNumber": "3361",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 3.0,
+            "B+": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Hooge, Kimberley O"
+        ]
+    },
+    {
+        "Subject": "CGS",
+        "CatalogNumber": "4352",
+        "Section": "0W1",
+        "Grades": {
+            "A": 8.0,
+            "A-": 1.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "C": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Kumar, Pushpa S",
+            "Tran, Trung Hieu"
+        ]
+    },
+    {
+        "Subject": "CHEM",
+        "CatalogNumber": "1111",
+        "Section": "1U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 5.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Qin, Yanping",
+            "Montalvillo, Fernando",
+            "Yan, Qing"
+        ]
+    },
+    {
+        "Subject": "CHEM",
+        "CatalogNumber": "1112",
+        "Section": "1U2",
+        "Grades": {
+            "A+": 1.0,
+            "A": 8.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Huang, Yu",
+            "Umer, Arslan",
+            "Hasna Begam, Mohammed Nazar"
+        ]
+    },
+    {
+        "Subject": "CHEM",
+        "CatalogNumber": "1311",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 4.0,
+            "A-": 4.0,
+            "B+": 3.0,
+            "B-": 3.0,
+            "C": 1.0,
+            "C-": 2.0,
+            "D-": 1.0,
+            "F": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Sra, Amandeep K",
+            "Gull, Humera"
+        ]
+    },
+    {
+        "Subject": "CHEM",
+        "CatalogNumber": "1312",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 7.0,
+            "A": 8.0,
+            "A-": 4.0,
+            "B+": 4.0,
+            "B": 10.0,
+            "B-": 5.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 10.0,
+            "D+": 4.0,
+            "D": 2.0,
+            "D-": 3.0,
+            "F": 8.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Huang, Yu",
+            "Parsamian, Perouza",
+            "Gamage, Madujika A"
+        ]
+    },
+    {
+        "Subject": "CHEM",
+        "CatalogNumber": "2125",
+        "Section": "1U2",
+        "Grades": {
+            "A+": 24.0,
+            "B+": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Wijenayake, Sumudu N",
+            "Ben David, Ayala",
+            "Giri, Sachin"
+        ]
+    },
+    {
+        "Subject": "CHEM",
+        "CatalogNumber": "2323",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 10.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "C+": 7.0,
+            "C": 2.0,
+            "C-": 4.0,
+            "D+": 1.0,
+            "F": 6.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Tran, Daniel N"
+        ]
+    },
+    {
+        "Subject": "CHEM",
+        "CatalogNumber": "2325",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 8.0,
+            "A": 2.0,
+            "A-": 5.0,
+            "B+": 5.0,
+            "B": 4.0,
+            "B-": 2.0,
+            "C+": 4.0,
+            "C": 5.0,
+            "C-": 4.0,
+            "D+": 1.0,
+            "D": 4.0,
+            "F": 11.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Sibert, John W"
+        ]
+    },
+    {
+        "Subject": "COMD",
+        "CatalogNumber": "5340",
+        "Section": "0U1",
+        "Grades": {
+            "A": 24.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Aldridge, Michelle A",
+            "Vu, Katrina D"
+        ]
+    },
+    {
+        "Subject": "COMD",
+        "CatalogNumber": "6320",
+        "Section": "0U1",
+        "Grades": {
+            "A": 12.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Carter, Jessica A",
+            "Smith, Irma E"
+        ]
+    },
+    {
+        "Subject": "COMD",
+        "CatalogNumber": "7303",
+        "Section": "0U1",
+        "Grades": {
+            "A": 93.0,
+            "B": 8.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Dean, Lucinda L",
+            "Kenedi, Helen"
+        ]
+    },
+    {
+        "Subject": "COMD",
+        "CatalogNumber": "7323",
+        "Section": "0U1",
+        "Grades": {
+            "A": 14.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sweeney, Melissa"
+        ]
+    },
+    {
+        "Subject": "COMD",
+        "CatalogNumber": "7V68",
+        "Section": "0U1",
+        "Grades": {
+            "A": 29.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sale, Felicity F"
+        ]
+    },
+    {
+        "Subject": "COMD",
+        "CatalogNumber": "7V86",
+        "Section": "0U1",
+        "Grades": {
+            "A": 41.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rich, Judith B",
+            "Denicola-Prechtl, Kathleen M"
+        ]
+    },
+    {
+        "Subject": "COMD",
+        "CatalogNumber": "7V86",
+        "Section": "0U2",
+        "Grades": {
+            "A": 18.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Gollis, Christina R"
+        ]
+    },
+    {
+        "Subject": "COMD",
+        "CatalogNumber": "7V89",
+        "Section": "0U1",
+        "Grades": {
+            "A": 12.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Walsh, Diane G"
+        ]
+    },
+    {
+        "Subject": "COMM",
+        "CatalogNumber": "1311",
+        "Section": "0S1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 5.0,
+            "D-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Tanner, Lari J"
+        ]
+    },
+    {
+        "Subject": "COMM",
+        "CatalogNumber": "1311",
+        "Section": "0S2",
+        "Grades": {
+            "A+": 4.0,
+            "A": 6.0,
+            "A-": 2.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Tanner, Lari J"
+        ]
+    },
+    {
+        "Subject": "COMM",
+        "CatalogNumber": "1311",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 8.0,
+            "A": 9.0,
+            "A-": 2.0,
+            "B": 1.0,
+            "F": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Vazzi, Lisa"
+        ]
+    },
+    {
+        "Subject": "COMM",
+        "CatalogNumber": "1311",
+        "Section": "0W2",
+        "Grades": {
+            "A+": 3.0,
+            "A": 2.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Vazzi, Lisa"
+        ]
+    },
+    {
+        "Subject": "COMM",
+        "CatalogNumber": "1315",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 7.0,
+            "A": 4.0,
+            "A-": 3.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "F": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Skiles, Bradley W"
+        ]
+    },
+    {
+        "Subject": "COMM",
+        "CatalogNumber": "3342",
+        "Section": "0S1",
+        "Grades": {
+            "A": 15.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Gooch, John C"
+        ]
+    },
+    {
+        "Subject": "CRIM",
+        "CatalogNumber": "1301",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 5.0,
+            "A-": 3.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Geibler, Robert"
+        ]
+    },
+    {
+        "Subject": "CRIM",
+        "CatalogNumber": "1307",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 4.0,
+            "A-": 4.0,
+            "B": 1.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Van Blarcum, Lauren N"
+        ]
+    },
+    {
+        "Subject": "CRIM",
+        "CatalogNumber": "3301",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 15.0,
+            "A": 9.0,
+            "A-": 9.0,
+            "B+": 2.0,
+            "B": 4.0,
+            "B-": 4.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 3.0,
+            "D": 2.0,
+            "F": 2.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Manuel, Samantha A"
+        ]
+    },
+    {
+        "Subject": "CRIM",
+        "CatalogNumber": "3302",
+        "Section": "0W2",
+        "Grades": {
+            "A+": 2.0,
+            "A": 5.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 4.0,
+            "B-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rodriguez, Diana C"
+        ]
+    },
+    {
+        "Subject": "CRIM",
+        "CatalogNumber": "3310",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 8.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "D": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Wilds, Katherine M"
+        ]
+    },
+    {
+        "Subject": "CRIM",
+        "CatalogNumber": "4311",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 1.0,
+            "A-": 6.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 3.0,
+            "C": 1.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Gordon, Quinn T"
+        ]
+    },
+    {
+        "Subject": "CRIM",
+        "CatalogNumber": "4396",
+        "Section": "5W1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 17.0,
+            "A-": 5.0,
+            "B+": 8.0,
+            "B": 14.0,
+            "B-": 6.0,
+            "C+": 3.0,
+            "C": 3.0,
+            "D-": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Worrall, John L"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "1134",
+        "Section": "1U1",
+        "Grades": {
+            "A+": 12.0,
+            "A": 2.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Min, Richard K",
+            "Hsu, Chih-Wei"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "1136",
+        "Section": "1U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 2.0,
+            "A-": 3.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "C-": 1.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Min, Richard K",
+            "Alshomar, Ahmad"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "1136",
+        "Section": "1U2",
+        "Grades": {
+            "A+": 7.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "D+": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Min, Richard K",
+            "Li, Dongcheng"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "1325",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 5.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 5.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Feng, Ranran",
+            "Li, Ruosen"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "1334",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 3.0,
+            "A-": 4.0,
+            "B+": 5.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "C-": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nagar, Anurag",
+            "Ocampo Diaz, Gerardo"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "1335",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 2.0,
+            "A-": 9.0,
+            "B+": 3.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Erbatur, Serdar",
+            "Li, Xiao"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "1336",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B+": 3.0,
+            "B": 4.0,
+            "B-": 2.0,
+            "C+": 3.0,
+            "C": 2.0,
+            "D": 1.0,
+            "F": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Gupta, Neeraj K",
+            "Birashk, Amin",
+            "Deniz, Omer Faruk"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "1336",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 5.0,
+            "A": 3.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Arnold, Gordon L"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "1337",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 6.0,
+            "A-": 5.0,
+            "B+": 3.0,
+            "B": 9.0,
+            "B-": 1.0,
+            "C+": 3.0,
+            "C": 2.0,
+            "D+": 1.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Dollinger, Scott M",
+            "Delaram, Zeinab",
+            "Chen, Zizhao"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "1337",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 5.0,
+            "A-": 3.0,
+            "B+": 2.0,
+            "B": 7.0,
+            "B-": 4.0,
+            "C+": 6.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Davis, Chris I",
+            "Zeng, Yankai"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "2305",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 11.0,
+            "A-": 7.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Feng, Ranran",
+            "Guo, Jinghui"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "2336",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 5.0,
+            "A-": 1.0,
+            "B": 1.0,
+            "C+": 2.0,
+            "F": 4.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Arnold, Gordon L"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "2336",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 3.0,
+            "A-": 5.0,
+            "B+": 5.0,
+            "B": 7.0,
+            "B-": 10.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Khan, Ziaullah",
+            "Tian, Zijing",
+            "Chen, Simin"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "2340",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 5.0,
+            "A-": 6.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "D+": 1.0,
+            "D-": 1.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Mazidi, Karen J",
+            "Mi, Feng"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "2340",
+        "Section": "0U2",
+        "Grades": {
+            "A": 3.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C-": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Zhao, Yi",
+            "Mi, Feng"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "3305",
+        "Section": "0U2",
+        "Grades": {
+            "A": 6.0,
+            "A-": 5.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Davis, Chris I",
+            "Shams, Shahab"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "3305",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 19.0,
+            "A-": 4.0,
+            "B+": 4.0,
+            "B": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Farage, Timothy P",
+            "Tian, Zijing"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "3341",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 1.0,
+            "A-": 3.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 2.0,
+            "C": 1.0,
+            "C-": 5.0,
+            "D+": 3.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Whalen, Tristan G"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "3345",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 1.0,
+            "A-": 4.0,
+            "B+": 3.0,
+            "B": 2.0,
+            "B-": 2.0,
+            "C+": 3.0,
+            "C-": 1.0,
+            "D+": 3.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Ozbirn, Greg A",
+            "Malouf, Brian D"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "3345",
+        "Section": "0U2",
+        "Grades": {
+            "A-": 1.0,
+            "B+": 1.0,
+            "B-": 1.0,
+            "C+": 2.0,
+            "C": 3.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Zhao, Yi",
+            "Malouf, Brian D"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "3354",
+        "Section": "0U1",
+        "Grades": {
+            "A": 2.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Paulk, Mark C",
+            "Chen, Zizhao"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "3377",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 8.0,
+            "A": 23.0,
+            "A-": 11.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "C+": 3.0,
+            "C": 2.0,
+            "D": 1.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Dollinger, Scott M",
+            "Jiang, Kai"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4141",
+        "Section": "6U1",
+        "Grades": {
+            "A+": 14.0,
+            "A": 3.0,
+            "A-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nguyen, Nhut",
+            "Li, Xiao"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4141",
+        "Section": "6U2",
+        "Grades": {
+            "A+": 4.0,
+            "A": 2.0,
+            "A-": 3.0,
+            "B+": 1.0,
+            "C+": 2.0,
+            "C-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nguyen, Nhut",
+            "Chen, Tiantian",
+            "Li, Xiao"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4301",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 7.0,
+            "A": 11.0,
+            "A-": 7.0,
+            "B+": 5.0,
+            "B": 4.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "D": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Karami, Gity",
+            "Delaram, Zeinab"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4336",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 17.0,
+            "A-": 12.0,
+            "B+": 6.0,
+            "B": 4.0,
+            "B-": 4.0,
+            "C+": 1.0,
+            "C": 3.0,
+            "C-": 3.0,
+            "D+": 2.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Ozbirn, Greg A",
+            "Wang, Wenting",
+            "Nguyen, Son V"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4337",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 11.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "D": 2.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Karami, Gity",
+            "Liu, Ximeng"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4337",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 7.0,
+            "A": 2.0,
+            "A-": 5.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C": 2.0,
+            "F": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Karami, Gity",
+            "Li, Ruosen"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4341",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 13.0,
+            "A-": 3.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "C+": 3.0,
+            "C": 4.0,
+            "C-": 3.0,
+            "D+": 2.0,
+            "D": 2.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nguyen, Nhut",
+            "Chen, Tiantian"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4347",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 4.0,
+            "B+": 1.0,
+            "B": 4.0,
+            "C": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Omer, Jalal S",
+            "Liu, Ximeng"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4347",
+        "Section": "5U1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 5.0,
+            "B+": 10.0,
+            "B": 4.0,
+            "B-": 2.0,
+            "C+": 4.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Khan, Ziaullah",
+            "Li, Shengjie"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4348",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 3.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C": 2.0,
+            "C-": 3.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Mittal, Neeraj",
+            "Wang, Wenting"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4348",
+        "Section": "0U2",
+        "Grades": {
+            "A": 3.0,
+            "A-": 4.0,
+            "B+": 7.0,
+            "B": 8.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "D": 2.0,
+            "F": 5.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Prakash, Ravi",
+            "Rathnasuriya, Ravishka S"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4349",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 6.0,
+            "A-": 2.0,
+            "B": 2.0,
+            "B-": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Chitturi, Bhadrachalam",
+            "Aggarwal, Alakh"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4352",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 15.0,
+            "A-": 5.0,
+            "B": 6.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Kumar, Pushpa S",
+            "Tran, Trung Hieu"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4365",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 2.0,
+            "A-": 3.0,
+            "B+": 5.0,
+            "B": 1.0,
+            "B-": 3.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "D+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Min, Richard K",
+            "Zeng, Yankai"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4375",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "A-": 2.0,
+            "B+": 5.0,
+            "B": 3.0,
+            "B-": 5.0,
+            "C+": 2.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "F": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Mazidi, Karen J",
+            "Shams, Shahab"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4375",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 1.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C-": 1.0,
+            "F": 3.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Ng, Yu Chung V",
+            "Li, Shengjie"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4376",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 1.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 3.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "D+": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Chung, Lawrence",
+            "Alshomar, Ahmad"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4384",
+        "Section": "0U1",
+        "Grades": {
+            "A": 2.0,
+            "A-": 7.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "C-": 5.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Erbatur, Serdar",
+            "Deniz, Omer Faruk"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4384",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 1.0,
+            "A": 5.0,
+            "A-": 2.0,
+            "B+": 5.0,
+            "B": 2.0,
+            "B-": 3.0,
+            "C+": 2.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Davis, Chris I",
+            "Birashk, Amin"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4390",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 4.0,
+            "A-": 3.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "D": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nguyen, Nhut",
+            "Li, Congzhou"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "4393",
+        "Section": "0U1",
+        "Grades": {
+            "A": 4.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "C-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nguyen, Nhut",
+            "Chen, Simin"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "5343",
+        "Section": "0U1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 4.0,
+            "B+": 5.0,
+            "B": 7.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 3.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Gupta, Neeraj K",
+            "Deniz, Omer Faruk"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6314",
+        "Section": "5U1",
+        "Grades": {
+            "A": 11.0,
+            "A-": 6.0,
+            "B+": 10.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Min, Richard K",
+            "Hsu, Chih-Wei"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6350",
+        "Section": "0U1",
+        "Grades": {
+            "A": 46.0,
+            "A-": 18.0,
+            "B+": 4.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nagar, Anurag",
+            "Su, Ke",
+            "Miao, Miao"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6359",
+        "Section": "0U1",
+        "Grades": {
+            "A": 10.0,
+            "A-": 20.0,
+            "B+": 11.0,
+            "B": 8.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Chung, Lawrence",
+            "Kolluri, Kirthy"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6360",
+        "Section": "5U1",
+        "Grades": {
+            "A": 9.0,
+            "A-": 2.0,
+            "B+": 4.0,
+            "B": 4.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Omer, Jalal S",
+            "Garg, Priyanshi"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6363",
+        "Section": "0U1",
+        "Grades": {
+            "A": 16.0,
+            "A-": 3.0,
+            "B+": 10.0,
+            "B": 4.0,
+            "B-": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Chitturi, Bhadrachalam",
+            "Aggarwal, Alakh"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6364",
+        "Section": "0U1",
+        "Grades": {
+            "A": 17.0,
+            "A-": 7.0,
+            "B+": 3.0,
+            "B": 14.0,
+            "C+": 2.0,
+            "C": 9.0,
+            "F": 5.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Schweitzer, Haim",
+            "Dasgupta, Sopam",
+            "Song, Zihe"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6364",
+        "Section": "0U2",
+        "Grades": {
+            "A": 17.0,
+            "A-": 6.0,
+            "B+": 2.0,
+            "B": 4.0,
+            "B-": 2.0,
+            "C": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Schweitzer, Haim",
+            "Dasgupta, Sopam",
+            "Song, Zihe"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6367",
+        "Section": "0U1",
+        "Grades": {
+            "A": 13.0,
+            "A-": 5.0,
+            "B+": 4.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Wong, Weichen E",
+            "Li, Dongcheng",
+            "Chen, Zizhao"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6375",
+        "Section": "5U1",
+        "Grades": {
+            "A": 25.0,
+            "A-": 12.0,
+            "B+": 4.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nagar, Anurag",
+            "Zhang, Qifan"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6378",
+        "Section": "0U1",
+        "Grades": {
+            "A": 8.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 6.0,
+            "B-": 2.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Prakash, Ravi",
+            "Miao, Miao"
+        ]
+    },
+    {
+        "Subject": "CS",
+        "CatalogNumber": "6385",
+        "Section": "0W1",
+        "Grades": {
+            "A": 43.0,
+            "A-": 15.0,
+            "B+": 5.0,
+            "B": 7.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Farago, Andras",
+            "Hatfield, Cody R",
+            "Garg, Priyanshi"
+        ]
+    },
+    {
+        "Subject": "ECON",
+        "CatalogNumber": "2301",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 3.0,
+            "A-": 3.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Bing, Yuanchen"
+        ]
+    },
+    {
+        "Subject": "ECON",
+        "CatalogNumber": "2301",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 6.0,
+            "A-": 4.0,
+            "B+": 5.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Li, Ji"
+        ]
+    },
+    {
+        "Subject": "ECON",
+        "CatalogNumber": "2302",
+        "Section": "5U1",
+        "Grades": {
+            "A": 2.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Lu, Yundi"
+        ]
+    },
+    {
+        "Subject": "ECS",
+        "CatalogNumber": "3390",
+        "Section": "051",
+        "Grades": {
+            "A+": 14.0,
+            "A": 3.0,
+            "A-": 1.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Montgomery, Christina"
+        ]
+    },
+    {
+        "Subject": "ECS",
+        "CatalogNumber": "3390",
+        "Section": "053",
+        "Grades": {
+            "A+": 2.0,
+            "A": 5.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Johnson, Janet L"
+        ]
+    },
+    {
+        "Subject": "ECS",
+        "CatalogNumber": "3390",
+        "Section": "091",
+        "Grades": {
+            "A+": 1.0,
+            "A": 5.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "C": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Johnson, Janet L"
+        ]
+    },
+    {
+        "Subject": "ECS",
+        "CatalogNumber": "3390",
+        "Section": "092",
+        "Grades": {
+            "A": 10.0,
+            "C-": 1.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Scally, Deborah A"
+        ]
+    },
+    {
+        "Subject": "ED",
+        "CatalogNumber": "4358",
+        "Section": "0W1",
+        "Grades": {
+            "A": 2.0,
+            "B": 1.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "F": 2.0,
+            "CR": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Root, Alexey"
+        ]
+    },
+    {
+        "Subject": "EE",
+        "CatalogNumber": "3161",
+        "Section": "051",
+        "Grades": {
+            "A+": 1.0,
+            "A": 7.0,
+            "A-": 2.0,
+            "B+": 5.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Mezenner, Rabah"
+        ]
+    },
+    {
+        "Subject": "EE",
+        "CatalogNumber": "3202",
+        "Section": "0U1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B-": 6.0,
+            "C+": 2.0,
+            "C": 1.0,
+            "C-": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Kiasaleh, Kamran",
+            "Apalak, Merve"
+        ]
+    },
+    {
+        "Subject": "EE",
+        "CatalogNumber": "3301",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 2.0,
+            "B+": 1.0,
+            "C+": 1.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Tacca, Marco",
+            "Luo, Ziyang"
+        ]
+    },
+    {
+        "Subject": "EE",
+        "CatalogNumber": "3311",
+        "Section": "5U1",
+        "Grades": {
+            "A": 5.0,
+            "A-": 3.0,
+            "B+": 5.0,
+            "B": 2.0,
+            "B-": 4.0,
+            "C+": 1.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sechen, Carl",
+            "Salimath, Vibhav Kumarswami"
+        ]
+    },
+    {
+        "Subject": "EE",
+        "CatalogNumber": "4203",
+        "Section": "0H1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 5.0,
+            "A-": 5.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 3.0,
+            "C": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Kehtarnavaz, Nasser",
+            "Ni, Aoxin",
+            "Gogineni, Susmitha"
+        ]
+    },
+    {
+        "Subject": "EEMF",
+        "CatalogNumber": "6372",
+        "Section": "5U1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "C": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Tinker, Mark T"
+        ]
+    },
+    {
+        "Subject": "EEOP",
+        "CatalogNumber": "6314",
+        "Section": "0H1",
+        "Grades": {
+            "A": 10.0,
+            "A-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Tamil, Lakshman"
+        ]
+    },
+    {
+        "Subject": "EERF",
+        "CatalogNumber": "7V89",
+        "Section": "0W1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 4.0,
+            "B+": 4.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Henderson, Rashaunda M",
+            "Datta, Rajesh K"
+        ]
+    },
+    {
+        "Subject": "ENGR",
+        "CatalogNumber": "2300",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 8.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 4.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Akin, Bilal",
+            "Li, Chen",
+            "Kumar, Saurabh"
+        ]
+    },
+    {
+        "Subject": "ENGR",
+        "CatalogNumber": "3300",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 7.0,
+            "B+": 6.0,
+            "B": 8.0,
+            "B-": 2.0,
+            "C+": 5.0,
+            "C": 9.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ali, Mohammed Z",
+            "Peng, Genchang",
+            "Ahmed, Sabrina"
+        ]
+    },
+    {
+        "Subject": "ENGR",
+        "CatalogNumber": "3341",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B-": 2.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "D-": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Fonseka, John",
+            "Helwa, Sherief M"
+        ]
+    },
+    {
+        "Subject": "ENTP",
+        "CatalogNumber": "3301",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 5.0,
+            "A-": 6.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nichols, Paul M"
+        ]
+    },
+    {
+        "Subject": "ENTP",
+        "CatalogNumber": "4340",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 10.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Goodrich, Mary Beth W"
+        ]
+    },
+    {
+        "Subject": "ENTP",
+        "CatalogNumber": "6370",
+        "Section": "0W1",
+        "Grades": {
+            "A": 11.0,
+            "A-": 10.0,
+            "B+": 7.0,
+            "B": 13.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Kimzey, Jackie",
+            "Deng, Shu"
+        ]
+    },
+    {
+        "Subject": "EPPS",
+        "CatalogNumber": "2302",
+        "Section": "0W1",
+        "Grades": {
+            "A": 9.0,
+            "A-": 4.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "C-": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Yoon, Youngseok"
+        ]
+    },
+    {
+        "Subject": "EPPS",
+        "CatalogNumber": "6317",
+        "Section": "051",
+        "Grades": {
+            "A": 18.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Qiu, Fang",
+            "Lyu, Haitao"
+        ]
+    },
+    {
+        "Subject": "FILM",
+        "CatalogNumber": "1303",
+        "Section": "051",
+        "Grades": {
+            "A+": 9.0,
+            "B": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Shafek, Amal S"
+        ]
+    },
+    {
+        "Subject": "FILM",
+        "CatalogNumber": "2332",
+        "Section": "091",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "A-": 5.0,
+            "B+": 1.0,
+            "B-": 1.0,
+            "C+": 3.0,
+            "C": 1.0,
+            "D": 2.0,
+            "F": 2.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Baker, Emily-Rose"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "3300",
+        "Section": "0W1",
+        "Grades": {
+            "A": 19.0,
+            "B": 11.0,
+            "C": 6.0,
+            "D": 7.0,
+            "F": 6.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Lynch, Julie",
+            "Huang, Zhuowei"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "3320",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "B-": 2.0,
+            "C": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Harit, Tuhin"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "3320",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 2.0,
+            "A": 4.0,
+            "A-": 4.0,
+            "B": 4.0,
+            "C": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Wen, Yaxin"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "3320",
+        "Section": "0W1",
+        "Grades": {
+            "A": 8.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 11.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 9.0,
+            "C-": 3.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Manzi, Jeff"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "3320",
+        "Section": "0W2",
+        "Grades": {
+            "A+": 1.0,
+            "A": 5.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 8.0,
+            "B-": 1.0,
+            "C+": 3.0,
+            "C": 9.0,
+            "C-": 2.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Manzi, Jeff"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "3320",
+        "Section": "0W3",
+        "Grades": {
+            "A+": 1.0,
+            "A": 9.0,
+            "B+": 2.0,
+            "B": 4.0,
+            "C+": 1.0,
+            "C": 6.0,
+            "C-": 1.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Manzi, Jeff"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "3360",
+        "Section": "0W1",
+        "Grades": {
+            "A": 2.0,
+            "A-": 10.0,
+            "B+": 7.0,
+            "B": 13.0,
+            "B-": 4.0,
+            "C+": 3.0,
+            "C": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Pedigo, Madison F"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "3365",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 4.0,
+            "A-": 1.0,
+            "B+": 9.0,
+            "B": 10.0,
+            "B-": 4.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "DeCourcy, George A"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "3390",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 2.0,
+            "A-": 5.0,
+            "B+": 3.0,
+            "B": 5.0,
+            "B-": 4.0,
+            "C+": 4.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "D": 2.0,
+            "D-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "El-Ashmawi, Amal H"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "4300",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Oyima-Antseleve, Ndackyssa"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "4310",
+        "Section": "5U1",
+        "Grades": {
+            "A": 3.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "C": 1.0,
+            "C-": 2.0,
+            "D+": 1.0,
+            "D-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Smith, Jake A"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "4380",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "A-": 7.0,
+            "B": 2.0,
+            "C+": 3.0,
+            "D+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ballew, Gregory E"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "6301",
+        "Section": "0W1",
+        "Grades": {
+            "A": 21.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "B": 8.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "C": 9.0,
+            "F": 6.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nishi, Hirofumi",
+            "Guo, Shujian"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "6301",
+        "Section": "5U1",
+        "Grades": {
+            "A": 8.0,
+            "A-": 1.0,
+            "B": 3.0,
+            "C": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Nishi, Hirofumi",
+            "Guo, Shujian"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "6301",
+        "Section": "XU1",
+        "Grades": {
+            "A": 12.0,
+            "A-": 3.0,
+            "B": 3.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "El-Ashmawi, Amal H"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "6307",
+        "Section": "0W1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 2.0,
+            "B": 4.0,
+            "B-": 4.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Ma, Liping",
+            "Kurucak, Abdurrahman"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "6308",
+        "Section": "0W1",
+        "Grades": {
+            "A": 10.0,
+            "A-": 3.0,
+            "B+": 7.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Lewin, Peter",
+            "Kelly, Matthew L"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "6310",
+        "Section": "5U1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 3.0,
+            "B+": 3.0,
+            "B": 5.0,
+            "B-": 3.0,
+            "C": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Kaur, Dupinderjeet",
+            "Kurucak, Abdurrahman"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "6318",
+        "Section": "5U1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 2.0,
+            "B-": 3.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Baranchuk, Nina",
+            "Guo, Shujian"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "6321",
+        "Section": "5H1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 2.0,
+            "B": 7.0,
+            "C": 7.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Guttery, Randall"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "6322",
+        "Section": "0W1",
+        "Grades": {
+            "A": 16.0,
+            "A-": 6.0,
+            "B+": 11.0,
+            "B": 7.0,
+            "B-": 3.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "DeCourcy, George A"
+        ]
+    },
+    {
+        "Subject": "FIN",
+        "CatalogNumber": "6360",
+        "Section": "5U1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Kaur, Dupinderjeet",
+            "Kurucak, Abdurrahman"
+        ]
+    },
+    {
+        "Subject": "FTEC",
+        "CatalogNumber": "6312",
+        "Section": "FH1",
+        "Grades": {
+            "A": 12.0,
+            "A-": 6.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Scott, James A"
+        ]
+    },
+    {
+        "Subject": "FTEC",
+        "CatalogNumber": "6334",
+        "Section": "FH1",
+        "Grades": {
+            "A": 19.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Zemoodeh, Amir"
+        ]
+    },
+    {
+        "Subject": "GEOS",
+        "CatalogNumber": "1303",
+        "Section": "051",
+        "Grades": {
+            "A+": 2.0,
+            "A": 12.0,
+            "A-": 5.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Griffin, William R",
+            "Wang, Ning"
+        ]
+    },
+    {
+        "Subject": "GEOS",
+        "CatalogNumber": "3300",
+        "Section": "0S1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 1.0,
+            "A-": 3.0,
+            "B-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pirouz, Mortaza",
+            "Moulding, Ann E"
+        ]
+    },
+    {
+        "Subject": "GEOS",
+        "CatalogNumber": "4300",
+        "Section": "0S1",
+        "Grades": {
+            "A+": 1.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C+": 3.0,
+            "C": 1.0,
+            "D+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pirouz, Mortaza",
+            "Moulding, Ann E"
+        ]
+    },
+    {
+        "Subject": "GOVT",
+        "CatalogNumber": "2305",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 2.0,
+            "A-": 2.0,
+            "B": 2.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Sanchez De La Rosa, Andres Ricardo"
+        ]
+    },
+    {
+        "Subject": "GOVT",
+        "CatalogNumber": "2305",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 1.0,
+            "A": 6.0,
+            "A-": 2.0,
+            "B+": 4.0,
+            "B": 5.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "C": 3.0,
+            "D": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Widner, Katie"
+        ]
+    },
+    {
+        "Subject": "GOVT",
+        "CatalogNumber": "2306",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 6.0,
+            "A-": 1.0,
+            "B+": 6.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Noe, Ricardo"
+        ]
+    },
+    {
+        "Subject": "GOVT",
+        "CatalogNumber": "2306",
+        "Section": "0U2",
+        "Grades": {
+            "A": 11.0,
+            "A-": 7.0,
+            "B+": 5.0,
+            "B": 7.0,
+            "B-": 6.0,
+            "C+": 2.0,
+            "C": 3.0,
+            "C-": 2.0,
+            "F": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Eaton, John M"
+        ]
+    },
+    {
+        "Subject": "HDCD",
+        "CatalogNumber": "6351",
+        "Section": "5W1",
+        "Grades": {
+            "A": 11.0,
+            "A-": 1.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ewing, Donna M"
+        ]
+    },
+    {
+        "Subject": "HDCD",
+        "CatalogNumber": "6370",
+        "Section": "0H1",
+        "Grades": {
+            "A": 15.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ewing, Donna M"
+        ]
+    },
+    {
+        "Subject": "HIST",
+        "CatalogNumber": "1302",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 6.0,
+            "A-": 13.0,
+            "B+": 23.0,
+            "B": 19.0,
+            "B-": 31.0,
+            "C+": 11.0,
+            "C": 12.0,
+            "C-": 7.0,
+            "D+": 6.0,
+            "D": 2.0,
+            "D-": 3.0,
+            "F": 10.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Schulze, Jeffrey",
+            "Ivey, Tinamarie",
+            "Li, Ang"
+        ]
+    },
+    {
+        "Subject": "HIST",
+        "CatalogNumber": "3328",
+        "Section": "0W1",
+        "Grades": {
+            "A-": 3.0,
+            "B+": 6.0,
+            "B": 2.0,
+            "C+": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Dennis, Patrick W"
+        ]
+    },
+    {
+        "Subject": "HIST",
+        "CatalogNumber": "4344",
+        "Section": "0W1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 9.0,
+            "B+": 5.0,
+            "B": 3.0,
+            "B-": 4.0,
+            "C+": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pfister, Debra H"
+        ]
+    },
+    {
+        "Subject": "HIST",
+        "CatalogNumber": "4378",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 12.0,
+            "A": 11.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "C+": 1.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pettengill, Ryan S"
+        ]
+    },
+    {
+        "Subject": "HIST",
+        "CatalogNumber": "6325",
+        "Section": "0W1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 5.0,
+            "B-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Schulze, Jeffrey"
+        ]
+    },
+    {
+        "Subject": "HIST",
+        "CatalogNumber": "6340",
+        "Section": "551",
+        "Grades": {
+            "A": 6.0,
+            "A-": 3.0,
+            "B+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Wilson, Michael"
+        ]
+    },
+    {
+        "Subject": "HLTH",
+        "CatalogNumber": "1301",
+        "Section": "0W1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 6.0,
+            "B+": 3.0,
+            "B": 2.0,
+            "B-": 3.0,
+            "C+": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Baetge, Claire"
+        ]
+    },
+    {
+        "Subject": "HLTH",
+        "CatalogNumber": "3300",
+        "Section": "0U1",
+        "Grades": {
+            "A": 2.0,
+            "A-": 6.0,
+            "B+": 6.0,
+            "B": 3.0,
+            "B-": 5.0,
+            "C+": 4.0,
+            "C": 7.0,
+            "C-": 8.0,
+            "D+": 1.0,
+            "D": 4.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Byrnes, Kathleen A"
+        ]
+    },
+    {
+        "Subject": "HMGT",
+        "CatalogNumber": "6320",
+        "Section": "CH1",
+        "Grades": {
+            "A": 22.0,
+            "A-": 3.0,
+            "B+": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Jacob, Stephen"
+        ]
+    },
+    {
+        "Subject": "HMGT",
+        "CatalogNumber": "6324",
+        "Section": "0W1",
+        "Grades": {
+            "A": 11.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ziegler, Laurie",
+            "Garg, Suyash"
+        ]
+    },
+    {
+        "Subject": "HMGT",
+        "CatalogNumber": "6324",
+        "Section": "0W2",
+        "Grades": {
+            "A": 7.0,
+            "B": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Ziegler, Laurie",
+            "Garg, Suyash"
+        ]
+    },
+    {
+        "Subject": "HMGT",
+        "CatalogNumber": "6331",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 20.0,
+            "A-": 9.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Malaise, Michael"
+        ]
+    },
+    {
+        "Subject": "HMGT",
+        "CatalogNumber": "6332",
+        "Section": "5U1",
+        "Grades": {
+            "A": 10.0,
+            "A-": 3.0,
+            "B+": 9.0,
+            "B": 5.0,
+            "B-": 5.0,
+            "C+": 4.0,
+            "C": 4.0,
+            "F": 7.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ramanathan, Kannan"
+        ]
+    },
+    {
+        "Subject": "HMGT",
+        "CatalogNumber": "6401",
+        "Section": "AS1",
+        "Grades": {
+            "A": 42.0,
+            "A-": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Taylor, Donald E",
+            "Kaiser, Robert C"
+        ]
+    },
+    {
+        "Subject": "HMGT",
+        "CatalogNumber": "6408",
+        "Section": "AS1",
+        "Grades": {
+            "A": 45.0,
+            "A-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Taylor, Donald E",
+            "Convery, Paul"
+        ]
+    },
+    {
+        "Subject": "IMS",
+        "CatalogNumber": "3310",
+        "Section": "0U1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 2.0,
+            "B+": 5.0,
+            "B": 3.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Wang, Jiyu"
+        ]
+    },
+    {
+        "Subject": "IMS",
+        "CatalogNumber": "3310",
+        "Section": "5U1",
+        "Grades": {
+            "A": 9.0,
+            "A-": 10.0,
+            "B+": 6.0,
+            "B": 9.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "F": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Liu, Yu"
+        ]
+    },
+    {
+        "Subject": "IMS",
+        "CatalogNumber": "4335",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 4.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B-": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Goodrich, Mary Beth W"
+        ]
+    },
+    {
+        "Subject": "IMS",
+        "CatalogNumber": "4V94",
+        "Section": "091",
+        "Grades": {
+            "A": 11.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Zydorek, Hubert"
+        ]
+    },
+    {
+        "Subject": "IMS",
+        "CatalogNumber": "6304",
+        "Section": "AW1",
+        "Grades": {
+            "A": 11.0,
+            "B": 8.0,
+            "C": 2.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Petrik, Peter"
+        ]
+    },
+    {
+        "Subject": "IMS",
+        "CatalogNumber": "6314",
+        "Section": "0W1",
+        "Grades": {
+            "A": 5.0,
+            "A-": 18.0,
+            "B+": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Dalgic, Tevfik"
+        ]
+    },
+    {
+        "Subject": "IMS",
+        "CatalogNumber": "6316",
+        "Section": "GW1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 8.0,
+            "B+": 4.0,
+            "B": 6.0,
+            "B-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Peinhardt, Clint W"
+        ]
+    },
+    {
+        "Subject": "IMS",
+        "CatalogNumber": "6354",
+        "Section": "GW1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 10.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Albrecht, Maria"
+        ]
+    },
+    {
+        "Subject": "IMS",
+        "CatalogNumber": "6360",
+        "Section": "0W1",
+        "Grades": {
+            "A": 30.0,
+            "A-": 22.0,
+            "B+": 14.0,
+            "B": 4.0,
+            "B-": 5.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Olsztynska, Agnieszka",
+            "Deng, Shu"
+        ]
+    },
+    {
+        "Subject": "IMS",
+        "CatalogNumber": "6365",
+        "Section": "0W1",
+        "Grades": {
+            "A": 14.0,
+            "A-": 11.0,
+            "B+": 10.0,
+            "B": 6.0,
+            "B-": 5.0,
+            "C+": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Woldu, Habte G",
+            "Alborz, Ethan"
+        ]
+    },
+    {
+        "Subject": "ISIS",
+        "CatalogNumber": "3335",
+        "Section": "0W1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 10.0,
+            "B+": 6.0,
+            "B": 5.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "D+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rosa, Jonathan"
+        ]
+    },
+    {
+        "Subject": "ISIS",
+        "CatalogNumber": "4304",
+        "Section": "0H1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 4.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Werhnyak, Larissa"
+        ]
+    },
+    {
+        "Subject": "ISNS",
+        "CatalogNumber": "2359",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 62.0,
+            "A": 14.0,
+            "A-": 7.0,
+            "B+": 5.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "D": 2.0,
+            "D-": 1.0,
+            "F": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pujana, Ignacio",
+            "Sink, Katharine O"
+        ]
+    },
+    {
+        "Subject": "ISNS",
+        "CatalogNumber": "2367",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 14.0,
+            "A": 22.0,
+            "A-": 7.0,
+            "B+": 1.0,
+            "B": 4.0,
+            "B-": 3.0,
+            "C": 1.0,
+            "D+": 1.0,
+            "F": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pujana, Ignacio",
+            "Akatakpo, Solomon O"
+        ]
+    },
+    {
+        "Subject": "ISNS",
+        "CatalogNumber": "2367",
+        "Section": "0W2",
+        "Grades": {
+            "A+": 3.0,
+            "A": 16.0,
+            "A-": 7.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pujana, Ignacio",
+            "Akatakpo, Solomon O"
+        ]
+    },
+    {
+        "Subject": "ITSS",
+        "CatalogNumber": "3300",
+        "Section": "5U1",
+        "Grades": {
+            "A": 27.0,
+            "A-": 13.0,
+            "B+": 5.0,
+            "B": 7.0,
+            "B-": 1.0,
+            "C+": 2.0,
+            "C": 3.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Owens, Sean M"
+        ]
+    },
+    {
+        "Subject": "ITSS",
+        "CatalogNumber": "3311",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 5.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 4.0,
+            "B-": 3.0,
+            "C+": 2.0,
+            "C": 1.0,
+            "C-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ozdemir, Dicle Yagmur"
+        ]
+    },
+    {
+        "Subject": "ITSS",
+        "CatalogNumber": "3312",
+        "Section": "5U1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 7.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "B-": 6.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "F": 2.0,
+            "W": 8
+        },
+        "Instructors": [
+            "Short, Kevin P",
+            "Harikrishna Reddy, Chillakuru"
+        ]
+    },
+    {
+        "Subject": "ITSS",
+        "CatalogNumber": "3390",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 5.0,
+            "A-": 4.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Neal, Angela A"
+        ]
+    },
+    {
+        "Subject": "ITSS",
+        "CatalogNumber": "4300",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 4.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 5.0,
+            "B-": 5.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "F": 2.0,
+            "W": 5
+        },
+        "Instructors": [
+            "Perry, Christopher M",
+            "Srivastava, Bhupesh K"
+        ]
+    },
+    {
+        "Subject": "ITSS",
+        "CatalogNumber": "4330",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 3.0,
+            "A-": 3.0,
+            "B+": 9.0,
+            "B": 7.0,
+            "B-": 5.0,
+            "C+": 5.0,
+            "C": 2.0,
+            "C-": 4.0,
+            "D-": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Khan, Taimur A",
+            "Harikrishna Reddy, Chillakuru"
+        ]
+    },
+    {
+        "Subject": "ITSS",
+        "CatalogNumber": "4351",
+        "Section": "5U1",
+        "Grades": {
+            "A": 7.0,
+            "A-": 11.0,
+            "B+": 8.0,
+            "B": 6.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Pandian, Thiru",
+            "Luo, Ning"
+        ]
+    },
+    {
+        "Subject": "ITSS",
+        "CatalogNumber": "4352",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 8.0,
+            "A-": 15.0,
+            "B+": 5.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 3.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Neal, Angela A",
+            "Kengalapura Shivamurthy, Sourabha"
+        ]
+    },
+    {
+        "Subject": "ITSS",
+        "CatalogNumber": "4360",
+        "Section": "5U1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 2.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "D+": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Thirumalai, Nambi",
+            "Tang, Ping"
+        ]
+    },
+    {
+        "Subject": "ITSS",
+        "CatalogNumber": "4370",
+        "Section": "5U1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 6.0,
+            "B+": 2.0,
+            "B": 9.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Young, John G"
+        ]
+    },
+    {
+        "Subject": "LIT",
+        "CatalogNumber": "1301",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 9.0,
+            "A": 3.0,
+            "A-": 1.0,
+            "B+": 3.0,
+            "B": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ingrao, Peter J"
+        ]
+    },
+    {
+        "Subject": "LIT",
+        "CatalogNumber": "2331",
+        "Section": "0W2",
+        "Grades": {
+            "A": 10.0,
+            "B+": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Arrabai, Mustafa M"
+        ]
+    },
+    {
+        "Subject": "LIT",
+        "CatalogNumber": "3337",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 3.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Riley, Kristin N"
+        ]
+    },
+    {
+        "Subject": "MAS",
+        "CatalogNumber": "6102",
+        "Section": "0U1",
+        "Grades": {
+            "F": 2.0,
+            "P": 50.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Cirilo, Jason M"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "1314",
+        "Section": "0S1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B-": 3.0,
+            "C": 1.0,
+            "D+": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Alvarado, Iris"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "1314",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 2.0,
+            "B-": 2.0,
+            "C": 1.0,
+            "C-": 2.0,
+            "F": 5.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Aman, Kelly",
+            "Murad, Mohammad Hassan"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "1325",
+        "Section": "0U1",
+        "Grades": {
+            "B+": 4.0,
+            "C": 2.0,
+            "C-": 3.0,
+            "D": 2.0,
+            "F": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Guo, Huizhen",
+            "Nuwagira, Brighton"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "1325",
+        "Section": "5U1",
+        "Grades": {
+            "A-": 1.0,
+            "B": 2.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "F": 8.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Liu, Runzhou",
+            "Ghanem, Ziad G"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "1326",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 3.0,
+            "A": 3.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 3.0,
+            "D": 1.0,
+            "F": 4.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Duruoha, Adannah",
+            "Crane, Casey M"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2312",
+        "Section": "0U1",
+        "Grades": {
+            "A": 2.0,
+            "A-": 1.0,
+            "B": 1.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 4.0,
+            "F": 4.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Martynova, Irina",
+            "Chen, Huiyi"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2413",
+        "Section": "0U1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 5.0,
+            "C+": 1.0,
+            "C": 4.0,
+            "C-": 4.0,
+            "D-": 2.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Nguyen, Mylinh T",
+            "Gallo, Erika S",
+            "Cao, Jianpeng",
+            "Zhao, Kun"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2413",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 1.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B": 1.0,
+            "B-": 3.0,
+            "C+": 2.0,
+            "C": 3.0,
+            "C-": 2.0,
+            "D-": 2.0,
+            "F": 5.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Patel, Jigarkumar S",
+            "Gallo, Erika S",
+            "Cao, Jianpeng",
+            "Zhao, Kun"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2414",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A-": 3.0,
+            "B+": 1.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 4.0,
+            "C-": 1.0,
+            "D+": 2.0,
+            "D-": 1.0,
+            "F": 13.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Ahsan, Mohammad K"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2414",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 3.0,
+            "A-": 5.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C-": 1.0,
+            "D+": 3.0,
+            "D": 2.0,
+            "F": 8.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Ahsan, Mohammad K"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2415",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B": 2.0,
+            "C+": 2.0,
+            "C": 4.0,
+            "C-": 2.0,
+            "D-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Dahal, Rabin",
+            "Chen, Ying"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2415",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 4.0,
+            "A": 3.0,
+            "B+": 2.0,
+            "B": 5.0,
+            "B-": 2.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "F": 2.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Dahal, Rabin",
+            "Zagvozdkin, Andrei"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2417",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 1.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 2.0,
+            "C+": 4.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "F": 2.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Sultana, Nasrin",
+            "Jahan, Mahmuda"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2418",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 2.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 3.0,
+            "C": 5.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "F": 3.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Paudel, Ajaya B"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2418",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 6.0,
+            "A": 1.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 2.0,
+            "C": 3.0,
+            "C-": 2.0,
+            "D+": 3.0,
+            "D": 1.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Adabrah, Anani Komla"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2419",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 3.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 4.0,
+            "B-": 3.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Eydelzon, Anatoly",
+            "Palit, Priyojit",
+            "Li, Jiacheng"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "2420",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 3.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Dabkowski, Mieczyslaw K"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "3351",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 2.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "C+": 4.0,
+            "C": 1.0,
+            "C-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ramakrishna, Viswanath",
+            "Seiffert, Lucas"
+        ]
+    },
+    {
+        "Subject": "MATH",
+        "CatalogNumber": "4301",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "C": 3.0,
+            "C-": 2.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Dabkowski, Mieczyslaw K",
+            "Ahmed, Faisal"
+        ]
+    },
+    {
+        "Subject": "MECH",
+        "CatalogNumber": "2330",
+        "Section": "051",
+        "Grades": {
+            "A": 2.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "C": 3.0,
+            "C-": 1.0,
+            "D-": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Thamban, P.L.Stephan"
+        ]
+    },
+    {
+        "Subject": "MECH",
+        "CatalogNumber": "3105",
+        "Section": "1W1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 3.0,
+            "A-": 3.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rios, Oziel"
+        ]
+    },
+    {
+        "Subject": "MECH",
+        "CatalogNumber": "3150",
+        "Section": "1W1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 5.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Park, Wooram"
+        ]
+    },
+    {
+        "Subject": "MECH",
+        "CatalogNumber": "3305",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 1.0,
+            "A-": 2.0,
+            "B+": 6.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "C": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Rios, Oziel"
+        ]
+    },
+    {
+        "Subject": "MECH",
+        "CatalogNumber": "3320",
+        "Section": "0S1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 2.0,
+            "A-": 7.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 2.0,
+            "C+": 3.0,
+            "C": 3.0,
+            "C-": 4.0,
+            "D": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "You, Seung M"
+        ]
+    },
+    {
+        "Subject": "MECH",
+        "CatalogNumber": "3370",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 3.0,
+            "A-": 3.0,
+            "B+": 2.0,
+            "B": 4.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Fadda, Dani Z"
+        ]
+    },
+    {
+        "Subject": "MECH",
+        "CatalogNumber": "3380",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 2.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 5.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "D": 3.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Malik, Arif"
+        ]
+    },
+    {
+        "Subject": "MECH",
+        "CatalogNumber": "4340",
+        "Section": "0W1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 3.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Park, Wooram"
+        ]
+    },
+    {
+        "Subject": "MECH",
+        "CatalogNumber": "4381",
+        "Section": "0U1",
+        "Grades": {
+            "A": 7.0,
+            "A-": 20.0,
+            "B+": 16.0,
+            "B": 27.0,
+            "B-": 6.0,
+            "C+": 2.0,
+            "C": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hart, Robert A"
+        ]
+    },
+    {
+        "Subject": "MECH",
+        "CatalogNumber": "4V95",
+        "Section": "0W1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 2.0,
+            "B": 7.0,
+            "C": 9.0,
+            "C-": 1.0,
+            "D": 2.0,
+            "F": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Summers, Joshua"
+        ]
+    },
+    {
+        "Subject": "MECO",
+        "CatalogNumber": "6303",
+        "Section": "0W1",
+        "Grades": {
+            "A": 13.0,
+            "A-": 11.0,
+            "B+": 11.0,
+            "B": 3.0,
+            "B-": 5.0,
+            "C+": 3.0,
+            "C": 8.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Lewin, Peter",
+            "Kelly, Matthew L"
+        ]
+    },
+    {
+        "Subject": "MECO",
+        "CatalogNumber": "6303",
+        "Section": "AW1",
+        "Grades": {
+            "A": 15.0,
+            "A-": 1.0,
+            "B-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Kiser, Stephen L"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6308",
+        "Section": "0W1",
+        "Grades": {
+            "A": 27.0,
+            "A-": 9.0,
+            "B+": 13.0,
+            "B": 4.0,
+            "B-": 2.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Raghunathan, Srinivasan",
+            "Joseph, Shailender"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6308",
+        "Section": "0W2",
+        "Grades": {
+            "A": 9.0,
+            "A-": 12.0,
+            "B+": 9.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Raghunathan, Srinivasan",
+            "Joseph, Shailender"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6313",
+        "Section": "5U1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 12.0,
+            "B+": 9.0,
+            "B": 9.0,
+            "B-": 6.0,
+            "C+": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Shroff, Tejas N",
+            "Zhu, Yan"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6313",
+        "Section": "CW1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 3.0,
+            "B+": 7.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rhoades, Mike"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6313",
+        "Section": "GW1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 1.0,
+            "B+": 6.0,
+            "B": 3.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Wiant, Russell B"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6313",
+        "Section": "GW2",
+        "Grades": {
+            "A": 11.0,
+            "A-": 5.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Wiant, Russell B"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6319",
+        "Section": "0W1",
+        "Grades": {
+            "A": 18.0,
+            "B": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Thompson, Luell O"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6324",
+        "Section": "0W1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 1.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Menon, Syam",
+            "Luo, Ning"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6326",
+        "Section": "0W1",
+        "Grades": {
+            "A": 8.0,
+            "A-": 5.0,
+            "B+": 5.0,
+            "B": 8.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ryu, Young",
+            "Zhu, Wangsheng"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6330",
+        "Section": "5U1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 4.0,
+            "B+": 5.0,
+            "B": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Shroff, Tejas N",
+            "Zhu, Yan"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6346",
+        "Section": "5U1",
+        "Grades": {
+            "A": 13.0,
+            "A-": 2.0,
+            "B+": 4.0,
+            "B": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "El-Youssef, Rami",
+            "Tang, Ping"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6363",
+        "Section": "0U1",
+        "Grades": {
+            "A": 16.0,
+            "A-": 14.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Calisir, Engin",
+            "Xie, Si"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6363",
+        "Section": "5U1",
+        "Grades": {
+            "A": 17.0,
+            "A-": 10.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Calisir, Engin",
+            "Xie, Si"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6380",
+        "Section": "0U1",
+        "Grades": {
+            "A": 13.0,
+            "A-": 1.0,
+            "B+": 10.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Islam, Naser",
+            "Srivastava, Bhupesh K"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6380",
+        "Section": "5D1",
+        "Grades": {
+            "A": 18.0,
+            "A-": 4.0,
+            "B+": 13.0,
+            "B": 5.0,
+            "B-": 1.0,
+            "C": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Islam, Naser",
+            "Srivastava, Bhupesh K"
+        ]
+    },
+    {
+        "Subject": "MIS",
+        "CatalogNumber": "6382",
+        "Section": "5U1",
+        "Grades": {
+            "A": 10.0,
+            "A-": 12.0,
+            "B+": 12.0,
+            "B": 6.0,
+            "B-": 4.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Neouchi, Rabih",
+            "Xie, Si"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "3300",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 3.0,
+            "A-": 2.0,
+            "B+": 6.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Jameei Osgouei, Ata"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "3300",
+        "Section": "0W1",
+        "Grades": {
+            "A": 7.0,
+            "A-": 11.0,
+            "B+": 12.0,
+            "B": 8.0,
+            "B-": 7.0,
+            "C+": 2.0,
+            "C": 1.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pahwa, Parneet",
+            "Kim, Seung Mok"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "3330",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 5.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "B-": 3.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Amirpour, Semiramis",
+            "Rai, Rahul"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "4330",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 8.0,
+            "A-": 7.0,
+            "B+": 5.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "C-": 2.0,
+            "D+": 1.0,
+            "D-": 2.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Edsel, Alexander D"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "4334",
+        "Section": "5U1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 10.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pacyna, Sandra"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "4360",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 8.0,
+            "A-": 10.0,
+            "B+": 14.0,
+            "B": 4.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Farquharson, Neil"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "4395",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 11.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Farquharson, Neil"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6301",
+        "Section": "0W1",
+        "Grades": {
+            "A": 13.0,
+            "A-": 9.0,
+            "B+": 8.0,
+            "B": 15.0,
+            "B-": 9.0,
+            "C+": 5.0,
+            "C": 2.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Pahwa, Parneet",
+            "Kim, Seung Mok"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6301",
+        "Section": "CW1",
+        "Grades": {
+            "A": 24.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Munch, James"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6301",
+        "Section": "MBP",
+        "Grades": {
+            "A": 5.0,
+            "A-": 3.0,
+            "B+": 11.0,
+            "B": 5.0,
+            "B-": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rajaratnam, Daniel"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6301",
+        "Section": "XU1",
+        "Grades": {
+            "A": 10.0,
+            "A-": 8.0,
+            "B+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Albrecht, Maria"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6309",
+        "Section": "0W1",
+        "Grades": {
+            "A": 2.0,
+            "A-": 4.0,
+            "B+": 7.0,
+            "B": 6.0,
+            "B-": 5.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rajaratnam, Daniel"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6310",
+        "Section": "0W1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 3.0,
+            "B+": 5.0,
+            "B": 5.0,
+            "B-": 3.0,
+            "C+": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Biswas, Abhijit",
+            "Brahmbhatt, Kruti Nitin"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6321",
+        "Section": "0W1",
+        "Grades": {
+            "A": 16.0,
+            "A-": 1.0,
+            "B+": 6.0,
+            "B": 12.0,
+            "B-": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Edsel, Alexander D"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6332",
+        "Section": "0W1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 4.0,
+            "B+": 7.0,
+            "B": 6.0,
+            "B-": 5.0,
+            "C+": 5.0,
+            "C": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Biswas, Abhijit"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6336",
+        "Section": "0W1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 4.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rao, Ram C",
+            "Choi, Eunsung"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6337",
+        "Section": "0W1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Subramanian, Upender",
+            "Madan, Anmol",
+            "Roshangarzadeh, Reza"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6339",
+        "Section": "0W1",
+        "Grades": {
+            "A": 7.0,
+            "A-": 5.0,
+            "B+": 4.0,
+            "B": 7.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rajaratnam, Daniel"
+        ]
+    },
+    {
+        "Subject": "MKT",
+        "CatalogNumber": "6352",
+        "Section": "0W1",
+        "Grades": {
+            "A": 19.0,
+            "A-": 6.0,
+            "B+": 4.0,
+            "B": 8.0,
+            "B-": 4.0,
+            "C+": 3.0,
+            "C": 4.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Tirone, Guido"
+        ]
+    },
+    {
+        "Subject": "MUSI",
+        "CatalogNumber": "1306",
+        "Section": "051",
+        "Grades": {
+            "A+": 15.0,
+            "A": 12.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Jones, Eric"
+        ]
+    },
+    {
+        "Subject": "NSC",
+        "CatalogNumber": "3361",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 3.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "C+": 4.0,
+            "C": 1.0,
+            "C-": 3.0,
+            "D+": 1.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "McWilliams, Steven P",
+            "Bryan, Caeley L"
+        ]
+    },
+    {
+        "Subject": "NSC",
+        "CatalogNumber": "3361",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 2.0,
+            "A": 2.0,
+            "A-": 2.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C+": 5.0,
+            "C": 2.0,
+            "C-": 3.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Taylor, Anna M",
+            "Garner, Katherine M",
+            "Szabo-Pardi, Thomas A"
+        ]
+    },
+    {
+        "Subject": "NSC",
+        "CatalogNumber": "4351",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 20.0,
+            "A-": 5.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Shareef, Safiullah M"
+        ]
+    },
+    {
+        "Subject": "NSC",
+        "CatalogNumber": "4352",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 4.0,
+            "A-": 3.0,
+            "B": 1.0,
+            "B-": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Raboune, Siham",
+            "Rodriguez, Sierra R"
+        ]
+    },
+    {
+        "Subject": "NSC",
+        "CatalogNumber": "4353",
+        "Section": "1U3",
+        "Grades": {
+            "A+": 3.0,
+            "A": 6.0,
+            "A-": 2.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Raboune, Siham",
+            "Driskill, Christopher M"
+        ]
+    },
+    {
+        "Subject": "NSC",
+        "CatalogNumber": "4366",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 3.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "D": 3.0,
+            "F": 3.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Taylor, Anna M",
+            "Hu, Ya-Yu"
+        ]
+    },
+    {
+        "Subject": "NSC",
+        "CatalogNumber": "4V90",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 11.0,
+            "A-": 5.0,
+            "B+": 3.0,
+            "B": 7.0,
+            "B-": 3.0,
+            "C-": 1.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Maqbool, Mohsin"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6249",
+        "Section": "CW1",
+        "Grades": {
+            "A": 26.0,
+            "B": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Latham, Van M"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6301",
+        "Section": "0W1",
+        "Grades": {
+            "A": 35.0,
+            "A-": 9.0,
+            "B+": 6.0,
+            "B": 9.0,
+            "B-": 3.0,
+            "C+": 2.0,
+            "C": 2.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hasenhuttl, Maria",
+            "Teschner, Ryan S"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6301",
+        "Section": "CH1",
+        "Grades": {
+            "A": 24.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ferrante, Anne M"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6331",
+        "Section": "CW1",
+        "Grades": {
+            "A": 10.0,
+            "B+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hasenhuttl, Maria"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6332",
+        "Section": "0W1",
+        "Grades": {
+            "A": 17.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "C": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Ziegler, Laurie",
+            "Garg, Suyash"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6332",
+        "Section": "0W2",
+        "Grades": {
+            "A": 28.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Ziegler, Laurie",
+            "Garg, Suyash"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6334",
+        "Section": "CW1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 6.0,
+            "B+": 5.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Latham, Van M"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6344",
+        "Section": "CW1",
+        "Grades": {
+            "A": 28.0,
+            "A-": 5.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Norton, Larry"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6348",
+        "Section": "CW1",
+        "Grades": {
+            "A": 28.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "C": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Plaisance Bryan, Suzette T"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6351",
+        "Section": "CW1",
+        "Grades": {
+            "A": 20.0,
+            "A-": 3.0,
+            "B+": 3.0,
+            "B": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Norton, Larry"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6352",
+        "Section": "CW1",
+        "Grades": {
+            "A": 19.0,
+            "A-": 3.0,
+            "B": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Norton, Larry"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6358",
+        "Section": "GW1",
+        "Grades": {
+            "A": 11.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Thurgood, Keith L"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6367",
+        "Section": "GW1",
+        "Grades": {
+            "A": 11.0,
+            "B+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Thurgood, Keith L"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6382",
+        "Section": "CW1",
+        "Grades": {
+            "A": 35.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Plaisance Bryan, Suzette T"
+        ]
+    },
+    {
+        "Subject": "OB",
+        "CatalogNumber": "6384",
+        "Section": "CW1",
+        "Grades": {
+            "A": 17.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Honeycutt, James"
+        ]
+    },
+    {
+        "Subject": "OBHR",
+        "CatalogNumber": "3310",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 3.0,
+            "A-": 3.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Guo, Nan"
+        ]
+    },
+    {
+        "Subject": "OBHR",
+        "CatalogNumber": "3330",
+        "Section": "0U1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 7.0,
+            "B+": 5.0,
+            "B": 6.0,
+            "B-": 3.0,
+            "C-": 3.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Meda, Edward",
+            "Teschner, Ryan S"
+        ]
+    },
+    {
+        "Subject": "OBHR",
+        "CatalogNumber": "4300",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 38.0,
+            "A": 12.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Edgington, Kyle D"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "3310",
+        "Section": "0U1",
+        "Grades": {
+            "A": 5.0,
+            "B+": 3.0,
+            "B": 4.0,
+            "C+": 3.0,
+            "C": 4.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Subramoniam, Ramesh",
+            "Wei, Jiarui"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "3310",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 5.0,
+            "A": 7.0,
+            "A-": 3.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Armaghan, Milad"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "3310",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 5.0,
+            "A-": 3.0,
+            "B+": 4.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 6.0,
+            "C": 2.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "F": 3.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Rout, Arun Kumar"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "3333",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 16.0,
+            "A-": 10.0,
+            "B+": 3.0,
+            "B": 7.0,
+            "B-": 2.0,
+            "C": 2.0,
+            "D+": 1.0,
+            "D": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Alimirzaei, Athena",
+            "Qu, Zihao"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "3333",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 14.0,
+            "A": 3.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "C-": 1.0,
+            "D": 3.0,
+            "F": 4.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Ahadi, Khatereh",
+            "Chen, Qiuxia"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "3360",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 14.0,
+            "A": 11.0,
+            "A-": 7.0,
+            "B+": 4.0,
+            "B": 8.0,
+            "B-": 2.0,
+            "C+": 4.0,
+            "C": 2.0,
+            "C-": 2.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Ahadi, Khatereh",
+            "Chen, Qiuxia"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "3360",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 6.0,
+            "A-": 3.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "B-": 5.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Manchiraju, Chandrasekhar Seetharama"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6301",
+        "Section": "0W1",
+        "Grades": {
+            "A": 18.0,
+            "A-": 7.0,
+            "B+": 3.0,
+            "B": 17.0,
+            "B-": 3.0,
+            "C+": 3.0,
+            "C": 3.0,
+            "F": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Leach, Sonia E",
+            "Takasi, Venkanna Dora Goutham"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6301",
+        "Section": "CH1",
+        "Grades": {
+            "A": 21.0,
+            "A-": 3.0,
+            "B+": 3.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Kim, Dohyeong"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6302",
+        "Section": "0W1",
+        "Grades": {
+            "A": 16.0,
+            "A-": 13.0,
+            "B+": 17.0,
+            "B": 9.0,
+            "B-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Dawande, Milind",
+            "Takasi, Venkanna Dora Goutham"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6302",
+        "Section": "AW6",
+        "Grades": {
+            "A": 13.0,
+            "A-": 6.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Leach, Sonia E"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6302",
+        "Section": "MBP",
+        "Grades": {
+            "A": 10.0,
+            "A-": 7.0,
+            "B+": 7.0,
+            "B": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Subramoniam, Ramesh",
+            "Wei, Jiarui"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6332",
+        "Section": "5U1",
+        "Grades": {
+            "A": 18.0,
+            "A-": 8.0,
+            "B+": 10.0,
+            "B": 4.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "C": 4.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ramanathan, Kannan",
+            "Wei, Jiarui"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6364",
+        "Section": "PW1",
+        "Grades": {
+            "A": 5.0,
+            "A-": 5.0,
+            "B+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rajamani, Divakar"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6379",
+        "Section": "PW1",
+        "Grades": {
+            "A": 5.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rajamani, Divakar",
+            "Raschke, Curt"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6390",
+        "Section": "0W1",
+        "Grades": {
+            "A": 22.0,
+            "B": 7.0,
+            "C": 3.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Thompson, Luell O"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6398",
+        "Section": "0W2",
+        "Grades": {
+            "A": 9.0,
+            "B": 1.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Alimirzaei, Athena",
+            "Qu, Zihao"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6398",
+        "Section": "5U1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 1.0,
+            "B+": 6.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sethi, Awanti"
+        ]
+    },
+    {
+        "Subject": "OPRE",
+        "CatalogNumber": "6399",
+        "Section": "0W1",
+        "Grades": {
+            "A": 9.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Menon, Syam",
+            "Luo, Ning"
+        ]
+    },
+    {
+        "Subject": "PA",
+        "CatalogNumber": "3333",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 11.0,
+            "A": 12.0,
+            "A-": 13.0,
+            "B+": 2.0,
+            "B-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Rafi, Ahmed"
+        ]
+    },
+    {
+        "Subject": "PA",
+        "CatalogNumber": "4355",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 7.0,
+            "A": 2.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hoang, Thanh T"
+        ]
+    },
+    {
+        "Subject": "PA",
+        "CatalogNumber": "6321",
+        "Section": "0E1",
+        "Grades": {
+            "A": 13.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Benavides, Teodoro J"
+        ]
+    },
+    {
+        "Subject": "PA",
+        "CatalogNumber": "6321",
+        "Section": "0U1",
+        "Grades": {
+            "A": 17.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Benavides, Teodoro J"
+        ]
+    },
+    {
+        "Subject": "PA",
+        "CatalogNumber": "6369",
+        "Section": "0W1",
+        "Grades": {
+            "A": 11.0,
+            "A-": 5.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Stocks, Dhriti P"
+        ]
+    },
+    {
+        "Subject": "PA",
+        "CatalogNumber": "8330",
+        "Section": "HN1",
+        "Grades": {
+            "A": 33.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Shute, William H",
+            "Chin, Michelle L"
+        ]
+    },
+    {
+        "Subject": "PHIL",
+        "CatalogNumber": "1301",
+        "Section": "0W1",
+        "Grades": {
+            "A": 47.0,
+            "B+": 5.0,
+            "B": 53.0,
+            "C+": 2.0,
+            "C": 11.0,
+            "D": 7.0,
+            "F": 4.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Amato, Lawrence A",
+            "Meyer, Zachary M",
+            "Tijani, Kehinde O"
+        ]
+    },
+    {
+        "Subject": "PHIL",
+        "CatalogNumber": "3328",
+        "Section": "0W1",
+        "Grades": {
+            "A-": 3.0,
+            "C+": 2.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Dennis, Patrick W"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "1301",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 5.0,
+            "A": 2.0,
+            "A-": 3.0,
+            "B+": 1.0,
+            "B": 4.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Khan, Amena",
+            "Jafarzadeh, Seyed Javad",
+            "Ruwali, Shisir"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "1302",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 8.0,
+            "A-": 2.0,
+            "B+": 3.0,
+            "B": 4.0,
+            "B-": 1.0,
+            "C+": 3.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Sun, Kuei",
+            "Bhattacharjee, Koustubh"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "2125",
+        "Section": "1U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 10.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "D-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sun, Kuei",
+            "Ali, Akbar"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "2125",
+        "Section": "1U2",
+        "Grades": {
+            "A+": 1.0,
+            "A": 10.0,
+            "B+": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Sun, Kuei",
+            "Bera, Avijit"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "2125",
+        "Section": "1U3",
+        "Grades": {
+            "A+": 1.0,
+            "A": 11.0,
+            "A-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Sun, Kuei",
+            "Gogoi, Antareep",
+            "Bhandari, Bishal",
+            "Gibbons, Stasio M"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "2126",
+        "Section": "1U1",
+        "Grades": {
+            "A+": 9.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Macalevey, Paul J",
+            "Patra, Rittik"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "2126",
+        "Section": "1U4",
+        "Grades": {
+            "A+": 22.0,
+            "A": 1.0,
+            "B+": 1.0,
+            "B-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Macalevey, Paul J",
+            "Shrestha, Samyak"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "2126",
+        "Section": "1U5",
+        "Grades": {
+            "A+": 9.0,
+            "A-": 1.0,
+            "C+": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Macalevey, Paul J",
+            "Khan, Junaid Saif"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "2325",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 6.0,
+            "A-": 3.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ishak-Boushaki, Mustapha",
+            "Sooriyaarachchi, Vinu K",
+            "Mitchell, George A"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "2325",
+        "Section": "0U2",
+        "Grades": {
+            "A+": 1.0,
+            "A": 6.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "F": 2.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Slinker, Jason D",
+            "Seifi, Melodee O",
+            "Ameh, Emmanuel O"
+        ]
+    },
+    {
+        "Subject": "PHYS",
+        "CatalogNumber": "2326",
+        "Section": "0U1",
+        "Grades": {
+            "A": 6.0,
+            "A-": 7.0,
+            "B+": 9.0,
+            "B": 7.0,
+            "B-": 2.0,
+            "C+": 4.0,
+            "C-": 2.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Gartstein, Yuri",
+            "Aker, Adam",
+            "Dowarah, Sasanka"
+        ]
+    },
+    {
+        "Subject": "PPOL",
+        "CatalogNumber": "4312",
+        "Section": "0S1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 9.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Boots, Denise P"
+        ]
+    },
+    {
+        "Subject": "PPPE",
+        "CatalogNumber": "7V26",
+        "Section": "0U1",
+        "Grades": {
+            "A": 15.0,
+            "A-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Elliott, Euel W"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "2301",
+        "Section": "0W1",
+        "Grades": {
+            "A": 16.0,
+            "A-": 16.0,
+            "B+": 14.0,
+            "B": 8.0,
+            "B-": 10.0,
+            "C+": 4.0,
+            "C": 3.0,
+            "C-": 4.0,
+            "D+": 1.0,
+            "D": 1.0,
+            "D-": 5.0,
+            "F": 5.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Brody, Salena M",
+            "Li, Yue"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "2317",
+        "Section": "0U1",
+        "Grades": {
+            "A": 1.0,
+            "B": 2.0,
+            "B-": 2.0,
+            "C+": 2.0,
+            "F": 2.0,
+            "W": 4
+        },
+        "Instructors": [
+            "Batchalli Maruthy, Gayathri",
+            "Zhang, Ziwei"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "3310",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 5.0,
+            "A-": 5.0,
+            "B+": 2.0,
+            "B": 2.0,
+            "B-": 7.0,
+            "C+": 2.0,
+            "C": 4.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Heinrich, Melissa D",
+            "Hafiz, Mariam"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "3331",
+        "Section": "0U1",
+        "Grades": {
+            "A": 17.0,
+            "A-": 9.0,
+            "B": 4.0,
+            "B-": 4.0,
+            "C+": 1.0,
+            "C": 3.0,
+            "C-": 1.0,
+            "F": 3.0,
+            "W": 8
+        },
+        "Instructors": [
+            "Huxtable-Jester, Karen J",
+            "Lilly, Lauren H"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "3342",
+        "Section": "5U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 4.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C": 3.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Bonner, Deborah L",
+            "Padilla Cardoso, Mayra A"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "3361",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 40.0,
+            "A": 11.0,
+            "A-": 11.0,
+            "B+": 6.0,
+            "B": 8.0,
+            "B-": 4.0,
+            "C+": 4.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Hooge, Kimberley O"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "3392",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 5.0,
+            "A-": 1.0,
+            "B+": 4.0,
+            "B-": 2.0,
+            "D": 1.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Holmes, Melanie C",
+            "Nguyen, Linh Thi D"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "3393",
+        "Section": "0U1",
+        "Grades": {
+            "A": 7.0,
+            "A-": 6.0,
+            "B+": 2.0,
+            "B": 1.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Jones, Desiree",
+            "Monroe, Anthony J"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "3393",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 2.0,
+            "A": 4.0,
+            "A-": 8.0,
+            "B+": 3.0,
+            "B": 2.0,
+            "B-": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Shirvani, Forouz",
+            "Sudheesh, Athul"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "4331",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 6.0,
+            "A": 9.0,
+            "A-": 7.0,
+            "B+": 2.0,
+            "B": 11.0,
+            "B-": 5.0,
+            "C+": 5.0,
+            "C": 4.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Poucher, Jesse W",
+            "Heard, Matthew J"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "4343",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 19.0,
+            "A": 36.0,
+            "A-": 14.0,
+            "B+": 8.0,
+            "B": 7.0,
+            "B-": 3.0,
+            "C+": 1.0,
+            "C": 4.0,
+            "F": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Ybarra, Regina K",
+            "Hsieh, Uan-Luen"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "4343",
+        "Section": "0W2",
+        "Grades": {
+            "A+": 5.0,
+            "A": 10.0,
+            "A-": 9.0,
+            "B+": 6.0,
+            "B": 8.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 2.0,
+            "D+": 1.0,
+            "D": 3.0,
+            "F": 1.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Ybarra, Regina K",
+            "Hsieh, Uan-Luen"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "4346",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 7.0,
+            "A": 9.0,
+            "A-": 7.0,
+            "B+": 4.0,
+            "B-": 1.0,
+            "C+": 1.0,
+            "C": 3.0,
+            "C-": 3.0,
+            "F": 2.0,
+            "W": 3
+        },
+        "Instructors": [
+            "Wilder, Siri",
+            "Platt, Kristen N"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "4V90",
+        "Section": "0U1",
+        "Grades": {
+            "A": 15.0,
+            "W": 0
+        },
+        "Instructors": [
+            "De Froy, Adrienne M"
+        ]
+    },
+    {
+        "Subject": "PSY",
+        "CatalogNumber": "4V90",
+        "Section": "0W1",
+        "Grades": {
+            "A": 23.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "C+": 3.0,
+            "C-": 1.0,
+            "D": 1.0,
+            "D-": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Brody, Salena M",
+            "De La Cerda, Callie B"
+        ]
+    },
+    {
+        "Subject": "REAL",
+        "CatalogNumber": "3365",
+        "Section": "0W1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 3.0,
+            "B-": 3.0,
+            "C-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "DeCourcy, George A"
+        ]
+    },
+    {
+        "Subject": "REAL",
+        "CatalogNumber": "6321",
+        "Section": "5H1",
+        "Grades": {
+            "A": 1.0,
+            "A-": 1.0,
+            "B": 2.0,
+            "C": 3.0,
+            "F": 2.0,
+            "W": 2
+        },
+        "Instructors": [
+            "Guttery, Randall"
+        ]
+    },
+    {
+        "Subject": "REAL",
+        "CatalogNumber": "6322",
+        "Section": "0W1",
+        "Grades": {
+            "A": 4.0,
+            "A-": 2.0,
+            "B+": 2.0,
+            "B": 6.0,
+            "B-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "DeCourcy, George A"
+        ]
+    },
+    {
+        "Subject": "RHET",
+        "CatalogNumber": "1302",
+        "Section": "051",
+        "Grades": {
+            "A+": 1.0,
+            "A": 7.0,
+            "A-": 3.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "D+": 1.0,
+            "D-": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Cook, Brandy S"
+        ]
+    },
+    {
+        "Subject": "RHET",
+        "CatalogNumber": "1302",
+        "Section": "052",
+        "Grades": {
+            "A+": 7.0,
+            "A": 4.0,
+            "A-": 4.0,
+            "B-": 1.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Walker, Jason A"
+        ]
+    },
+    {
+        "Subject": "RHET",
+        "CatalogNumber": "1302",
+        "Section": "091",
+        "Grades": {
+            "A": 1.0,
+            "A-": 4.0,
+            "B+": 1.0,
+            "B": 3.0,
+            "B-": 2.0,
+            "C": 1.0,
+            "D+": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Cox, Gavin L"
+        ]
+    },
+    {
+        "Subject": "RHET",
+        "CatalogNumber": "1302",
+        "Section": "0S1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 4.0,
+            "A-": 3.0,
+            "B+": 1.0,
+            "B": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Hill, Justin T"
+        ]
+    },
+    {
+        "Subject": "SE",
+        "CatalogNumber": "3306",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 3.0,
+            "B+": 2.0,
+            "B-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Farage, Timothy P",
+            "Song, Zihe"
+        ]
+    },
+    {
+        "Subject": "SE",
+        "CatalogNumber": "4381",
+        "Section": "0U1",
+        "Grades": {
+            "A": 3.0,
+            "A-": 4.0,
+            "B+": 3.0,
+            "B": 3.0,
+            "B-": 7.0,
+            "C+": 3.0,
+            "C": 3.0,
+            "C-": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Paulk, Mark C",
+            "Nguyen, Son V"
+        ]
+    },
+    {
+        "Subject": "SOC",
+        "CatalogNumber": "1301",
+        "Section": "0W1",
+        "Grades": {
+            "A+": 33.0,
+            "A": 10.0,
+            "A-": 1.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Dickey-Laprocido, Galen L"
+        ]
+    },
+    {
+        "Subject": "SOC",
+        "CatalogNumber": "2320",
+        "Section": "0S1",
+        "Grades": {
+            "A+": 13.0,
+            "A": 4.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Lanham, Carol C",
+            "Scotch, Richard",
+            "Dore, Gaetan"
+        ]
+    },
+    {
+        "Subject": "SPAU",
+        "CatalogNumber": "3340",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 7.0,
+            "B": 2.0,
+            "C": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Aldridge, Michelle A",
+            "Vu, Katrina D"
+        ]
+    },
+    {
+        "Subject": "SPAU",
+        "CatalogNumber": "3343",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 3.0,
+            "A": 4.0,
+            "A-": 2.0,
+            "B+": 1.0,
+            "C": 2.0,
+            "D+": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Mehta, Sonya",
+            "Thomas, Abbey L"
+        ]
+    },
+    {
+        "Subject": "STAT",
+        "CatalogNumber": "1342",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 1.0,
+            "A": 1.0,
+            "A-": 1.0,
+            "B": 1.0,
+            "B-": 2.0,
+            "C+": 1.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 1
+        },
+        "Instructors": [
+            "Koshevnik, Yuly",
+            "Shuvo, Farabi R"
+        ]
+    },
+    {
+        "Subject": "STAT",
+        "CatalogNumber": "2332",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 10.0,
+            "A": 2.0,
+            "A-": 1.0,
+            "B+": 1.0,
+            "B": 2.0,
+            "C+": 2.0,
+            "C": 1.0,
+            "C-": 1.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Whalen, Tristan G"
+        ]
+    },
+    {
+        "Subject": "STAT",
+        "CatalogNumber": "4351",
+        "Section": "0U1",
+        "Grades": {
+            "A+": 4.0,
+            "A": 5.0,
+            "A-": 2.0,
+            "B": 3.0,
+            "B-": 1.0,
+            "D-": 3.0,
+            "F": 1.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Koshevnik, Yuly",
+            "Rahman, Nusma",
+            "Nguyen, Mylinh T"
+        ]
+    },
+    {
+        "Subject": "SYSM",
+        "CatalogNumber": "6325",
+        "Section": "SU1",
+        "Grades": {
+            "A": 12.0,
+            "A-": 1.0,
+            "B+": 2.0,
+            "W": 0
+        },
+        "Instructors": [
+            "Koganti, Ramakrishna"
+        ]
+    }
+]
