@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:myapp/models/user.dart';
 
 import 'class_model.dart';
@@ -50,9 +51,9 @@ class UserModel {
     var data = doc.data();
     var docID = doc.id;
     // Create a UserModel instance with the fetched data
-    Schedule sched = await fetchUserSchedule(docID);
+    Schedule? sched = await fetchUserSchedule(docID);
 
-    List<UserModel> friends = await getFriendsModels(
+    List<UserModel>? friends = await getFriendsModels(
         data['Friends'] != null ? List<String>.from(data['Friends']) : null);
     return UserModel(
         userDocID: docID,
@@ -60,8 +61,9 @@ class UserModel {
         username: data['Username'],
         email: data['Email'],
         password: data['Password'],
-        avatarURL: data['AvatarURL'] ??
-            "https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg",
+        avatarURL: data['AvatarURL']?.isEmpty ?? true
+            ? "https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
+            : data['AvatarURL'],
         schedule: sched);
   }
 
@@ -81,6 +83,7 @@ class UserModel {
                 .doc(docID)
                 .get();
         Schedule sched = await fetchUserSchedule(docID);
+
         if (friendDoc.exists) {
           var data = friendDoc.data();
           if (data != null) {
@@ -88,8 +91,10 @@ class UserModel {
               userDocID: docID,
               username: data['Username'],
               email: data['Email'],
-              avatarURL: data['AvatarURL'] ??
-                  "https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg",
+              avatarURL: data['AvatarURL']?.isEmpty ?? true
+                  ? "https://static.vecteezy.com/system/resources/previews/020/765/399/non_2x/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
+                  : data['AvatarURL'],
+
               schedule:
                   sched, // Adjust according to your Schedule class structure
             ));
@@ -106,36 +111,28 @@ class UserModel {
 
   static Future<Schedule> fetchUserSchedule(String userDocID) async {
     print('Fetching schedule for user document ID: $userDocID');
+
     Schedule schedule = Schedule(id: userDocID, courses: []);
 
-    try {
-      // Access the 'Classes' subcollection of the user's schedule
-      QuerySnapshot<
-          Map<String,
-              dynamic>> classesSnapshot = await FirebaseFirestore.instance
-          .collection('Schedules') // Your main schedules collection
-          .doc(userDocID) // The document ID for the user's schedule
-          .collection(
-              'Classes') // The subcollection under the user's schedule document
-          .get();
+    final schedulesRef = FirebaseFirestore.instance.collection('Schedules');
 
-      // Process all the classes in the subcollection
-      List<ClassModel> courses = classesSnapshot.docs
-          .map((doc) => ClassModel.fromJson(doc.data()))
-          .toList();
+    final classesSnapshot =
+        await schedulesRef.doc(userDocID).collection('Classes').get();
 
-      if (courses.isNotEmpty) {
-        schedule = Schedule(id: userDocID, courses: courses);
-        print(
-            'Successfully fetched ${courses.length} classes for user document ID: $userDocID');
-      } else {
-        print(
-            'No classes found in the Classes subcollection for user document ID: $userDocID');
-      }
-    } catch (e) {
-      print(
-          'Error fetching Classes subcollection for user document ID $userDocID: $e');
-      // Handle the error appropriately
+    List<ClassModel> userClasses = [];
+
+    for (var classDoc in classesSnapshot.docs) {
+      var data = classDoc.data();
+      // Assuming ClassModel has a constructor that takes a Map
+      var classModel = ClassModel.fromJson(data);
+      userClasses.add(classModel);
+    }
+
+    // Assign the retrieved classes to the schedule
+    schedule.courses = userClasses;
+
+    if (schedule.courses.isEmpty) {
+      return Schedule(id: '1', courses: []);
     }
 
     return schedule;

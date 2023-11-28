@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/models/user_model.dart';
 import 'package:myapp/pages/chat.dart';
+import 'package:myapp/pages/compare.dart';
 import 'package:myapp/providers/friend_provider.dart';
 import 'package:myapp/colors/app_colors.dart';
 import 'package:myapp/providers/user_model_provider.dart';
@@ -202,7 +203,11 @@ class ViewFriendsForm extends ConsumerWidget {
           );
           break;
         case "option2":
-          // Handle Option 2
+          showDialog(
+              context: context,
+              builder: (context) => ComparisonScreen(
+                    friend: friend,
+                  ));
           break;
         case "option3":
           {

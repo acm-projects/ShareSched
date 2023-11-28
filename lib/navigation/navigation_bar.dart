@@ -5,6 +5,7 @@ import 'package:myapp/pages/custom_widgets.dart';
 import 'package:myapp/pages/home.dart';
 import 'package:myapp/pages/friends.dart';
 import 'package:myapp/pages/qrcode.dart';
+import 'package:myapp/pages/chat_gpt.dart';
 
 class CustomNavigationBar extends ConsumerStatefulWidget {
   CustomNavigationBar({Key? key}) : super(key: key);
@@ -20,6 +21,7 @@ class _CustomNavigationBarState extends ConsumerState<CustomNavigationBar> {
     const HomeScreen(),
     const FriendScreen(),
     const QrScreen(),
+    const VirtualAssistantScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -48,6 +50,11 @@ class _CustomNavigationBarState extends ConsumerState<CustomNavigationBar> {
               _buildNavItem(
                   1, const Icon(Icons.group_outlined, size: 30), 'Friends'),
               _buildNavItem(2, const Icon(Icons.qr_code_outlined), 'QR'),
+              _buildNavItem(
+                  3,
+                  const ImageIcon(
+                      AssetImage('assets/page-1/images/virtual_assistant.png')),
+                  'VA'),
             ],
           ),
         ),
@@ -89,7 +96,10 @@ class _CustomNavigationBarState extends ConsumerState<CustomNavigationBar> {
                   fontSize: 14,
                 ),
                 duration: const Duration(milliseconds: 250),
-                child: Text(label),
+                child: Text(
+                  label,
+                  textAlign: TextAlign.center,
+                ),
               ),
             ],
           ),

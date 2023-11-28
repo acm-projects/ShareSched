@@ -25,6 +25,7 @@ class Course {
   final String section;
   final Map<String, double> grades;
   final List<String> instructors;
+  final String term;
 
   Course(
     this.subject,
@@ -32,16 +33,17 @@ class Course {
     this.section,
     this.grades,
     this.instructors,
+    this.term,
   );
 
-  factory Course.fromJson(Map<String, dynamic> json) {
+  factory Course.fromJson(Map<String, dynamic> json, String year) {
     return Course(
-      json['Subject'],
-      json['CatalogNumber'],
-      json['Section'],
-      Map<String, double>.from(json['Grades']),
-      List<String>.from(json['Instructors']),
-    );
+        json['Subject'],
+        json['CatalogNumber'],
+        json['Section'],
+        Map<String, double>.from(json['Grades']),
+        List<String>.from(json['Instructors']),
+        year);
   }
   void printCourseInformation() {
     print("Subject: ${subject}");
@@ -55,21 +57,30 @@ class Course {
     String subject = courseName.split(" ")[0];
     String catalogNumber = courseName.split(" ")[1];
     final List<String> assetPaths = [
-      'assets/grades/Summer2023.json',
-      // Add more asset paths as needed
+      'assets/grades/Fall_2022.json',
+      'assets/grades/Spring_2023.json',
+      'assets/grades/Summer_2023.json',
+      'assets/grades/Summer_2022.json',
+      'assets/grades/Spring_2022.json',
+      'assets/grades/Summer_2021.json',
+      'assets/grades/Spring_2021.json',
     ];
 
     for (final assetPath in assetPaths) {
       try {
         final jsonString = await rootBundle.loadString(assetPath);
         final data = jsonDecode(jsonString);
+        final List<String> pathParts = assetPath.split('/')[2].split('_');
+        final season = pathParts[0];
+        final year = pathParts[1].split('.')[0];
 
         for (final courseData in data) {
           if (courseData['Subject'] == subject &&
               courseData['CatalogNumber'] == catalogNumber) {
-            // Access other properties of the found course as needed
             return Course.fromJson(
-                courseData); // Return immediately after finding the first match
+              courseData,
+              '$season $year',
+            );
           }
         }
       } catch (e) {
@@ -136,7 +147,13 @@ class _CourseModalState extends State<CourseModal> {
                         children: [
                           const Icon(Icons.book),
                           const SizedBox(width: 10),
-                          Text('Course Name: ${widget.courseName}'),
+                          Expanded(
+                            // Wrap the FittedBox in an Expanded widget
+                            child: FittedBox(
+                              child: Text('Course Name: ${widget.courseName}'),
+                              fit: BoxFit.scaleDown,
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(height: 30),
@@ -144,7 +161,13 @@ class _CourseModalState extends State<CourseModal> {
                         children: [
                           const Icon(Icons.person),
                           const SizedBox(width: 10),
-                          Text('Professor: ${widget.professorName}'),
+                          Expanded(
+                            // Wrap the FittedBox in an Expanded widget
+                            child: FittedBox(
+                              child: Text('Professor: ${widget.professorName}'),
+                              fit: BoxFit.scaleDown,
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(height: 30),
@@ -152,19 +175,33 @@ class _CourseModalState extends State<CourseModal> {
                         children: [
                           const Icon(Icons.star),
                           const SizedBox(width: 10),
-                          Text('Professor Rating: ${widget.professorRating}'),
+                          Expanded(
+                            // Wrap the FittedBox in an Expanded widget
+                            child: FittedBox(
+                              child: Text(
+                                  'Professor Rating: ${widget.professorRating}'),
+                              fit: BoxFit.scaleDown,
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(height: 30),
-                      Row(
-                        children: [
-                          const Icon(Icons.access_time),
-                          const SizedBox(width: 10),
-                          Text('Credit Hours: ${widget.creditHours}'),
-                        ],
-                      ),
                       if (courseInformation != null && showPieChart)
-                        CustomPieChart(courseInformation: courseInformation),
+                        Column(
+                          children: [
+                            Text(
+                              '${courseInformation!.term}', // Display the professor's name
+                              style: TextStyle(
+                                fontFamily: 'Quicksand-SemiBold',
+                                fontSize: 16,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(height: 20),
+                            CustomPieChart(
+                                courseInformation: courseInformation),
+                          ],
+                        )
                     ]))))));
   }
 }
@@ -192,7 +229,6 @@ class CustomPieChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Assuming courseInformation!.grades is something like {'A+': 40, 'A': 25, ...}
     Map<String, double> dataMap = courseInformation!.grades;
     List<Color> colorList =
         dataMap.keys.map((key) => gradeColors[key]!).toList();
@@ -222,9 +258,13 @@ class CustomPieChart extends StatelessWidget {
       chartValuesOptions: ChartValuesOptions(
         showChartValuesOutside: true,
         showChartValueBackground: true,
-        showChartValues: false,
+        showChartValues: true,
+        showChartValuesInPercentage: true,
+        decimalPlaces: 0,
         chartValueStyle: defaultChartValueStyle.copyWith(
-          color: Colors.white,
+          fontFamily: 'Quicksand-SemiBold',
+          letterSpacing: 1.3,
+          color: Colors.black,
         ),
       ),
       colorList: colorList,

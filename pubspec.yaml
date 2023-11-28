@@ -41,6 +41,7 @@ dependencies:
   firebase_auth: ^4.10.0
   cloud_firestore: ^4.9.2
   get: ^4.6.6
+  chat_gpt_sdk: ^2.2.5
 
   time_planner:
     git:
@@ -54,6 +55,7 @@ dependencies:
   firebase_storage: ^11.5.1
   logger: ^2.0.2+1
   pie_chart: ^5.4.0
+  flutter_dotenv: ^5.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -99,6 +101,7 @@ flutter:
     - assets/page-1/images/
     - assets/page-1/images/custom/
     - assets/grades/
+    - consts.env
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

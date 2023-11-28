@@ -14,9 +14,9 @@ final friendsListStreamProvider = StreamProvider<List<UserModel>>((ref) async* {
     if (snapshot.exists && snapshot.data() != null) {
       List<String> friendDocIDs =
           List<String>.from(snapshot.data()!['Friends'] ?? []);
-      List<UserModel> friendsList =
+      List<UserModel>? friendsList =
           await UserModel.getFriendsModels(friendDocIDs);
-      yield friendsList;
+      yield friendsList!;
     } else {
       yield []; // Yield an empty list if no friends or user document doesn't exist
     }

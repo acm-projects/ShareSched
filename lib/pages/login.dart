@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/models/user_model.dart';
 import 'package:myapp/navigation/navigation_bar.dart';
+import 'package:myapp/pages/home.dart';
 import 'package:myapp/services/auth.dart';
 import 'custom_widgets.dart';
 import 'register.dart';
@@ -96,7 +97,12 @@ class _LoginFormState extends ConsumerState<LoginForm> {
     String? pUsername = ref.read(userModelProvider).username;
     String? pDocID = ref.read(userModelProvider).userDocID;
     String? avatarURL = ref.read(userModelProvider).avatarURL;
+    Schedule? schedule = ref.read(userModelProvider).schedule;
 
+    ref.read(scheduleNotifierProvider).courses = schedule!.courses;
+
+    print("Schedule courses: ");
+    schedule!.printCourses();
     print("Email: ${pEmail}");
     print("Password: ${pPassword}");
     print("Username: ${pUsername}");

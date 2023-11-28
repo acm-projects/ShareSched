@@ -6,10 +6,12 @@ import 'package:myapp/firebase_options.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 Future<void> main() async {
-  Paint.enableDithering = true;
   WidgetsFlutterBinding.ensureInitialized();
+
+  Paint.enableDithering = true;
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -27,6 +29,8 @@ Future<void> main() async {
   Get.put(UserRepository());
 
   runApp(const ProviderScope(child: MyApp()));
+
+  await dotenv.load(fileName: "consts.env");
 }
 
 class MyApp extends StatelessWidget {

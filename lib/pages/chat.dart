@@ -10,8 +10,15 @@ class ChatScreen extends StatefulWidget {
   _ChatScreenState createState() => _ChatScreenState();
 }
 
+class ChatMessage {
+  String message;
+  bool isSentByUser;
+
+  ChatMessage({required this.message, required this.isSentByUser});
+}
+
 class _ChatScreenState extends State<ChatScreen> {
-  List<String> messages = [];
+  List<ChatMessage> messages = [];
   TextEditingController messageController = TextEditingController();
   Color iconColor = Colors.white;
 
@@ -58,8 +65,8 @@ class _ChatScreenState extends State<ChatScreen> {
                 final message = messages[index];
 
                 return MessageBubble(
-                  message: message,
-                  isSentByUser: true,
+                  message: message.message,
+                  isSentByUser: message.isSentByUser,
                 );
               },
             ),
@@ -121,10 +128,14 @@ class _ChatScreenState extends State<ChatScreen> {
                     color: iconColor,
                   ),
                   onPressed: () {
-                    setState(() {
-                      messages.add(messageController.text);
-                    });
-                    messageController.clear();
+                    if (messageController.text.isNotEmpty) {
+                      setState(() {
+                        messages.add(ChatMessage(
+                            message: messageController.text,
+                            isSentByUser: true));
+                      });
+                      messageController.clear();
+                    }
                   },
                 ),
               ],
@@ -157,7 +168,8 @@ class MessageBubble extends StatelessWidget {
               BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.8),
           decoration: BoxDecoration(
             border: Border.all(
-                width: 2.0, color: isSentByUser ? Colors.blue : Colors.white),
+                width: 2.0,
+                color: isSentByUser ? Colors.blue : AppColors.themeColor),
             color: Colors.black,
             borderRadius: isSentByUser
                 ? const BorderRadius.only(

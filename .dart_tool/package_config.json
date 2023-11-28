@@ -32,6 +32,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "chat_gpt_sdk",
+      "rootUri": "file:///C:/Users/ROSHA/AppData/Local/Pub/Cache/hosted/pub.dev/chat_gpt_sdk-2.2.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
       "name": "clock",
       "rootUri": "file:///C:/Users/ROSHA/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
@@ -78,6 +84,12 @@
       "rootUri": "file:///C:/Users/ROSHA/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.6",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "dio",
+      "rootUri": "file:///C:/Users/ROSHA/AppData/Local/Pub/Cache/hosted/pub.dev/dio-5.3.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
     },
     {
       "name": "fake_async",
@@ -180,6 +192,12 @@
       "rootUri": "file:///D:/flutter/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "flutter_dotenv",
+      "rootUri": "file:///C:/Users/ROSHA/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_dotenv-5.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "flutter_hooks",
@@ -518,7 +536,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-11-27T08:43:36.515136Z",
+  "generated": "2023-11-27T20:48:20.890362Z",
   "generator": "pub",
   "generatorVersion": "3.1.5"
 }

@@ -67,15 +67,15 @@ class ScheduleNotifier extends StateNotifier<Schedule> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  CustomText(text: courseName),
+                  FittedBox(child: CustomText(text: courseName)),
                   const SizedBox(
                     height: 6,
                   ),
-                  CustomText(text: professorName),
+                  FittedBox(child: CustomText(text: professorName)),
                   const SizedBox(
                     height: 6,
                   ),
-                  CustomText(text: location),
+                  FittedBox(child: CustomText(text: location)),
                   const SizedBox(
                     height: 6,
                   ),
@@ -89,13 +89,12 @@ class ScheduleNotifier extends StateNotifier<Schedule> {
     String timePart = string!.substring(11, 16);
 
     List<String> timeParts = timePart.split(':');
-    int hour = int.parse(timeParts[0]);
-    int minute = int.parse(timeParts[1]);
+    int hour = int.parse(timeParts[0]) - 5;
+    int minute = int.parse(timeParts[1]) - 50;
 
     TimeOfDay time = TimeOfDay(hour: hour, minute: minute);
 
     print('${time.hour}: ${time.minute}');
-
     return time;
   }
 
@@ -137,6 +136,49 @@ class ScheduleNotifier extends StateNotifier<Schedule> {
     if (!string.contains(' ')) return [string, ''];
 
     return string.split(' ');
+  }
+
+  static List<ClassModel> compareSchedules(
+      Schedule schedule1, Schedule schedule2) {
+    List<ClassModel> commonCourses = [];
+
+    for (ClassModel course1 in schedule1.courses) {
+      for (ClassModel course2 in schedule2.courses) {
+        if (areCoursesSimilar(course1, course2)) {
+          commonCourses.add(course1);
+        }
+      }
+    }
+
+    return commonCourses;
+  }
+
+  // Helper method to check if two courses are similar
+  static bool areCoursesSimilar(ClassModel course1, ClassModel course2) {
+    return course1.subjectPrefix == course2.subjectPrefix &&
+        course1.courseNumber == course2.courseNumber &&
+        haveSimilarMeetingTimes(course1, course2);
+  }
+
+  // Check if two courses have similar meeting times
+  static bool haveSimilarMeetingTimes(ClassModel course1, ClassModel course2) {
+    return course1.meetingDays!
+            .toSet()
+            .intersection(course2.meetingDays!.toSet())
+            .isNotEmpty &&
+        timeOverlap(course1.start_time, course1.end_time, course2.start_time,
+            course2.end_time);
+  }
+
+  // Check if two time periods overlap
+  static bool timeOverlap(
+      String? start1, String? end1, String? start2, String? end2) {
+    DateTime startTime1 = DateTime.parse(start1!);
+    DateTime endTime1 = DateTime.parse(end1!);
+    DateTime startTime2 = DateTime.parse(start2!);
+    DateTime endTime2 = DateTime.parse(end2!);
+
+    return startTime1.isBefore(endTime2) && startTime2.isBefore(endTime1);
   }
 
   List<List<List<String?>>> getCourseTimes() {
