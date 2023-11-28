@@ -97,7 +97,8 @@ class _QrScreenState extends ConsumerState<QrScreen> {
               style: TextStyle(
                   fontFamily: 'Quicksand', color: AppColors.primaryTextColor),
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 40),
+            ScanQRButton(buttonPressed: scanQRCode),
             const SizedBox(height: 20),
             if (scannedData.isNotEmpty) ScannedDataContainer(scannedData),
           ],
@@ -122,6 +123,36 @@ class ScannedDataContainer extends StatelessWidget {
       child: Text(
         "Scanned Data: $scannedData",
         style: const TextStyle(fontSize: 16, color: Colors.white),
+      ),
+    );
+  }
+}
+
+class ScanQRButton extends StatelessWidget {
+  final Function buttonPressed;
+
+  const ScanQRButton({super.key, required this.buttonPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+      minWidth: 150,
+      height: 52,
+      onPressed: () => buttonPressed(),
+      color: AppColors.buttonColor1,
+      textColor: Colors.black,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(50.0),
+        side: const BorderSide(color: Colors.black, width: 0.3),
+      ),
+      child: const Text(
+        'Scan',
+        style: TextStyle(
+          color: Colors.black,
+          fontFamily: 'Quicksand',
+          fontSize: 15,
+          letterSpacing: 1.25,
+        ),
       ),
     );
   }

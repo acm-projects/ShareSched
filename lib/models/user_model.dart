@@ -1,5 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myapp/colors/app_colors.dart';
+import 'package:myapp/models/course_modal.dart';
 import 'package:myapp/models/user.dart';
+import 'package:myapp/pages/custom_widgets.dart';
+import 'package:time_planner/time_planner.dart';
 
 import 'class_model.dart';
 
@@ -150,6 +155,111 @@ class Schedule {
       id: id ?? this.id,
       courses: courses ?? this.courses,
     );
+  }
+
+  static TimeOfDay convertStringToTime(String? string) {
+    String timePart = string!.substring(11, 16);
+
+    List<String> timeParts = timePart.split(':');
+    int hour = int.parse(timeParts[0]) - 5;
+    int minute = int.parse(timeParts[1]) - 50;
+
+    TimeOfDay time = TimeOfDay(hour: hour, minute: minute);
+
+    print('${time.hour}: ${time.minute}');
+    return time;
+  }
+
+  static List<int> convertDayToInt(List<String>? days) {
+    List<int> daysList = [];
+    for (int i = 0; i < days!.length; ++i) {
+      switch (days[i]) {
+        case 'Monday':
+          daysList.add(0);
+          break;
+        case 'Tuesday':
+          daysList.add(1);
+          break;
+        case 'Wednesday':
+          daysList.add(2);
+          break;
+        case 'Thursday':
+          daysList.add(3);
+          break;
+        case 'Friday':
+          daysList.add(4);
+          break;
+      }
+    }
+    return daysList;
+  }
+
+  static int computeTimeDifferenceInMinutes(String? start, String? end) {
+    DateTime startingTime = DateTime.parse(start!);
+    DateTime endingTime = DateTime.parse(end!);
+
+    Duration timeDifference = endingTime.difference(startingTime);
+
+    return timeDifference.inMinutes;
+  }
+
+  List<TimePlannerTask> convertCoursesToTasks(BuildContext context) {
+    print("Conversion started");
+    List<TimePlannerTask> tasks = [];
+    for (int i = 0; i < courses.length; ++i) {
+      String? courseName =
+          '${courses[i].subjectPrefix} ${courses[i].courseNumber}';
+      print('Course name: ${courseName}\n');
+      String? location = '${courses[i].building} ${courses[i].room}';
+
+      String? professorName = '${courses[i].professor}';
+      print('Location: ${location}\n');
+      List<int> days = convertDayToInt(courses[i].meetingDays);
+      TimeOfDay startingTime = convertStringToTime(courses[i].start_time);
+      print('Starting time: ${startingTime.hour}: ${startingTime.minute}');
+      int minuteDuration = computeTimeDifferenceInMinutes(
+          courses[i].start_time, courses[i].end_time);
+      print('Minute duration: ${minuteDuration}');
+      for (int i = 0; i < days.length; ++i) {
+        tasks.add(TimePlannerTask(
+            onTap: () {
+              showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return CourseModal(
+                      courseName: courseName,
+                      professorName: professorName,
+                      professorRating: 3,
+                      creditHours: 3,
+                    );
+                  });
+            },
+            minutesDuration: minuteDuration,
+            dateTime: TimePlannerDateTime(
+                day: days[i],
+                hour: startingTime.hour,
+                minutes: startingTime.minute),
+            color: AppColors.getRandomColor(),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  FittedBox(child: CustomText(text: courseName)),
+                  const SizedBox(
+                    height: 6,
+                  ),
+                  FittedBox(child: CustomText(text: professorName)),
+                  const SizedBox(
+                    height: 6,
+                  ),
+                  FittedBox(child: CustomText(text: location)),
+                  const SizedBox(
+                    height: 6,
+                  ),
+                ])));
+      }
+    }
+    return tasks;
   }
 
   void printCourses() {

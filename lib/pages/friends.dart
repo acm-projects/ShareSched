@@ -195,6 +195,7 @@ class ViewFriendsForm extends ConsumerWidget {
           showDialog(
             context: context,
             builder: (context) {
+              friend.schedule!.printCourses();
               return MiniSchedule(
                 username: friend.username,
                 schedule: friend.schedule!,
@@ -507,6 +508,7 @@ class MiniSchedule extends StatelessWidget {
                     height: 800,
                     width: 450,
                     child: TimePlanner(
+                      tasks: schedule.convertCoursesToTasks(context),
                       startHour: 8,
                       endHour: 22,
                       headers: const [

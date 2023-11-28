@@ -1,17 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\ROSHA\\Downloads\\ui\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "/home/xor/Desktop/ShareSched/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ROSHA\\Downloads\\ui\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "/home/xor/Desktop/ShareSched/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
-                        "startOffsets": "175,831",
+                        "startOffsets": "172,817",
                         "endLines": "7,16",
                         "endColumns": "12,12",
-                        "endOffsets": "482,997"
+                        "endOffsets": "475,981"
                     },
                     "to": {
                         "startLines": "2,7",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ROSHA\\.gradle\\caches\\transforms-3\\aee4bf2e33c23b07f4b9d582f2ab6699\\transformed\\material-1.1.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "/home/xor/.gradle/caches/transforms-3/aee4bf2e33c23b07f4b9d582f2ab6699/transformed/material-1.1.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\ROSHA\\.gradle\\caches\\transforms-3\\e748a3d25f48915edb04f801f93d71a5\\transformed\\appcompat-1.1.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "/home/xor/.gradle/caches/transforms-3/e748a3d25f48915edb04f801f93d71a5/transformed/appcompat-1.1.0/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
